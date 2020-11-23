@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Covid-19",
+        "category": "Health",
+        "id": 1001,
+        "isNew": false,
+        "isWithAR": true,
+        "intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
+        "imageName": "turtlerock"
+    },
+    {
+        "name": "Engine",
+        "category": "Tech",
+        "id": 1002,
+        "isNew": true,
+        "isWithAR": true,
+        "intro": "Get active on your off days and challenge your friends. Get active on your off days and challenge your friends.",
+        "imageName": "rainbowlake"
+    },
+    {
+        "name": "Plastic",
+        "category": "Health",
+        "id": 1003,
+        "isNew": true,
+        "isWithAR": true,
+        "intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
+        "imageName": "twinlake"
+    },
+    {
+        "name": "Camera",
+        "category": "Tech",
+        "id": 1004,
+        "isNew": true,
+        "isWithAR": true,
+        "intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
+        "imageName": "umbagog"
+    }
+]
