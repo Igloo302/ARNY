@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031BB056256C02950048F2C6 /* LessonData.json in Resources */ = {isa = PBXBuildFile; fileRef = 031BB055256C02950048F2C6 /* LessonData.json */; };
+		031BB062256C09D50048F2C6 /* SubjectData.json in Resources */ = {isa = PBXBuildFile; fileRef = 031BB061256C09D50048F2C6 /* SubjectData.json */; };
 		0336AC82256A50B500951BF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0336AC81256A50B500951BF9 /* AppDelegate.swift */; };
 		0336AC84256A50B500951BF9 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0336AC83256A50B500951BF9 /* ARViewController.swift */; };
 		0336AC86256A50B500951BF9 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 0336AC85256A50B500951BF9 /* Experience.rcproject */; };
@@ -37,13 +39,13 @@
 		03D35633256AB064006BD6A7 /* icybay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03D35625256AB064006BD6A7 /* icybay.jpg */; };
 		03D35634256AB064006BD6A7 /* chilkoottrail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03D35626256AB064006BD6A7 /* chilkoottrail.jpg */; };
 		03D3563E256AB33A006BD6A7 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D3563D256AB33A006BD6A7 /* UserData.swift */; };
-		03D35641256AB396006BD6A7 /* TopicData.json in Resources */ = {isa = PBXBuildFile; fileRef = 03D35640256AB396006BD6A7 /* TopicData.json */; };
-		03D35644256AB415006BD6A7 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D35643256AB415006BD6A7 /* Topic.swift */; };
-		03D35647256AB720006BD6A7 /* LessonData.json in Resources */ = {isa = PBXBuildFile; fileRef = 03D35646256AB720006BD6A7 /* LessonData.json */; };
+		03D35644256AB415006BD6A7 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D35643256AB415006BD6A7 /* Subject.swift */; };
 		03D3564A256AB8D7006BD6A7 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D35649256AB8D7006BD6A7 /* Lesson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		031BB055256C02950048F2C6 /* LessonData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LessonData.json; sourceTree = "<group>"; };
+		031BB061256C09D50048F2C6 /* SubjectData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SubjectData.json; sourceTree = "<group>"; };
 		0336AC7E256A50B500951BF9 /* ARNY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARNY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0336AC81256A50B500951BF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0336AC83256A50B500951BF9 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
@@ -76,9 +78,7 @@
 		03D35625256AB064006BD6A7 /* icybay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icybay.jpg; sourceTree = "<group>"; };
 		03D35626256AB064006BD6A7 /* chilkoottrail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chilkoottrail.jpg; sourceTree = "<group>"; };
 		03D3563D256AB33A006BD6A7 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		03D35640256AB396006BD6A7 /* TopicData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TopicData.json; sourceTree = "<group>"; };
-		03D35643256AB415006BD6A7 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
-		03D35646256AB720006BD6A7 /* LessonData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LessonData.json; sourceTree = "<group>"; };
+		03D35643256AB415006BD6A7 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		03D35649256AB8D7006BD6A7 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,12 +129,12 @@
 			children = (
 				0336AC81256A50B500951BF9 /* AppDelegate.swift */,
 				039A761A256B89A50033E5A7 /* SketchShadow.swift */,
-				0336AC83256A50B500951BF9 /* ARViewController.swift */,
 				0336AC99256A5E0300951BF9 /* MainViewController.swift */,
 				03D3560B256A80D3006BD6A7 /* DiscoverViewController.swift */,
 				039A7617256B86AD0033E5A7 /* TypePageViewContorller.swift */,
 				039A7622256B9E5F0033E5A7 /* SubjectViewController.swift */,
 				0385AE3A256BD68000B16056 /* LessonViewController.swift */,
+				0336AC83256A50B500951BF9 /* ARViewController.swift */,
 				0385AE3D256BEEA800B16056 /* BasicViewController.swift */,
 				0385AE40256BF93000B16056 /* CoachingOverlay.swift */,
 			);
@@ -146,7 +146,7 @@
 			children = (
 				03D35615256AB024006BD6A7 /* Data.swift */,
 				03D3563D256AB33A006BD6A7 /* UserData.swift */,
-				03D35643256AB415006BD6A7 /* Topic.swift */,
+				03D35643256AB415006BD6A7 /* Subject.swift */,
 				03D35649256AB8D7006BD6A7 /* Lesson.swift */,
 			);
 			path = Models;
@@ -163,9 +163,9 @@
 				03D35625256AB064006BD6A7 /* icybay.jpg */,
 				03D35622256AB064006BD6A7 /* lakemcdonald.jpg */,
 				0385AE34256BAA0100B16056 /* Map.png */,
-				03D35646256AB720006BD6A7 /* LessonData.json */,
 				03D35621256AB064006BD6A7 /* rainbowlake.jpg */,
-				03D35640256AB396006BD6A7 /* TopicData.json */,
+				031BB055256C02950048F2C6 /* LessonData.json */,
+				031BB061256C09D50048F2C6 /* SubjectData.json */,
 				03D35624256AB064006BD6A7 /* silversalmoncreek.jpg */,
 				03D3561C256AB064006BD6A7 /* stmarylake.jpg */,
 				03D3561B256AB064006BD6A7 /* turtlerock.jpg */,
@@ -239,18 +239,18 @@
 				03D35628256AB064006BD6A7 /* twinlake.jpg in Resources */,
 				03D35630256AB064006BD6A7 /* lakemcdonald.jpg in Resources */,
 				03D35629256AB064006BD6A7 /* turtlerock.jpg in Resources */,
-				03D35641256AB396006BD6A7 /* TopicData.json in Resources */,
 				03D3562C256AB064006BD6A7 /* chincoteague.jpg in Resources */,
 				0336AC8B256A50B800951BF9 /* Assets.xcassets in Resources */,
 				03D3562D256AB064006BD6A7 /* charleyrivers.jpg in Resources */,
 				03D35633256AB064006BD6A7 /* icybay.jpg in Resources */,
 				0385AE38256BC9A500B16056 /* rate.png in Resources */,
+				031BB056256C02950048F2C6 /* LessonData.json in Resources */,
+				031BB062256C09D50048F2C6 /* SubjectData.json in Resources */,
 				0385AE35256BAA0100B16056 /* Map.png in Resources */,
 				03D35634256AB064006BD6A7 /* chilkoottrail.jpg in Resources */,
 				03D35627256AB064006BD6A7 /* hiddenlake.jpg in Resources */,
 				0336AC89256A50B500951BF9 /* Main.storyboard in Resources */,
 				03D3562A256AB064006BD6A7 /* stmarylake.jpg in Resources */,
-				03D35647256AB720006BD6A7 /* LessonData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +264,7 @@
 				0385AE3B256BD68000B16056 /* LessonViewController.swift in Sources */,
 				0336AC84256A50B500951BF9 /* ARViewController.swift in Sources */,
 				039A7623256B9E5F0033E5A7 /* SubjectViewController.swift in Sources */,
-				03D35644256AB415006BD6A7 /* Topic.swift in Sources */,
+				03D35644256AB415006BD6A7 /* Subject.swift in Sources */,
 				039A761B256B89A50033E5A7 /* SketchShadow.swift in Sources */,
 				0385AE41256BF93000B16056 /* CoachingOverlay.swift in Sources */,
 				03D35616256AB024006BD6A7 /* Data.swift in Sources */,

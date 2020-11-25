@@ -10,7 +10,8 @@ import CoreLocation
 import UIKit
 import SwiftUI
 
-let topicData: [Topic] = load("TopicData.json")
+//主题 课程
+let subjectData: [Subject] = load("SubjectData.json")
 let lessonData: [Lesson] = load("LessonData.json")
 
 func load<T: Decodable>(_ filename: String) -> T {

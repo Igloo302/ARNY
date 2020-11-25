@@ -49,11 +49,6 @@ class MainViewController: UIViewController {
 //            y: 20,
 //            blur: 30,
 //            spread: 0)
-        
-        //输出json数据
-        print(topicData)
-        print(lessonData)
-        
     }
     
     @objc func startARMode(){

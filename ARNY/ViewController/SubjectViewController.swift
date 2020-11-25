@@ -28,12 +28,12 @@ class SubjectViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         // 配置手势
-        let tapToLesson = UITapGestureRecognizer(target: self, action: #selector(startLessonView))
-        tapToLesson.numberOfTapsRequired = 1
-        lessonCard1.addGestureRecognizer(tapToLesson)
-        lessonCard2.addGestureRecognizer(tapToLesson)
-        lessonCard3.addGestureRecognizer(tapToLesson)
+        lessonCard1.addGestureRecognizer(setGestureRecognizer())
+        lessonCard2.addGestureRecognizer(setGestureRecognizer())
+        lessonCard3.addGestureRecognizer(setGestureRecognizer())
     }
+    
+    // MARK: - UI Interaction
     
     @IBAction func buttonBack(_ sender: Any) {
         //self.dismiss(animated: true, completion:nil)
@@ -62,7 +62,14 @@ class SubjectViewController: UIViewController {
         self.navigationController?.pushViewController(newVC, animated: true)
     }
     
-    
+    func setGestureRecognizer() -> UITapGestureRecognizer {
+
+            var Recognizer = UITapGestureRecognizer()
+
+            Recognizer = UITapGestureRecognizer (target: self, action: #selector(startLessonView))
+            Recognizer.numberOfTapsRequired = 1
+            return Recognizer
+        }
     
     @objc func startLessonView(){
         print("启动Lesson View")

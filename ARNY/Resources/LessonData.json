@@ -1,74 +1,235 @@
-[
-    {
-        "name": "Why You Should Wear A Mask",
-        "category": "Health",
-        "id": 1001,
-        "isNew": false,
-        "isWithAR": true,
-        "intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
-        "imageName": "turtlerock",
-        "score": 4.5,
-        "relatedLessons":[
-            {
-                "id":1002
-            },
-            {
-                "id":1003
-            },
-            {
-                "id":1004
-            }
-        ]
-    },
-    {
-        "name": "How Engine Work",
-        "category": "Tech",
-        "id": 1002,
-        "isNew": true,
-        "isWithAR": true,
-        "intro": "Get active on your off days and challenge your friends. Get active on your off days and challenge your friends.",
-        "imageName": "rainbowlake",
-        "score": 4.5,
-        "relatedLessons":[
-            {
-                "id":1003
-            },
-            {
-                "id":1004
-            }
-        ]
-    },
-    {
-        "name": "How To Make Plastic",
-        "category": "Health",
-        "id": 1003,
-        "isNew": true,
-        "isWithAR": true,
-        "intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
-        "imageName": "twinlake",
-        "score": 4.5,
-        "relatedLessons":[
-            {
-                "id":1002
-            }
-        ]
-    },
-    {
-        "name": "How Camera Works",
-        "category": "Tech",
-        "id": 1004,
-        "isNew": true,
-        "isWithAR": true,
-        "intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
-        "imageName": "umbagog",
-        "score": 4.5,
-        "relatedLessons":[
-            {
-                "id":1001
-            },
-            {
-                "id":1003
-            }
-        ]
-    }
-]
+[{
+	"name": "How to put on and take off a mask",
+	"category": "Health",
+	"id": 1000,
+	"isNew": false,
+	"isWithAR": true,
+	"isWithSteps": true,
+	"intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
+	"imageName": "turtlerock",
+	"score": 4.5,
+	"relatedLessons": [{
+		"id": 1002
+	}, {
+		"id": 1003
+	}, {
+		"id": 1004
+	}],
+	"points": [{
+		"name": "Clean your hands 清洁双手",
+		"id": 2001,
+		"isNew": false,
+		"isWithAR": true,
+		"detail": "Before touching the mask, clean your hands with an alcohol-based hand rub or soap and water.  在触摸面罩之前，请用酒精洗手液或肥皂和水清洁双手。\n\n在触摸面罩之前，请用酒精洗手液或肥皂和水清洁双手。",
+		"imageName": "turtlerock",
+		"imageNameForBasic": "turtlerock"
+	}, {
+		"name": "Inspect the mask 检查口罩",
+		"id": 2002,
+		"isNew": false,
+		"isWithAR": true,
+		"detail": "Inspect the mask for tears or holes; do not use a mask that has previously been worn or is damaged.  检查面罩是否有破损或孔洞；不要使用以前佩戴过或损坏的面罩。",
+		"imageName": "turtlerock",
+		"imageNameForBasic": "hiddenlake"
+	}, {
+		"name": "Verify which side is the top 确认顶部",
+		"id": 2003,
+		"isNew": false,
+		"isWithAR": true,
+		"detail": "Verify which side is the top – this is usually where the metal strip is. \n确认哪边是顶部——这通常是金属条的位置。",
+		"imageName": "turtlerock",
+		"imageNameForBasic": "turtlerock"
+	}, {
+		"name": "Identify the inside 确认内部",
+		"id": 2004,
+		"isNew": false,
+		"isWithAR": true,
+		"detail": "Then, identify the inside of the mask, which is usually the white side. \n然后，确定口罩的内部，通常是白色的一面。",
+		"imageName": "turtlerock",
+		"imageNameForBasic": "turtlerock"
+	}, {
+		"name": "Adjust the mask 佩戴口罩",
+		"id": 2005,
+		"isNew": false,
+		"isWithAR": true,
+		"detail": "Place the mask on your face covering your nose, mouth and chin, making sure that there are no gaps between your face and the mask. Place the straps behind the head or ears. 将口罩放在脸上，遮住鼻子、嘴和下巴，确保脸和口罩之间没有缝隙。将带子放在头部或耳朵后面。",
+		"imageName": "turtlerock",
+		"imageNameForBasic": "turtlerock"
+	}, {
+		"name": "Pinch the metal strip 调整金属条",
+		"id": 2006,
+		"isNew": false,
+		"isWithAR": true,
+		"detail": "Pinch the metal strip so it moulds to the shape of your nose. 捏住金属条，使其与你的鼻子形状相吻合。",
+		"imageName": "turtlerock",
+		"imageNameForBasic": "turtlerock"
+	}, {
+		"name": "Do not touch the front 不要触碰口罩前部",
+		"id": 2007,
+		"isNew": false,
+		"isWithAR": true,
+		"detail": "Remember, do not touch the front of the mask while using it to avoid contamination; if you accidentally touch it, clean your hands.   切记，在使用口罩时，不要触摸口罩的正面，以免造成污染；如果不小心触摸到口罩，请清洁双手。 ",
+		"imageName": "turtlerock",
+		"imageNameForBasic": "turtlerock"
+	}]
+}, {
+	"name": "Why You Should Wear A Mask",
+	"category": "Health",
+	"id": 1001,
+	"isNew": false,
+	"isWithAR": true,
+	"isWithSteps": true,
+	"intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
+	"imageName": "turtlerock",
+	"score": 4.5,
+	"relatedLessons": [{
+		"id": 1002
+	}, {
+		"id": 1003
+	}, {
+		"id": 1004
+	}],
+	"points": [{
+		"name": "洗手",
+		"id": 2001,
+		"isNew": false,
+		"isWithAR": true,
+		"detail": "先需要洗手20分钟",
+		"imageName": "turtlerock",
+		"imageNameForBasic": "turtlerock"
+	}, {
+		"name": "泡脚",
+		"id": 2002,
+		"isNew": false,
+		"isWithAR": true,
+		"detail": "先需要泡脚20分钟",
+		"imageName": "turtlerock",
+		"imageNameForBasic": "turtlerock"
+	}, {
+		"name": "搓澡",
+		"id": 2003,
+		"isNew": false,
+		"isWithAR": true,
+		"detail": "先需要搓澡20分钟",
+		"imageName": "turtlerock",
+		"imageNameForBasic": "turtlerock"
+	}]
+}, {
+	"name": "How Engine Work",
+	"category": "Tech",
+	"id": 1002,
+	"isNew": true,
+	"isWithAR": true,
+	"isWithSteps": false,
+	"intro": "Get active on your off days and challenge your friends. Get active on your off days and challenge your friends.",
+	"imageName": "rainbowlake",
+	"score": 4.5,
+	"relatedLessons": [{
+		"id": 1003
+	}, {
+		"id": 1004
+	}],
+	"points": [{
+		"name": "洗手",
+		"id": 2001,
+		"isNew": false,
+		"isWithAR": true,
+		"detail": "先需要洗手20分钟",
+		"imageName": "turtlerock",
+		"imageNameForBasic": "turtlerock"
+	}, {
+		"name": "泡脚",
+		"id": 2002,
+		"isNew": false,
+		"isWithAR": true,
+		"detail": "先需要泡脚20分钟",
+		"imageName": "turtlerock",
+		"imageNameForBasic": "turtlerock"
+	}, {
+		"name": "搓澡",
+		"id": 2003,
+		"isNew": false,
+		"isWithAR": true,
+		"detail": "先需要搓澡20分钟",
+		"imageName": "turtlerock",
+		"imageNameForBasic": "turtlerock"
+	}]
+}, {
+	"name": "How To Make Plastic",
+	"category": "Health",
+	"id": 1003,
+	"isNew": true,
+	"isWithAR": true,
+	"isWithSteps": false,
+	"intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
+	"imageName": "twinlake",
+	"score": 4.5,
+	"relatedLessons": [{
+		"id": 1002
+	}],
+	"points": [{
+		"name": "洗手",
+		"id": 2001,
+		"isNew": false,
+		"isWithAR": true,
+		"detail": "先需要洗手20分钟",
+		"imageName": "turtlerock",
+		"imageNameForBasic": "turtlerock"
+	}, {
+		"name": "泡脚",
+		"id": 2002,
+		"isNew": false,
+		"isWithAR": true,
+		"detail": "先需要泡脚20分钟",
+		"imageName": "turtlerock",
+		"imageNameForBasic": "turtlerock"
+	}, {
+		"name": "搓澡",
+		"id": 2003,
+		"isNew": false,
+		"isWithAR": true,
+		"detail": "先需要搓澡20分钟",
+		"imageName": "turtlerock",
+		"imageNameForBasic": "turtlerock"
+	}]
+}, {
+	"name": "How Camera Works",
+	"category": "Tech",
+	"id": 1004,
+	"isNew": true,
+	"isWithAR": true,
+	"isWithSteps": false,
+	"intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
+	"imageName": "umbagog",
+	"score": 4.5,
+	"relatedLessons": [{
+		"id": 1001
+	}, {
+		"id": 1003
+	}],
+	"points": [{
+		"name": "洗手",
+		"id": 2001,
+		"isNew": false,
+		"isWithAR": true,
+		"detail": "先需要洗手20分钟",
+		"imageName": "turtlerock",
+		"imageNameForBasic": "turtlerock"
+	}, {
+		"name": "泡脚",
+		"id": 2002,
+		"isNew": false,
+		"isWithAR": true,
+		"detail": "先需要泡脚20分钟",
+		"imageName": "turtlerock",
+		"imageNameForBasic": "turtlerock"
+	}, {
+		"name": "搓澡",
+		"id": 2003,
+		"isNew": false,
+		"isWithAR": true,
+		"detail": "先需要搓澡20分钟",
+		"imageName": "turtlerock",
+		"imageNameForBasic": "turtlerock"
+	}]
+}]
