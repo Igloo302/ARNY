@@ -847,13 +847,13 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLu-pf-jpU">
-                                <rect key="frame" x="0.0" y="159" width="1112" height="675"/>
+                                <rect key="frame" x="44" y="159" width="1024" height="675"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPn-7c-KVV">
-                                        <rect key="frame" x="0.0" y="0.0" width="1112" height="862"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="862"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ly4-Zc-RMF">
-                                                <rect key="frame" x="44" y="0.0" width="1024" height="215"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="215"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7sg-ep-ywp">
                                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="30"/>
@@ -884,10 +884,10 @@
                                                             <constraint firstAttribute="trailing" secondItem="qrI-E0-tdC" secondAttribute="trailing" id="ya7-wm-Pfe"/>
                                                         </constraints>
                                                     </view>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="100" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aEl-mn-aFK">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="100" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aEl-mn-aFK">
                                                         <rect key="frame" x="0.0" y="42" width="1024" height="173"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jlA-qM-VhS">
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jlA-qM-VhS">
                                                             <size key="itemSize" width="128" height="128"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -950,12 +950,10 @@
                                                     <constraint firstAttribute="height" constant="215" id="JcZ-8k-8Xi"/>
                                                     <constraint firstItem="aEl-mn-aFK" firstAttribute="centerX" secondItem="Ly4-Zc-RMF" secondAttribute="centerX" id="PK7-TB-tDn"/>
                                                     <constraint firstItem="7sg-ep-ywp" firstAttribute="centerX" secondItem="Ly4-Zc-RMF" secondAttribute="centerX" id="PPf-SX-sl1"/>
-                                                    <constraint firstItem="aEl-mn-aFK" firstAttribute="leading" secondItem="Ly4-Zc-RMF" secondAttribute="leading" id="aXz-6P-KH3"/>
-                                                    <constraint firstAttribute="trailing" secondItem="7sg-ep-ywp" secondAttribute="trailing" id="cfK-iV-GT1"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xwg-l0-MZP">
-                                                <rect key="frame" x="44" y="215" width="1024" height="215"/>
+                                                <rect key="frame" x="0.0" y="215" width="1024" height="215"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpR-CY-TWZ">
                                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="30"/>
@@ -974,6 +972,7 @@
                                                                 <state key="normal" image="more"/>
                                                                 <connections>
                                                                     <action selector="buttonMore:" destination="KVK-dg-tz9" eventType="touchUpInside" id="BSZ-xp-bgR"/>
+                                                                    <action selector="more1:" destination="f4h-WO-vQG" eventType="touchUpInside" id="flP-jY-h4e"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -982,14 +981,14 @@
                                                             <constraint firstAttribute="bottom" secondItem="9Bj-eX-Nzw" secondAttribute="bottom" id="QTb-6I-n8h"/>
                                                             <constraint firstItem="9Bj-eX-Nzw" firstAttribute="leading" secondItem="wpR-CY-TWZ" secondAttribute="leading" id="VGf-zj-MMO"/>
                                                             <constraint firstItem="9Bj-eX-Nzw" firstAttribute="top" secondItem="wpR-CY-TWZ" secondAttribute="top" id="ZTG-wy-yYF"/>
-                                                            <constraint firstAttribute="trailing" secondItem="nzP-hV-xa5" secondAttribute="trailing" id="ZYt-5q-fVq"/>
+                                                            <constraint firstAttribute="trailing" secondItem="nzP-hV-xa5" secondAttribute="trailing" id="e59-ad-vWi"/>
                                                             <constraint firstItem="nzP-hV-xa5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9Bj-eX-Nzw" secondAttribute="trailing" constant="8" symbolic="YES" id="evf-5o-36M"/>
                                                         </constraints>
                                                     </view>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="200" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Nyt-Un-BuF">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="200" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Nyt-Un-BuF">
                                                         <rect key="frame" x="0.0" y="42" width="1024" height="173"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="S11-sq-Cau">
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="S11-sq-Cau">
                                                             <size key="itemSize" width="128" height="128"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -1051,11 +1050,12 @@
                                                 <constraints>
                                                     <constraint firstItem="Nyt-Un-BuF" firstAttribute="leading" secondItem="xwg-l0-MZP" secondAttribute="leading" id="CD4-cM-yRm"/>
                                                     <constraint firstItem="Nyt-Un-BuF" firstAttribute="centerX" secondItem="xwg-l0-MZP" secondAttribute="centerX" id="Dtl-m3-ISZ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="wpR-CY-TWZ" secondAttribute="trailing" id="Wsq-w2-hGk"/>
                                                     <constraint firstAttribute="height" constant="215" id="eOo-9b-rZb"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="hY3-jd-Pm4">
-                                                <rect key="frame" x="44" y="430" width="1024" height="215"/>
+                                                <rect key="frame" x="0.0" y="430" width="1024" height="215"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlc-23-vpa">
                                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="30"/>
@@ -1074,6 +1074,7 @@
                                                                 <state key="normal" image="more"/>
                                                                 <connections>
                                                                     <action selector="buttonMore:" destination="KVK-dg-tz9" eventType="touchUpInside" id="iTP-h8-LA4"/>
+                                                                    <action selector="more2:" destination="f4h-WO-vQG" eventType="touchUpInside" id="hpH-v2-cef"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -1086,10 +1087,10 @@
                                                             <constraint firstAttribute="trailing" secondItem="Mpk-47-UAi" secondAttribute="trailing" id="tzC-Gb-prc"/>
                                                         </constraints>
                                                     </view>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="300" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ItM-81-1EE">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="300" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ItM-81-1EE">
                                                         <rect key="frame" x="0.0" y="42" width="1024" height="173"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="00t-dl-L3q">
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="00t-dl-L3q">
                                                             <size key="itemSize" width="128" height="128"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -1149,13 +1150,14 @@
                                                     </collectionView>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="zlc-23-vpa" secondAttribute="trailing" id="Ziz-nf-vnc"/>
                                                     <constraint firstItem="ItM-81-1EE" firstAttribute="leading" secondItem="hY3-jd-Pm4" secondAttribute="leading" id="adh-MA-CAo"/>
                                                     <constraint firstAttribute="height" constant="215" id="fbN-QK-tF1"/>
                                                     <constraint firstItem="ItM-81-1EE" firstAttribute="centerX" secondItem="hY3-jd-Pm4" secondAttribute="centerX" id="x69-bG-Fq8"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="XJC-4I-wf7">
-                                                <rect key="frame" x="44" y="645" width="1024" height="215"/>
+                                                <rect key="frame" x="0.0" y="645" width="1024" height="215"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2X-MM-KlW">
                                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="30"/>
@@ -1186,10 +1188,10 @@
                                                             <constraint firstAttribute="bottom" secondItem="pQD-ge-d2u" secondAttribute="bottom" id="q99-o7-NFf"/>
                                                         </constraints>
                                                     </view>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="400" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RbH-ms-DpM">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="400" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RbH-ms-DpM">
                                                         <rect key="frame" x="0.0" y="42" width="1024" height="173"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Et8-Xa-Yca">
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Et8-Xa-Yca">
                                                             <size key="itemSize" width="128" height="128"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -1251,23 +1253,24 @@
                                                 <constraints>
                                                     <constraint firstItem="RbH-ms-DpM" firstAttribute="leading" secondItem="XJC-4I-wf7" secondAttribute="leading" id="Ac7-nG-Fag"/>
                                                     <constraint firstItem="RbH-ms-DpM" firstAttribute="centerX" secondItem="XJC-4I-wf7" secondAttribute="centerX" id="Kf8-ma-IqS"/>
+                                                    <constraint firstAttribute="trailing" secondItem="U2X-MM-KlW" secondAttribute="trailing" id="dMy-6z-xHs"/>
                                                     <constraint firstAttribute="height" constant="215" id="n5J-iz-asU"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="xwg-l0-MZP" firstAttribute="leading" secondItem="uPn-7c-KVV" secondAttribute="leading" constant="44" id="2HY-Jg-cFY"/>
-                                            <constraint firstItem="xwg-l0-MZP" firstAttribute="centerX" secondItem="uPn-7c-KVV" secondAttribute="centerX" id="4Dn-wf-y8P"/>
-                                            <constraint firstItem="XJC-4I-wf7" firstAttribute="leading" secondItem="uPn-7c-KVV" secondAttribute="leading" constant="44" id="9nb-ru-dWf"/>
-                                            <constraint firstItem="hY3-jd-Pm4" firstAttribute="centerX" secondItem="uPn-7c-KVV" secondAttribute="centerX" id="BZb-Nk-Tpe"/>
-                                            <constraint firstItem="XJC-4I-wf7" firstAttribute="centerX" secondItem="uPn-7c-KVV" secondAttribute="centerX" id="PhJ-Tg-Dfd"/>
-                                            <constraint firstItem="Ly4-Zc-RMF" firstAttribute="leading" secondItem="uPn-7c-KVV" secondAttribute="leading" constant="44" id="Q6t-bD-l4L"/>
+                                            <constraint firstAttribute="trailing" secondItem="xwg-l0-MZP" secondAttribute="trailing" id="BO9-o2-Ev7"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ly4-Zc-RMF" secondAttribute="trailing" id="Dlx-DG-9oK"/>
+                                            <constraint firstItem="hY3-jd-Pm4" firstAttribute="leading" secondItem="Ly4-Zc-RMF" secondAttribute="leading" id="OAD-bS-vVj"/>
+                                            <constraint firstItem="Ly4-Zc-RMF" firstAttribute="leading" secondItem="uPn-7c-KVV" secondAttribute="leading" id="Q6t-bD-l4L"/>
+                                            <constraint firstAttribute="trailing" secondItem="XJC-4I-wf7" secondAttribute="trailing" id="SUv-gY-NbM"/>
                                             <constraint firstAttribute="height" constant="862" id="fjS-Qx-dvn"/>
-                                            <constraint firstItem="hY3-jd-Pm4" firstAttribute="leading" secondItem="uPn-7c-KVV" secondAttribute="leading" constant="44" id="gC7-DJ-0uo"/>
                                             <constraint firstItem="xwg-l0-MZP" firstAttribute="top" secondItem="Ly4-Zc-RMF" secondAttribute="bottom" id="gdp-NU-vab"/>
                                             <constraint firstItem="Ly4-Zc-RMF" firstAttribute="top" secondItem="uPn-7c-KVV" secondAttribute="top" id="hyu-Er-9Gj"/>
+                                            <constraint firstItem="xwg-l0-MZP" firstAttribute="leading" secondItem="Ly4-Zc-RMF" secondAttribute="leading" id="oRv-Sc-ajV"/>
+                                            <constraint firstItem="XJC-4I-wf7" firstAttribute="leading" secondItem="Ly4-Zc-RMF" secondAttribute="leading" id="qiB-hf-O3i"/>
                                             <constraint firstItem="hY3-jd-Pm4" firstAttribute="top" secondItem="xwg-l0-MZP" secondAttribute="bottom" id="v0t-g1-f9b"/>
-                                            <constraint firstItem="Ly4-Zc-RMF" firstAttribute="centerX" secondItem="uPn-7c-KVV" secondAttribute="centerX" id="xl4-Bg-yYr"/>
+                                            <constraint firstAttribute="trailing" secondItem="hY3-jd-Pm4" secondAttribute="trailing" id="wqt-LJ-d9v"/>
                                             <constraint firstItem="XJC-4I-wf7" firstAttribute="top" secondItem="hY3-jd-Pm4" secondAttribute="bottom" id="zM6-Jf-Uic"/>
                                         </constraints>
                                     </view>
@@ -1286,7 +1289,7 @@
                         <viewLayoutGuide key="safeArea" id="pH3-2I-SWE"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="VLu-pf-jpU" firstAttribute="trailing" secondItem="pH3-2I-SWE" secondAttribute="trailing" id="Cl6-n4-AA7"/>
+                            <constraint firstItem="VLu-pf-jpU" firstAttribute="trailing" secondItem="pH3-2I-SWE" secondAttribute="trailing" constant="-44" id="Cl6-n4-AA7"/>
                             <constraint firstItem="ccW-7c-rTA" firstAttribute="top" secondItem="pH3-2I-SWE" secondAttribute="top" constant="74" id="XOv-7Q-K5Q">
                                 <variation key="heightClass=compact-widthClass=compact" constant="10"/>
                                 <variation key="heightClass=compact-widthClass=regular" constant="20"/>
@@ -1311,7 +1314,7 @@
                                 <variation key="heightClass=regular-widthClass=compact" constant="5"/>
                             </constraint>
                             <constraint firstAttribute="bottom" secondItem="VLu-pf-jpU" secondAttribute="bottom" id="xMs-XM-ic6"/>
-                            <constraint firstItem="VLu-pf-jpU" firstAttribute="leading" secondItem="pH3-2I-SWE" secondAttribute="leading" id="yOC-Vn-RTk"/>
+                            <constraint firstItem="VLu-pf-jpU" firstAttribute="leading" secondItem="pH3-2I-SWE" secondAttribute="leading" constant="44" id="yOC-Vn-RTk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="DIscover More" id="HHc-aK-Wdg"/>
@@ -1523,6 +1526,9 @@
                             </constraint>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="catNameLabel" destination="6ec-yq-C0q" id="W51-dd-mCN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Rm-uZ-k5i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

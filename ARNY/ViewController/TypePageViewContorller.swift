@@ -15,10 +15,13 @@ class TypePageViewContorller: UIViewController, UICollectionViewDelegate,UIColle
     var images :[String] = [""]
     var lessonNames : [String] = [""]
 
+    @IBOutlet weak var catNameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        catNameLabel.text = category
         
         images.removeAll()
         lessonNames.removeAll()

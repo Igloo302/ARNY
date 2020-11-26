@@ -205,7 +205,21 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate,UIColle
         self.navigationController?.pushViewController(newVC, animated: true)
     }
     
+    @IBAction func more1(_ sender: Any) {// Navigation模式生效
+        //传递lessonID
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let newVC = storyboard.instantiateViewController(withIdentifier: "typeView") as! TypePageViewContorller
+        newVC.category = categorys[1]
+        self.navigationController?.pushViewController(newVC, animated: true)
+    }
     
+    @IBAction func more2(_ sender: Any) {// Navigation模式生效
+        //传递lessonID
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let newVC = storyboard.instantiateViewController(withIdentifier: "typeView") as! TypePageViewContorller
+        newVC.category = categorys[2]
+        self.navigationController?.pushViewController(newVC, animated: true)
+    }
     
     /*
      // MARK: - Navigation
