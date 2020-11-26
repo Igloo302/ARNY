@@ -18,15 +18,29 @@ class LessonViewController: UIViewController {
     @IBOutlet weak var buttonAR: UIButton!
     
     // 课程信息
-    var lessonID:Int = 1000
+    var lessonID:Int = 999
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        initLP()
         // Do any additional setup after loading the view.
         updateUI()
     }
+    
+    func initLP(){
+        // 课程信息初始化
+        if lessonID != 999 {
+            print("从上级页面接收lessonID=", lessonID)
+        } else {
+            lessonID = 1000
+            print("未从上级页面接收到lessonID，设置为默认值1000")
+        }
+        
+        print("当前课程位于",lessonID)
+    }
+    
     
     // MARK: - UI
     

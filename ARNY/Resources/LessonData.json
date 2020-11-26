@@ -232,4 +232,285 @@
 		"imageName": "turtlerock",
 		"imageNameForBasic": "turtlerock"
 	}]
-}]
+}, {
+    "name": "How Animal Works",
+    "category": "Nature",
+    "id": 1004,
+    "isNew": true,
+    "isWithAR": true,
+    "isWithSteps": false,
+    "intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
+    "imageName": "umbagog",
+    "score": 4.5,
+    "relatedLessons": [{
+        "id": 1001
+    }, {
+        "id": 1003
+    }],
+    "points": [{
+        "name": "洗手",
+        "id": 2001,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要洗手20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }, {
+        "name": "泡脚",
+        "id": 2002,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要泡脚20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }, {
+        "name": "搓澡",
+        "id": 2003,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要搓澡20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }]
+}, {
+    "name": "How Animal Works",
+    "category": "Mental",
+    "id": 1004,
+    "isNew": true,
+    "isWithAR": true,
+    "isWithSteps": false,
+    "intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
+    "imageName": "umbagog",
+    "score": 4.5,
+    "relatedLessons": [{
+        "id": 1001
+    }, {
+        "id": 1003
+    }],
+    "points": [{
+        "name": "洗手",
+        "id": 2001,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要洗手20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }, {
+        "name": "泡脚",
+        "id": 2002,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要泡脚20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }, {
+        "name": "搓澡",
+        "id": 2003,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要搓澡20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }]
+}, {
+    "name": "How Animal Works",
+    "category": "Mental",
+    "id": 1004,
+    "isNew": true,
+    "isWithAR": true,
+    "isWithSteps": false,
+    "intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
+    "imageName": "umbagog",
+    "score": 4.5,
+    "relatedLessons": [{
+        "id": 1001
+    }, {
+        "id": 1003
+    }],
+    "points": [{
+        "name": "洗手",
+        "id": 2001,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要洗手20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }, {
+        "name": "泡脚",
+        "id": 2002,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要泡脚20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }, {
+        "name": "搓澡",
+        "id": 2003,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要搓澡20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }]
+}, {
+    "name": "How Animal Works",
+    "category": "Mental",
+    "id": 1004,
+    "isNew": true,
+    "isWithAR": true,
+    "isWithSteps": false,
+    "intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
+    "imageName": "umbagog",
+    "score": 4.5,
+    "relatedLessons": [{
+        "id": 1001
+    }, {
+        "id": 1003
+    }],
+    "points": [{
+        "name": "洗手",
+        "id": 2001,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要洗手20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }, {
+        "name": "泡脚",
+        "id": 2002,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要泡脚20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }, {
+        "name": "搓澡",
+        "id": 2003,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要搓澡20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }]
+}, {
+    "name": "How Works",
+    "category": "Nature",
+    "id": 1004,
+    "isNew": true,
+    "isWithAR": true,
+    "isWithSteps": false,
+    "intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
+    "imageName": "lakemcdonald",
+    "score": 4.5,
+    "relatedLessons": [{
+        "id": 1001
+    }, {
+        "id": 1003
+    }],
+    "points": [{
+        "name": "洗手",
+        "id": 2001,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要洗手20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }, {
+        "name": "泡脚",
+        "id": 2002,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要泡脚20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }, {
+        "name": "搓澡",
+        "id": 2003,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要搓澡20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }]
+}, {
+    "name": "How Works",
+    "category": "Health",
+    "id": 1004,
+    "isNew": true,
+    "isWithAR": true,
+    "isWithSteps": false,
+    "intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
+    "imageName": "lakemcdonald",
+    "score": 4.5,
+    "relatedLessons": [{
+        "id": 1001
+    }, {
+        "id": 1003
+    }],
+    "points": [{
+        "name": "洗手",
+        "id": 2001,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要洗手20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }, {
+        "name": "泡脚",
+        "id": 2002,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要泡脚20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }, {
+        "name": "搓澡",
+        "id": 2003,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要搓澡20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }]
+}, {
+    "name": "How Works",
+    "category": "Health",
+    "id": 1004,
+    "isNew": true,
+    "isWithAR": true,
+    "isWithSteps": false,
+    "intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
+    "imageName": "lakemcdonald",
+    "score": 4.5,
+    "relatedLessons": [{
+        "id": 1001
+    }, {
+        "id": 1003
+    }],
+    "points": [{
+        "name": "洗手",
+        "id": 2001,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要洗手20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }, {
+        "name": "泡脚",
+        "id": 2002,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要泡脚20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }, {
+        "name": "搓澡",
+        "id": 2003,
+        "isNew": false,
+        "isWithAR": true,
+        "detail": "先需要搓澡20分钟",
+        "imageName": "turtlerock",
+        "imageNameForBasic": "turtlerock"
+    }]
+}
+]

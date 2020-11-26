@@ -78,6 +78,15 @@ class MainViewController: UIViewController {
         self.navigationController?.pushViewController(newVC, animated: true)
     }
     
+    @IBAction func buttonMore(_ sender: Any) {
+        print("跳转DisCover View")
+        // performSegue(withIdentifier: "showTypePage", sender: self)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let newVC = storyboard.instantiateViewController(withIdentifier: "discoverView")
+        self.navigationController?.pushViewController(newVC, animated: true)
+    }
+    
     
     /*
      // MARK: - Navigation
