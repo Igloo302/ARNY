@@ -19,6 +19,7 @@ var images2 :[String] = [""]
 var lessonNames2 : [String] = [""]
 
 var imagesD :[String] = [""]
+var lessonCatD: [String] = [""]
 var lessonNamesD : [String] = [""]
 
 
@@ -51,6 +52,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate,UIColle
         lessonNames1.removeAll()
         lessonNames2.removeAll()
         lessonNamesD.removeAll()
+        lessonCatD.removeAll()
         
         for lesson in lessonData {
             switch lesson.category {
@@ -72,6 +74,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate,UIColle
             default:
                 do {
                     imagesD.append(lesson.imageName)
+                    lessonCatD.append(lesson.category)
                     lessonNamesD.append(lesson.name)
                 }
             }
@@ -147,6 +150,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate,UIColle
             
             return cell
         default:
+            // 其他类型
             let cellIdentifier = "lessonCell"
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
             
@@ -156,7 +160,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate,UIColle
             imageView.contentMode = .scaleAspectFill
             
             let lessonCatLabel = cell.viewWithTag(2) as! UILabel
-            lessonCatLabel.text = categorys[3]
+            lessonCatLabel.text = lessonCatD[(indexPath as NSIndexPath).row]
             
             let lessonNameLabel = cell.viewWithTag(3) as! UILabel
             lessonNameLabel.text = lessonNamesD[(indexPath as NSIndexPath).row]

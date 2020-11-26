@@ -9,6 +9,9 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    // 主题栏
+    @IBOutlet weak var subjectStackView: UIStackView!
+    
     @IBOutlet weak var arMode: UIImageView!
     
     @IBOutlet weak var covid19: UIImageView!
@@ -36,10 +39,12 @@ class MainViewController: UIViewController {
         let tapToAR = UITapGestureRecognizer(target: self, action: #selector(startARMode))
         tapToAR.numberOfTapsRequired = 1
         arMode.addGestureRecognizer(tapToAR)
-        
-        let tapToSubject = UITapGestureRecognizer(target: self, action: #selector(startSubjectView))
-        tapToSubject.numberOfTapsRequired = 1
-        covid19.addGestureRecognizer(tapToSubject)
+    
+        // 给每张卡片设置跳转
+        (subjectStackView.viewWithTag(2)!).addGestureRecognizer(setGestureRecognizer())
+        (subjectStackView.viewWithTag(3)!).addGestureRecognizer(setGestureRecognizer())
+        (subjectStackView.viewWithTag(4)!).addGestureRecognizer(setGestureRecognizer())
+        (subjectStackView.viewWithTag(5)!).addGestureRecognizer(setGestureRecognizer())
         
         // 阴影
 //        arMode.layer.applySketchShadow(
@@ -65,7 +70,28 @@ class MainViewController: UIViewController {
         
     }
     
-    @objc func startSubjectView(){
+    
+    
+    @IBAction func buttonMore(_ sender: Any) {
+        print("跳转Discover View")
+        // performSegue(withIdentifier: "showTypePage", sender: self)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let newVC = storyboard.instantiateViewController(withIdentifier: "discoverView")
+        self.navigationController?.pushViewController(newVC, animated: true)
+    }
+    
+    // SubjectStackView跳转
+    func setGestureRecognizer() -> UITapGestureRecognizer {
+
+            var Recognizer = UITapGestureRecognizer()
+
+            Recognizer = UITapGestureRecognizer (target: self, action: #selector(startSubjectView(gesture:)))
+            Recognizer.numberOfTapsRequired = 1
+            return Recognizer
+        }
+    
+    @objc func startSubjectView(gesture:UITapGestureRecognizer){
         print("启动Subject View")
         
 //        // Segue方式跳转
@@ -73,19 +99,25 @@ class MainViewController: UIViewController {
         
         // Navigation模式生效
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var newVC: UIViewController!
-        newVC = (storyboard.instantiateViewController(withIdentifier: "subjectView") )
+        let newVC = (storyboard.instantiateViewController(withIdentifier: "subjectView") ) as! SubjectViewController
+        
+        // 此处写了静态的主题ID
+        switch gesture.view!.tag {
+        case 2:
+            newVC.subjectID = 8001
+        case 3:
+            newVC.subjectID = 8002
+        case 4:
+            newVC.subjectID = 8003
+        case 5:
+            newVC.subjectID = 8004
+        default:
+            newVC.subjectID = 999
+        }
+        
         self.navigationController?.pushViewController(newVC, animated: true)
     }
     
-    @IBAction func buttonMore(_ sender: Any) {
-        print("跳转DisCover View")
-        // performSegue(withIdentifier: "showTypePage", sender: self)
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let newVC = storyboard.instantiateViewController(withIdentifier: "discoverView")
-        self.navigationController?.pushViewController(newVC, animated: true)
-    }
     
     
     /*

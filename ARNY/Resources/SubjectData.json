@@ -6,7 +6,14 @@
         "isNew": false,
         "isWithAR": true,
         "intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
-        "imageName": "turtlerock"
+        "imageName": "turtlerock",
+        "subLessons": [{
+            "id": 1000
+        }, {
+            "id": 1001
+        }, {
+            "id": 1002
+        }]
     },
     {
         "name": "Engine",
@@ -15,24 +22,45 @@
         "isNew": true,
         "isWithAR": true,
         "intro": "Get active on your off days and challenge your friends. Get active on your off days and challenge your friends.",
-        "imageName": "rainbowlake"
+        "imageName": "rainbowlake",
+        "subLessons": [{
+            "id": 1000
+        }, {
+            "id": 1001
+        }, {
+            "id": 1002
+        }]
     },
     {
-        "name": "Plastic",
-        "category": "Health",
+        "name": "Camera",
+        "category": "Tech",
         "id": 8003,
         "isNew": true,
         "isWithAR": true,
         "intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
-        "imageName": "twinlake"
+        "imageName": "twinlake",
+        "subLessons": [{
+            "id": 1000
+        }, {
+            "id": 1009
+        }, {
+            "id": 1002
+        }]
     },
     {
-        "name": "Camera",
+        "name": "Plastic",
         "category": "Tech",
         "id": 8004,
         "isNew": true,
         "isWithAR": true,
         "intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
-        "imageName": "umbagog"
+        "imageName": "umbagog",
+        "subLessons": [{
+            "id": 1000
+        }, {
+            "id": 1001
+        }, {
+            "id": 1002
+        }]
     }
 ]

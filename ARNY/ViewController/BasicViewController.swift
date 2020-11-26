@@ -32,7 +32,8 @@ class BasicViewController: UIViewController {
     
     // 头部
     @IBOutlet weak var buttonAR: UIButton!
-
+    @IBOutlet weak var lessonName: UILabel!
+    
     @IBOutlet weak var infoViewConstraintsButton: NSLayoutConstraint!
     
     override func viewDidLoad() {
@@ -102,7 +103,7 @@ class BasicViewController: UIViewController {
         } else {
             currentPoint = currentLesson.points.first!
             pointID = currentPoint.id
-            print("未从上级页面接收到lessonID，设置为本leeson默认值", pointID)
+            print("未从上级页面接收到pointID，设置为pointID默认值", pointID)
         }
 
         pointsCount = currentLesson.points.count
@@ -118,6 +119,8 @@ class BasicViewController: UIViewController {
     
     func initUI(){
         // 更新UI信息，包括文案、按钮
+        // 标题
+        lessonName.text = currentLesson.name
 
         //隐藏控制栏
         controllStackView.isHidden = true

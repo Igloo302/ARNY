@@ -16,6 +16,11 @@ struct Subject: Hashable, Codable, Identifiable {
     var category: String
     var isNew: Bool
     var isWithAR: Bool
+    var subLessons: [subLesson]
+    
+    struct subLesson: Codable, Hashable {
+        var id: Int
+    }
 }
 
 extension Subject {
