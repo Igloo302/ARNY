@@ -241,13 +241,10 @@
 		0336AC80256A50B500951BF9 /* ARNY */ = {
 			isa = PBXGroup;
 			children = (
+				0336AC81256A50B500951BF9 /* AppDelegate.swift */,
 				03D35618256AB045006BD6A7 /* Resources */,
 				03D35614256AB00D006BD6A7 /* Models */,
-				0336AC85256A50B500951BF9 /* Experience.rcproject */,
-				0336AC87256A50B500951BF9 /* Main.storyboard */,
 				0336AC9C256A5EDE00951BF9 /* ViewController */,
-				0336AC8A256A50B800951BF9 /* Assets.xcassets */,
-				0336AC8C256A50B800951BF9 /* LaunchScreen.storyboard */,
 				0336AC8F256A50B800951BF9 /* Info.plist */,
 			);
 			path = ARNY;
@@ -256,15 +253,13 @@
 		0336AC9C256A5EDE00951BF9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				036EB64F2571038800E12C8E /* StikyNote */,
-				0336AC81256A50B500951BF9 /* AppDelegate.swift */,
+				036EB64F2571038800E12C8E /* ARView */,
 				039A761A256B89A50033E5A7 /* SketchShadow.swift */,
 				0336AC99256A5E0300951BF9 /* MainViewController.swift */,
 				03D3560B256A80D3006BD6A7 /* DiscoverViewController.swift */,
 				039A7617256B86AD0033E5A7 /* TypePageViewContorller.swift */,
 				039A7622256B9E5F0033E5A7 /* SubjectViewController.swift */,
 				0385AE3A256BD68000B16056 /* LessonViewController.swift */,
-				0336AC83256A50B500951BF9 /* ARViewController.swift */,
 				0385AE3D256BEEA800B16056 /* BasicViewController.swift */,
 			);
 			path = ViewController;
@@ -302,9 +297,10 @@
 			path = 1013;
 			sourceTree = "<group>";
 		};
-		036EB64F2571038800E12C8E /* StikyNote */ = {
+		036EB64F2571038800E12C8E /* ARView */ = {
 			isa = PBXGroup;
 			children = (
+				0336AC83256A50B500951BF9 /* ARViewController.swift */,
 				036EB6692571091700E12C8E /* ARViewController+UITextViewDelegate.swift */,
 				0385AE40256BF93000B16056 /* ARViewController+ARCoachingOverlayDelegate.swift */,
 				036EB650257103A700E12C8E /* StikyNoteEntity.swift */,
@@ -316,7 +312,7 @@
 				036EB6632571073800E12C8E /* UIView+Helpers.swift */,
 				036EB66D2571097B00E12C8E /* Keyboard+Helpers.swift */,
 			);
-			path = StikyNote;
+			path = ARView;
 			sourceTree = "<group>";
 		};
 		03D35614256AB00D006BD6A7 /* Models */ = {
@@ -333,6 +329,10 @@
 		03D35618256AB045006BD6A7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0336AC8A256A50B800951BF9 /* Assets.xcassets */,
+				0336AC85256A50B500951BF9 /* Experience.rcproject */,
+				0336AC8C256A50B800951BF9 /* LaunchScreen.storyboard */,
+				0336AC87256A50B500951BF9 /* Main.storyboard */,
 				036EB6012570D21300E12C8E /* 1013 */,
 				036EB5ED2570CFF800E12C8E /* lessonImage */,
 				032833BE256FF8AA000ACAC7 /* 1004 */,
