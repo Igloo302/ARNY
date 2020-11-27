@@ -14,32 +14,29 @@ extension ARViewController: ARCoachingOverlayViewDelegate {
 //        messageLabel.ignoreMessages = true
 //        messageLabel.isHidden = true
 //        restartButton.isHidden = true
+        
+        // Disables user interaction when the coaching overlay activates.
+        view.isUserInteractionEnabled = false
+        
+        // Stops editing of sticky notes if any are being edited when the coaching overlay activates.
+        for stickyNote in stickyNotes where stickyNote.isEditing {
+            stickyNote.shouldAnimate = true
+            stickyNote.isEditing = false
+            guard let stickyView = stickyNote.view else { return }
+            stickyView.textView.dismissKeyboard()
+        }
     }
 
     func coachingOverlayViewDidDeactivate(_ coachingOverlayView: ARCoachingOverlayView) {
 //        messageLabel.ignoreMessages = false
 //        restartButton.isHidden = false
+        
+        // Re-enables user interaction once the coaching overlay deactivates.
+        view.isUserInteractionEnabled = true
     }
 
     func coachingOverlayViewDidRequestSessionReset(_ coachingOverlayView: ARCoachingOverlayView) {
 //        resetTracking()
     }
 
-    func setupCoachingOverlay() {
-        // Set up coaching view
-        coachingOverlay.session = arView.session
-        coachingOverlay.delegate = self
-        coachingOverlay.goal = .tracking
-        // coachingOverlay.goal = .tracking
-        
-        coachingOverlay.translatesAutoresizingMaskIntoConstraints = false
-        arView.addSubview(coachingOverlay)
-        
-        NSLayoutConstraint.activate([
-            coachingOverlay.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            coachingOverlay.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            coachingOverlay.widthAnchor.constraint(equalTo: view.widthAnchor),
-            coachingOverlay.heightAnchor.constraint(equalTo: view.heightAnchor)
-            ])
-    }
 }

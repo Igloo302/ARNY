@@ -52,9 +52,18 @@
 		036EB6472570D62100E12C8E /* 1003-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 036EB6432570D62100E12C8E /* 1003-1.jpeg */; };
 		036EB6482570D62100E12C8E /* 1003-5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 036EB6442570D62100E12C8E /* 1003-5.jpeg */; };
 		036EB64B2570D73D00E12C8E /* engine5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 036EB64A2570D73D00E12C8E /* engine5.jpg */; };
+		036EB651257103A700E12C8E /* StikyNoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EB650257103A700E12C8E /* StikyNoteEntity.swift */; };
+		036EB6552571041500E12C8E /* ScreenSpaceComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EB6542571041500E12C8E /* ScreenSpaceComponent.swift */; };
+		036EB6582571044000E12C8E /* StickyNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EB6572571044000E12C8E /* StickyNoteView.swift */; };
+		036EB65D2571062800E12C8E /* ARViewController+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EB65C2571062800E12C8E /* ARViewController+Gestures.swift */; };
+		036EB661257106C400E12C8E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EB660257106C400E12C8E /* GradientView.swift */; };
+		036EB6642571073800E12C8E /* UIView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EB6632571073800E12C8E /* UIView+Helpers.swift */; };
+		036EB66A2571091700E12C8E /* ARViewController+UITextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EB6692571091700E12C8E /* ARViewController+UITextViewDelegate.swift */; };
+		036EB66E2571097B00E12C8E /* Keyboard+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EB66D2571097B00E12C8E /* Keyboard+Helpers.swift */; };
+		036EB67425710AAD00E12C8E /* ARViewController+OverlayUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EB67325710AAD00E12C8E /* ARViewController+OverlayUI.swift */; };
 		0385AE3B256BD68000B16056 /* LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0385AE3A256BD68000B16056 /* LessonViewController.swift */; };
 		0385AE3E256BEEA800B16056 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0385AE3D256BEEA800B16056 /* BasicViewController.swift */; };
-		0385AE41256BF93000B16056 /* CoachingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0385AE40256BF93000B16056 /* CoachingOverlay.swift */; };
+		0385AE41256BF93000B16056 /* ARViewController+ARCoachingOverlayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0385AE40256BF93000B16056 /* ARViewController+ARCoachingOverlayDelegate.swift */; };
 		039A7618256B86AD0033E5A7 /* TypePageViewContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A7617256B86AD0033E5A7 /* TypePageViewContorller.swift */; };
 		039A761B256B89A50033E5A7 /* SketchShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A761A256B89A50033E5A7 /* SketchShadow.swift */; };
 		039A7623256B9E5F0033E5A7 /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A7622256B9E5F0033E5A7 /* SubjectViewController.swift */; };
@@ -121,9 +130,18 @@
 		036EB6432570D62100E12C8E /* 1003-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1003-1.jpeg"; sourceTree = "<group>"; };
 		036EB6442570D62100E12C8E /* 1003-5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1003-5.jpeg"; sourceTree = "<group>"; };
 		036EB64A2570D73D00E12C8E /* engine5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = engine5.jpg; sourceTree = "<group>"; };
+		036EB650257103A700E12C8E /* StikyNoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StikyNoteEntity.swift; sourceTree = "<group>"; };
+		036EB6542571041500E12C8E /* ScreenSpaceComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSpaceComponent.swift; sourceTree = "<group>"; };
+		036EB6572571044000E12C8E /* StickyNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyNoteView.swift; sourceTree = "<group>"; };
+		036EB65C2571062800E12C8E /* ARViewController+Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+Gestures.swift"; sourceTree = "<group>"; };
+		036EB660257106C400E12C8E /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		036EB6632571073800E12C8E /* UIView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Helpers.swift"; sourceTree = "<group>"; };
+		036EB6692571091700E12C8E /* ARViewController+UITextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+UITextViewDelegate.swift"; sourceTree = "<group>"; };
+		036EB66D2571097B00E12C8E /* Keyboard+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+Helpers.swift"; sourceTree = "<group>"; };
+		036EB67325710AAD00E12C8E /* ARViewController+OverlayUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+OverlayUI.swift"; sourceTree = "<group>"; };
 		0385AE3A256BD68000B16056 /* LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonViewController.swift; sourceTree = "<group>"; };
 		0385AE3D256BEEA800B16056 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
-		0385AE40256BF93000B16056 /* CoachingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachingOverlay.swift; sourceTree = "<group>"; };
+		0385AE40256BF93000B16056 /* ARViewController+ARCoachingOverlayDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+ARCoachingOverlayDelegate.swift"; sourceTree = "<group>"; };
 		039A7617256B86AD0033E5A7 /* TypePageViewContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypePageViewContorller.swift; sourceTree = "<group>"; };
 		039A761A256B89A50033E5A7 /* SketchShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchShadow.swift; sourceTree = "<group>"; };
 		039A7622256B9E5F0033E5A7 /* SubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
@@ -238,6 +256,7 @@
 		0336AC9C256A5EDE00951BF9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				036EB64F2571038800E12C8E /* StikyNote */,
 				0336AC81256A50B500951BF9 /* AppDelegate.swift */,
 				039A761A256B89A50033E5A7 /* SketchShadow.swift */,
 				0336AC99256A5E0300951BF9 /* MainViewController.swift */,
@@ -247,7 +266,6 @@
 				0385AE3A256BD68000B16056 /* LessonViewController.swift */,
 				0336AC83256A50B500951BF9 /* ARViewController.swift */,
 				0385AE3D256BEEA800B16056 /* BasicViewController.swift */,
-				0385AE40256BF93000B16056 /* CoachingOverlay.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -282,6 +300,23 @@
 				036EB62A2570D2D500E12C8E /* 1013-6.jpeg */,
 			);
 			path = 1013;
+			sourceTree = "<group>";
+		};
+		036EB64F2571038800E12C8E /* StikyNote */ = {
+			isa = PBXGroup;
+			children = (
+				036EB6692571091700E12C8E /* ARViewController+UITextViewDelegate.swift */,
+				0385AE40256BF93000B16056 /* ARViewController+ARCoachingOverlayDelegate.swift */,
+				036EB650257103A700E12C8E /* StikyNoteEntity.swift */,
+				036EB6542571041500E12C8E /* ScreenSpaceComponent.swift */,
+				036EB6572571044000E12C8E /* StickyNoteView.swift */,
+				036EB65C2571062800E12C8E /* ARViewController+Gestures.swift */,
+				036EB67325710AAD00E12C8E /* ARViewController+OverlayUI.swift */,
+				036EB660257106C400E12C8E /* GradientView.swift */,
+				036EB6632571073800E12C8E /* UIView+Helpers.swift */,
+				036EB66D2571097B00E12C8E /* Keyboard+Helpers.swift */,
+			);
+			path = StikyNote;
 			sourceTree = "<group>";
 		};
 		03D35614256AB00D006BD6A7 /* Models */ = {
@@ -438,20 +473,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				0385AE3B256BD68000B16056 /* LessonViewController.swift in Sources */,
+				036EB66A2571091700E12C8E /* ARViewController+UITextViewDelegate.swift in Sources */,
 				0336AC84256A50B500951BF9 /* ARViewController.swift in Sources */,
+				036EB661257106C400E12C8E /* GradientView.swift in Sources */,
 				039A7623256B9E5F0033E5A7 /* SubjectViewController.swift in Sources */,
+				036EB65D2571062800E12C8E /* ARViewController+Gestures.swift in Sources */,
 				03D35644256AB415006BD6A7 /* Subject.swift in Sources */,
 				039A761B256B89A50033E5A7 /* SketchShadow.swift in Sources */,
-				0385AE41256BF93000B16056 /* CoachingOverlay.swift in Sources */,
+				036EB6642571073800E12C8E /* UIView+Helpers.swift in Sources */,
+				0385AE41256BF93000B16056 /* ARViewController+ARCoachingOverlayDelegate.swift in Sources */,
 				03D35616256AB024006BD6A7 /* Data.swift in Sources */,
+				036EB651257103A700E12C8E /* StikyNoteEntity.swift in Sources */,
+				036EB66E2571097B00E12C8E /* Keyboard+Helpers.swift in Sources */,
 				039A7618256B86AD0033E5A7 /* TypePageViewContorller.swift in Sources */,
 				0336AC82256A50B500951BF9 /* AppDelegate.swift in Sources */,
+				036EB67425710AAD00E12C8E /* ARViewController+OverlayUI.swift in Sources */,
 				03D3563E256AB33A006BD6A7 /* UserData.swift in Sources */,
 				0336AC86256A50B500951BF9 /* Experience.rcproject in Sources */,
 				0336AC9A256A5E0300951BF9 /* MainViewController.swift in Sources */,
 				03D3560C256A80D3006BD6A7 /* DiscoverViewController.swift in Sources */,
 				03D3564A256AB8D7006BD6A7 /* Lesson.swift in Sources */,
+				036EB6582571044000E12C8E /* StickyNoteView.swift in Sources */,
 				0385AE3E256BEEA800B16056 /* BasicViewController.swift in Sources */,
+				036EB6552571041500E12C8E /* ScreenSpaceComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
