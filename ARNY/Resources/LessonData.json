@@ -222,14 +222,14 @@
         ]
     },
     {
-        "name": "History of the internal combustion engine",
+        "name": "How to Clean a Car Engine",
         "category": "Tech",
         "id": 1003,
         "isNew": false,
-        "isWithAR": true,
+        "isWithAR": false,
         "isWithSteps": false,
-        "intro": "In 1872, American George Brayton invented the first commercial liquid-fueled internal combustion engine. In 1876, Nicolaus Otto, working with Gottlieb Daimler and Wilhelm Maybach, patented the compressed charge, four-stroke cycle engine. In 1879, Karl Benz patented a reliable two-stroke gas engine.",
-        "imageName": "engine.jpeg",
+        "intro": "A clean engine bay can make it easier to conduct repairs or maintenance. If it's been a long time since you cleaned your engine, it may take a bit of time to allow the degreaser to soak through the grime, and a bit of elbow grease to brush off deposits of oil. It is best to clean your engine and engine bay before washing your car, so you can ensure you wash and rinse off any degreaser that may reach painted components. Cleaning the engine regularly will prevent rust from developing. Road grime and salt are the biggest culprits in developing rust, so rinsing the engine bay will prolong the life of your vehicle's engine.\n",
+        "imageName": "engine3.jpg",
         "score": 4.5,
         "relatedLessons": [
             {
@@ -241,70 +241,61 @@
         ],
         "points": [
             {
-                "name": "洗手",
+                "name": "Remove any debris caught in the engine bay",
                 "id": 2001,
                 "isNew": false,
-                "isWithAR": true,
-                "detail": "先需要洗手20分钟",
-                "imageName": "turtlerock.jpg",
-                "imageNameForBasic": "turtlerock.jpg"
+                "isWithAR": false,
+                "detail": "Before you begin cleaning the engine, remove any leaves, grass, twigs or other debris from the engine bay. This debris can become an issue and even cause fires if left to sit on the engine or electrical system long enough.[1]It is common for pine needles and leaves to collect at the bottom of the windshield and then fall into the engine bay.Look for small animal nests, particularly as the weather becomes cooler.",
+                "imageName": "1003-1.jpeg",
+                "imageNameForBasic": "1003-1.jpeg"
             },
             {
-                "name": "洗手",
+                "name": "Protect the electrical system of the car",
                 "id": 2002,
                 "isNew": false,
-                "isWithAR": true,
-                "detail": "先需要洗手20分钟",
-                "imageName": "turtlerock.jpg",
-                "imageNameForBasic": "turtlerock.jpg"
+                "isWithAR": false,
+                "detail": "Different components of the electrical system of the car including the battery needs to be properly covered to prevent any major damages by the water to such components.",
+                "imageName": "engine3.jpg",
+                "imageNameForBasic": "engine3.jpg"
             },
             {
-                "name": "洗手",
+                "name": "Disconnect the battery",
                 "id": 2003,
                 "isNew": false,
-                "isWithAR": true,
-                "detail": "先需要洗手20分钟",
-                "imageName": "turtlerock.jpg",
-                "imageNameForBasic": "turtlerock.jpg"
+                "isWithAR": false,
+                "detail": "Spraying water directly into your engine bay could cause some of the electrical components to arc, blowing fuses or causing other damage. Prevent this by loosening the bolt on the negative terminal on the battery and sliding the ground cable off of the terminal.You may choose to disconnect the positive terminal as well to remove and clean the battery outside of the engine bay.If you leave the battery in the vehicle, tuck the ground cable to the side to prevent it from coming into contact with the terminal.",
+                "imageName": "1003-3.jpeg",
+                "imageNameForBasic": "1003-3.jpeg"
             },
             {
-                "name": "洗手",
+                "name": "Cover exposed wiring or electronics",
                 "id": 2004,
                 "isNew": false,
-                "isWithAR": true,
-                "detail": "先需要洗手20分钟",
-                "imageName": "turtlerock.jpg",
-                "imageNameForBasic": "turtlerock.jpg"
+                "isWithAR": false,
+                "detail": "While your engine is fairly waterproof, wrapping plastic around some electrical components can offer you a higher degree of safety. Cover the spark plug inlets, loose wires and the distributor cap if your vehicle came equipped with one.[3]Small plastic bags or plastic cling wrap work well to offer protection from water.Refer to your vehicle's service manual if you are unsure if it came equipped with a distributor or where to find the spark plug inlets.",
+                "imageName": "1003-4.jpeg",
+                "imageNameForBasic": "1003-4.jpeg"
             },
             {
-                "name": "洗手",
+                "name": "Let the engine run for five minutes",
                 "id": 2005,
                 "isNew": false,
-                "isWithAR": true,
-                "detail": "先需要洗手20分钟",
-                "imageName": "turtlerock.jpg",
-                "imageNameForBasic": "turtlerock.jpg"
-            },
-            {
-                "name": "洗手",
-                "id": 2006,
-                "isNew": false,
-                "isWithAR": true,
-                "detail": "先需要洗手20分钟",
-                "imageName": "turtlerock.jpg",
-                "imageNameForBasic": "turtlerock.jpg"
+                "isWithAR": false,
+                "detail": "Grease on the engine will be much easier to remove when heated. Start the vehicle and allow it to run for five or so minutes. This will allow the engine to get to normal operating temperature and loosen any stuck on grime.\nDon't leave the engine running for too long, or you may burn yourself when you begin to clean again.",
+                "imageName": "1003-5.jpeg",
+                "imageNameForBasic": "1003-5.jpeg"
             }
         ]
     },
     {
-        "name": "HOW DOES AN INTERNAL COMBUSTION ENGINE WORK?",
+        "name": "How does an engine work?",
         "category": "Tech",
         "id": 1004,
         "isNew": true,
-        "isWithAR": true,
+        "isWithAR": false,
         "isWithSteps": false,
         "intro": "Combustion, also known as burning, is the basic chemical process of releasing energy from a fuel and air mixture.  In an internal combustion engine (ICE), the ignition and combustion of the fuel occurs within the engine itself. The engine then partially converts the energy from the combustion to work. The engine consists of a fixed cylinder and a moving piston. The expanding combustion gases push the piston, which in turn rotates the crankshaft. Ultimately, through a system of gears in the powertrain, this motion drives the vehicle’s wheels.",
-        "imageName": "types.png",
+        "imageName": "engine2.jpg",
         "score": 4.5,
         "relatedLessons": [
             {
@@ -316,58 +307,49 @@
         ],
         "points": [
             {
-                "name": "洗手",
+                "name": "Remove any debris caught in the engine bay",
                 "id": 2001,
                 "isNew": false,
-                "isWithAR": true,
-                "detail": "先需要洗手20分钟",
-                "imageName": "turtlerock.jpg",
-                "imageNameForBasic": "turtlerock.jpg"
+                "isWithAR": false,
+                "detail": "Before you begin cleaning the engine, remove any leaves, grass, twigs or other debris from the engine bay. This debris can become an issue and even cause fires if left to sit on the engine or electrical system long enough.[1]It is common for pine needles and leaves to collect at the bottom of the windshield and then fall into the engine bay.Look for small animal nests, particularly as the weather becomes cooler.",
+                "imageName": "1003-1.jpeg",
+                "imageNameForBasic": "1003-1.jpeg"
             },
             {
-                "name": "洗手",
+                "name": "Protect the electrical system of the car",
                 "id": 2002,
                 "isNew": false,
-                "isWithAR": true,
-                "detail": "先需要洗手20分钟",
-                "imageName": "turtlerock.jpg",
-                "imageNameForBasic": "turtlerock.jpg"
+                "isWithAR": false,
+                "detail": "Different components of the electrical system of the car including the battery needs to be properly covered to prevent any major damages by the water to such components.",
+                "imageName": "engine3.jpg",
+                "imageNameForBasic": "engine3.jpg"
             },
             {
-                "name": "洗手",
+                "name": "Disconnect the battery",
                 "id": 2003,
                 "isNew": false,
-                "isWithAR": true,
-                "detail": "先需要洗手20分钟",
-                "imageName": "turtlerock.jpg",
-                "imageNameForBasic": "turtlerock.jpg"
+                "isWithAR": false,
+                "detail": "Spraying water directly into your engine bay could cause some of the electrical components to arc, blowing fuses or causing other damage. Prevent this by loosening the bolt on the negative terminal on the battery and sliding the ground cable off of the terminal.You may choose to disconnect the positive terminal as well to remove and clean the battery outside of the engine bay.If you leave the battery in the vehicle, tuck the ground cable to the side to prevent it from coming into contact with the terminal.",
+                "imageName": "1003-3.jpeg",
+                "imageNameForBasic": "1003-3.jpeg"
             },
             {
-                "name": "洗手",
+                "name": "Cover exposed wiring or electronics",
                 "id": 2004,
                 "isNew": false,
-                "isWithAR": true,
-                "detail": "先需要洗手20分钟",
-                "imageName": "turtlerock.jpg",
-                "imageNameForBasic": "turtlerock.jpg"
+                "isWithAR": false,
+                "detail": "While your engine is fairly waterproof, wrapping plastic around some electrical components can offer you a higher degree of safety. Cover the spark plug inlets, loose wires and the distributor cap if your vehicle came equipped with one.[3]Small plastic bags or plastic cling wrap work well to offer protection from water.Refer to your vehicle's service manual if you are unsure if it came equipped with a distributor or where to find the spark plug inlets.",
+                "imageName": "1003-4.jpeg",
+                "imageNameForBasic": "1003-4.jpeg"
             },
             {
-                "name": "洗手",
+                "name": "Let the engine run for five minutes",
                 "id": 2005,
                 "isNew": false,
-                "isWithAR": true,
-                "detail": "先需要洗手20分钟",
-                "imageName": "turtlerock.jpg",
-                "imageNameForBasic": "turtlerock.jpg"
-            },
-            {
-                "name": "洗手",
-                "id": 2006,
-                "isNew": false,
-                "isWithAR": true,
-                "detail": "先需要洗手20分钟",
-                "imageName": "turtlerock.jpg",
-                "imageNameForBasic": "turtlerock.jpg"
+                "isWithAR": false,
+                "detail": "Grease on the engine will be much easier to remove when heated. Start the vehicle and allow it to run for five or so minutes. This will allow the engine to get to normal operating temperature and loosen any stuck on grime.\nDon't leave the engine running for too long, or you may burn yourself when you begin to clean again.",
+                "imageName": "1003-5.jpeg",
+                "imageNameForBasic": "1003-5.jpeg"
             }
         ]
     },
@@ -378,8 +360,8 @@
         "isNew": true,
         "isWithAR": true,
         "isWithSteps": false,
-        "intro": "Wearing a coronavirus mask is important for helping slow the spread of the virus, especially when you decide to go out. It's also important to know what type of mask you should wear and when it's appropriate to wear them.",
-        "imageName": "types.png",
+        "intro": "A medium apple — with a diameter of about 3 inches (7.6 centimeters) — equals 1.5 cups of fruit. Two cups of fruit daily are recommended on a 2,000-calorie diet.",
+        "imageName": "apple.png",
         "score": 4.5,
         "relatedLessons": [
             {
@@ -453,8 +435,8 @@
         "isNew": false,
         "isWithAR": true,
         "isWithSteps": false,
-        "intro": "Wearing a coronavirus mask is important for helping slow the spread of the virus, especially when you decide to go out. It's also important to know what type of mask you should wear and when it's appropriate to wear them.",
-        "imageName": "types.png",
+        "intro": "A lithium-ion battery or Li-ion battery is a type of rechargeable battery. Lithium-ion batteries are commonly used for portable electronics and electric vehicles and are growing in popularity for military and aerospace applications.\n",
+        "imageName": "battery.png",
         "score": 4.5,
         "relatedLessons": [
             {
@@ -528,8 +510,8 @@
         "isNew": false,
         "isWithAR": true,
         "isWithSteps": false,
-        "intro": "Wearing a coronavirus mask is important for helping slow the spread of the virus, especially when you decide to go out. It's also important to know what type of mask you should wear and when it's appropriate to wear them.",
-        "imageName": "types.png",
+        "intro": "A bomb is an explosive weapon that uses the exothermic reaction of an explosive material to provide an extremely sudden and violent release of energy.",
+        "imageName": "bomb.png",
         "score": 4.5,
         "relatedLessons": [
             {
@@ -603,8 +585,8 @@
         "isNew": true,
         "isWithAR": true,
         "isWithSteps": false,
-        "intro": "Wearing a coronavirus mask is important for helping slow the spread of the virus, especially when you decide to go out. It's also important to know what type of mask you should wear and when it's appropriate to wear them.",
-        "imageName": "types.png",
+        "intro": "A lock is a mechanical or electronic fastening device that is released by a physical object (such as a key, keycard, fingerprint, RFID card, security token, coin, etc.), by supplying secret information (such as a number or letter permutation or password), or by a combination thereof or only being able to be opened from one side such as a door chain.",
+        "imageName": "lock.jpg",
         "score": 4.5,
         "relatedLessons": [
             {
@@ -678,8 +660,8 @@
         "isNew": true,
         "isWithAR": true,
         "isWithSteps": false,
-        "intro": "Wearing a coronavirus mask is important for helping slow the spread of the virus, especially when you decide to go out. It's also important to know what type of mask you should wear and when it's appropriate to wear them.",
-        "imageName": "types.png",
+        "intro": "A dream is a succession of images, ideas, emotions, and sensations that usually occur involuntarily in the mind during certain stages of sleep. The content and purpose of dreams are not fully understood, although they have been a topic of scientific, philosophical and religious interest throughout recorded history. Dream interpretation is the attempt at drawing meaning from dreams and searching for an underlying message. The scientific study of dreams is called oneirology.",
+        "imageName": "dream.jpg",
         "score": 4.5,
         "relatedLessons": [
             {
@@ -748,13 +730,13 @@
     },
     {
         "name": "How Big is the Blue Whale?",
-        "category": "Tech",
+        "category": "Nature",
         "id": 1010,
         "isNew": true,
         "isWithAR": true,
         "isWithSteps": false,
-        "intro": "Wearing a coronavirus mask is important for helping slow the spread of the virus, especially when you decide to go out. It's also important to know what type of mask you should wear and when it's appropriate to wear them.",
-        "imageName": "types.png",
+        "intro": "The blue whale (Balaenoptera musculus) is a marine mammal belonging to the baleen whale suborder Mysticeti. Reaching a maximum confirmed length of 29.9 meters (98 feet) and weight of 173 tonnes (190 tons), it is the largest animal known to have ever existed. The blue whale’s long and slender body can be various shades of grayish-blue dorsally and somewhat lighter underneath.",
+        "imageName": "blue.jpg",
         "score": 4.5,
         "relatedLessons": [
             {
@@ -828,8 +810,8 @@
         "isNew": false,
         "isWithAR": true,
         "isWithSteps": false,
-        "intro": "Wearing a coronavirus mask is important for helping slow the spread of the virus, especially when you decide to go out. It's also important to know what type of mask you should wear and when it's appropriate to wear them.",
-        "imageName": "types.png",
+        "intro": "Photography is the art, application, and the practice of creating durable images by recording light, either electronically by means of an image sensor, or chemically by means of a light-sensitive material such as photographic film. It is employed in many fields of science, manufacturing (e.g., photolithography), and business, as well as its more direct uses for art, film and video production, recreational purposes, hobby, and mass communication.",
+        "imageName": "Photography.jpg",
         "score": 4.5,
         "relatedLessons": [
             {
@@ -904,7 +886,7 @@
         "isWithAR": true,
         "isWithSteps": false,
         "intro": "Computational photography refers to digital image capture and processing techniques that use digital computation instead of optical processes. Computational photography can improve the capabilities of a camera, or introduce features that were not possible at all with film based photography, or reduce the cost or size of camera elements. Examples of computational photography include in-camera computation of digital panoramas,[6] high-dynamic-range images, and light field cameras. Light field cameras use novel optical elements to capture three dimensional scene information which can then be used to produce 3D images, enhanced depth-of-field, and selective de-focusing (or \"post focus\"). Enhanced depth-of-field reduces the need for mechanical focusing systems. All of these features use computational imaging techniques.",
-        "imageName": "types.png",
+        "imageName": "Computational.jpg",
         "score": 4.5,
         "relatedLessons": [
             {
@@ -968,6 +950,147 @@
                 "detail": "先需要洗手20分钟",
                 "imageName": "turtlerock.jpg",
                 "imageNameForBasic": "turtlerock.jpg"
+            }
+        ]
+    },
+    {
+        "name": "How to Feed a Dog - Choosing a Type of Food",
+        "category": "Nature",
+        "id": 1013,
+        "isNew": true,
+        "isWithAR": false,
+        "isWithSteps": false,
+        "intro": "Every dog is different and has different nutritional needs. When feeding your dog, you'll have to consider a variety of factors. Take into account your dog's size and age when finding the right brand of food for him. If you want to make your own dog food, consult your vet first. Decide whether you'll free feed your dog or feed him on a schedule, and establish rules for your dog regarding food and meal times. You may encounter special circumstances, such as sickness and obesity, that will alter how you feed your dog. Talk to your vet if your dog has any special needs so you can meet them accordingly with his diet.",
+        "imageName": "dog.jpg",
+        "score": 4.5,
+        "relatedLessons": [
+            {
+                "id": 1003
+            },
+            {
+                "id": 1004
+            }
+        ],
+        "points": [
+            {
+                "name": "Find food rich in proteins, carbohydrates, and fiber.",
+                "id": 2001,
+                "isNew": false,
+                "isWithAR": true,
+                "detail": "Find food rich in proteins, carbohydrates, and fiber. Dogs need a diet comprised of protein, carbohydrates, and fiber in order to be healthy and happy. As you select your dog food, make sure you choose foods rich in these nutrients.\nAs dogs lived on a diet of protein in the wild, this is the most important ingredient to look for when selecting dog food. Make sure whatever diet you choose is rich in protein. Look for brands of dog food that use real meat products, or incorporate various proteins in your dog's diet. Your dog can eat organ meat, such as heart and liver, which may be cheaper to find if you're making your dog food at home. Carbohydrates are also important to a dog's diet. You can use carbohydrates found in products like wheat, barely, corn and oats. You can also use carbs found in green vegetables like spinach or broccoli. Many commercial dog food brands contain these types of carbs for your dog. Fruits may be used to assure your dog gets enough fiber in his diet. However, check with your vet before feeding your dog fruits. Certain fruits, like grapes, may be poisonous to your dog.",
+                "imageName": "1013-1.jpeg",
+                "imageNameForBasic": "1013-1.jpeg"
+            },
+            {
+                "name": "Read food labels on commercial dog foods",
+                "id": 2002,
+                "isNew": false,
+                "isWithAR": true,
+                "detail": "Read food labels on commercial dog foods. The cheapest way to feed your dog is to go for a commercial brand of dog food. Most commercial dog food brands are made with a combination of protein, fat, and fiber. They are also fortified with the vitamins and minerals your dog needs for his overall health. When selecting a commercial brand of dog food, however, make sure to read the label to make sure the brand is healthy.[2] Look for types of ingredients you recognize, such as specific types of meat and grains. Products with a lot of byproducts listed may not be as healthy for your dog. Avoid food that uses a heavy amount of preservatives. You should also avoid food that does not specify the type of meat used.",
+                "imageName": "1013-2.jpeg",
+                "imageNameForBasic": "1013-2.jpeg"
+            },
+            {
+                "name": "Look for products stamped by the Association of American Feed Control Officials (AAFCO)",
+                "id": 2003,
+                "isNew": false,
+                "isWithAR": true,
+                "detail": "Look for products stamped by the Association of American Feed Control Officials (AAFCO). The Association of American Feed Control Officials controls guidelines regarding how a product can be labeled. A product with a stamp from the AAFCO is more likely to have a honest label. If you want to make sure you're getting a quality product without any hidden ingredients, check for an AAFCO label.[3] Keep in mind an AAFCO label is not foolproof or a guarantee the food is healthy. You should still read ingredient lists, talk to your vet, and look at reviews online before selecting a commercial dog food.",
+                "imageName": "1013-3.jpeg",
+                "imageNameForBasic": "1013-3.jpeg"
+            },
+            {
+                "name": "Avoid certain foods",
+                "id": 2004,
+                "isNew": false,
+                "isWithAR": true,
+                "detail": "If you're making your dog's food at home, or occasionally give your dog table scraps, certain people foods are poisonous to dogs. Make sure to never give your dog any of the following foods:\nRaisins Onion Garlic Yeast dough Sugary foods, which can lead to obesity or teeth problems Chocolate Caffeinated beverages",
+                "imageName": "1013-4.jpeg",
+                "imageNameForBasic": "1013-4.jpeg"
+            },
+            {
+                "name": "Consult your vet if you plan to prepare your dog's food at home",
+                "id": 2005,
+                "isNew": false,
+                "isWithAR": true,
+                "detail": "You can make dog food at home, using household ingredients like meats, fruits, and vegetables. Arguably, a homemade diet could be healthier for your dog as the food may contain less preservative and additives. However, dogs have nutritional needs depending on their size, energy level, and age. You should consult a vet before attempting to make your dog's food at home. You want to make sure your dog is getting all the nutrients for optimal health.[5] Dogs need specific vitamins and minerals in their diet for optimal health. It's a good idea to talk over such requirements with your vet to make sure your choice of homemade dog food gets your dog these nutrients. If your dog has a specific health condition, your vet may want you to supplement your dog's diet with dietary supplements.[6] Eggs can be a good source of homemade protein for your dog, but you should never feed your dog raw eggs.",
+                "imageName": "1013-5.jpeg",
+                "imageNameForBasic": "1013-5.jpeg"
+            },
+            {
+                "name": "Adjust the food type based on your dog's age",
+                "id": 2006,
+                "isNew": false,
+                "isWithAR": true,
+                "detail": "If you have a puppy or an older dog, you may need to get puppy chow or a dog food brand designed for senior dogs. Dogs of these ages have specific dietary needs that cannot be met with regular dog food.[7]Puppies should be fed a combination of wet and dry food. The food should be between 25 and 30% protein. Puppies have a tendency to overeat, so it's a good idea to feed at regular times rather than free feeding. This is particularly true if your puppies are a small breed.If you have an older dog, ask your vet when to begin a senior diet. Bigger breeds of dogs need a senior diet earlier. Very large breeds will need a senior diet as early as 5 years. You will need increased amounts of certain vitamins, like Vitamin E and Beta Carotene, which you can find in some commercial dog foods. Your vet may also prescribe a supplement. Watch out for senior dog foods that contain low amounts of protein. A dog's need for protein does not change as he ages.",
+                "imageName": "1013-6.jpeg",
+                "imageNameForBasic": "1013-6.jpeg"
+            }
+        ]
+    },
+    {
+        "name": "How to Check a Used Car's Engine",
+        "category": "Tech",
+        "id": 1014,
+        "isNew": false,
+        "isWithAR": false,
+        "isWithSteps": true,
+        "intro": "Nobody has ever sold a car because it ran too well, or was too cheap to maintain, and you have to keep that in the back of your mind at all times when looking at used cars, no matter how much you may have fallen in love with it from a distance. However, \"used\" does not mean bad - in fact, even very old cars can still be perfectly sound if well cared for. Before you reach for your wallet, though, you'll want to use your head and make sure you're not making a purchase that you'll immediately regret. First and foremost, you need to look at the engine.\n",
+        "imageName": "engine5.jpg",
+        "score": 4.5,
+        "relatedLessons": [
+            {
+                "id": 1003
+            },
+            {
+                "id": 1004
+            }
+        ],
+        "points": [
+            {
+                "name": "Remove any debris caught in the engine bay",
+                "id": 2001,
+                "isNew": false,
+                "isWithAR": false,
+                "detail": "Before you begin cleaning the engine, remove any leaves, grass, twigs or other debris from the engine bay. This debris can become an issue and even cause fires if left to sit on the engine or electrical system long enough.[1]It is common for pine needles and leaves to collect at the bottom of the windshield and then fall into the engine bay.Look for small animal nests, particularly as the weather becomes cooler.",
+                "imageName": "1003-1.jpeg",
+                "imageNameForBasic": "1003-1.jpeg"
+            },
+            {
+                "name": "Protect the electrical system of the car",
+                "id": 2002,
+                "isNew": false,
+                "isWithAR": false,
+                "detail": "Different components of the electrical system of the car including the battery needs to be properly covered to prevent any major damages by the water to such components.",
+                "imageName": "engine3.jpg",
+                "imageNameForBasic": "engine3.jpg"
+            },
+            {
+                "name": "Disconnect the battery",
+                "id": 2003,
+                "isNew": false,
+                "isWithAR": false,
+                "detail": "Spraying water directly into your engine bay could cause some of the electrical components to arc, blowing fuses or causing other damage. Prevent this by loosening the bolt on the negative terminal on the battery and sliding the ground cable off of the terminal.You may choose to disconnect the positive terminal as well to remove and clean the battery outside of the engine bay.If you leave the battery in the vehicle, tuck the ground cable to the side to prevent it from coming into contact with the terminal.",
+                "imageName": "1003-3.jpeg",
+                "imageNameForBasic": "1003-3.jpeg"
+            },
+            {
+                "name": "Cover exposed wiring or electronics",
+                "id": 2004,
+                "isNew": false,
+                "isWithAR": false,
+                "detail": "While your engine is fairly waterproof, wrapping plastic around some electrical components can offer you a higher degree of safety. Cover the spark plug inlets, loose wires and the distributor cap if your vehicle came equipped with one.[3]Small plastic bags or plastic cling wrap work well to offer protection from water.Refer to your vehicle's service manual if you are unsure if it came equipped with a distributor or where to find the spark plug inlets.",
+                "imageName": "1003-4.jpeg",
+                "imageNameForBasic": "1003-4.jpeg"
+            },
+            {
+                "name": "Let the engine run for five minutes",
+                "id": 2005,
+                "isNew": false,
+                "isWithAR": false,
+                "detail": "Grease on the engine will be much easier to remove when heated. Start the vehicle and allow it to run for five or so minutes. This will allow the engine to get to normal operating temperature and loosen any stuck on grime.\nDon't leave the engine running for too long, or you may burn yourself when you begin to clean again.",
+                "imageName": "1003-5.jpeg",
+                "imageNameForBasic": "1003-5.jpeg"
             }
         ]
     }
