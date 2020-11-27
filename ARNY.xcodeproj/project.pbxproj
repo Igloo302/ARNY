@@ -9,6 +9,18 @@
 /* Begin PBXBuildFile section */
 		031BB056256C02950048F2C6 /* LessonData.json in Resources */ = {isa = PBXBuildFile; fileRef = 031BB055256C02950048F2C6 /* LessonData.json */; };
 		031BB062256C09D50048F2C6 /* SubjectData.json in Resources */ = {isa = PBXBuildFile; fileRef = 031BB061256C09D50048F2C6 /* SubjectData.json */; };
+		032833A3256FEF86000ACAC7 /* Identifyinside.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0328339D256FEF85000ACAC7 /* Identifyinside.jpg */; };
+		032833A4256FEF86000ACAC7 /* putmask.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0328339E256FEF85000ACAC7 /* putmask.jpg */; };
+		032833A5256FEF86000ACAC7 /* washhand.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0328339F256FEF86000ACAC7 /* washhand.jpg */; };
+		032833A6256FEF86000ACAC7 /* rightmask.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 032833A0256FEF86000ACAC7 /* rightmask.jpg */; };
+		032833A7256FEF86000ACAC7 /* donttouch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 032833A1256FEF86000ACAC7 /* donttouch.jpg */; };
+		032833A8256FEF86000ACAC7 /* metalstrip.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 032833A2256FEF86000ACAC7 /* metalstrip.jpg */; };
+		032833AC256FF033000ACAC7 /* checkmask.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 032833AB256FF033000ACAC7 /* checkmask.jpg */; };
+		032833B3256FF335000ACAC7 /* HowSurgicalMasksareMade.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 032833AF256FF334000ACAC7 /* HowSurgicalMasksareMade.jpg */; };
+		032833B4256FF335000ACAC7 /* non-woven-fabrics.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 032833B0256FF334000ACAC7 /* non-woven-fabrics.jpg */; };
+		032833B5256FF335000ACAC7 /* multi-layered.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 032833B1256FF334000ACAC7 /* multi-layered.jpg */; };
+		032833B6256FF335000ACAC7 /* spun-bond.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 032833B2256FF334000ACAC7 /* spun-bond.jpg */; };
+		032833BA256FF5F2000ACAC7 /* types.png in Resources */ = {isa = PBXBuildFile; fileRef = 032833B9256FF5F2000ACAC7 /* types.png */; };
 		0336AC82256A50B500951BF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0336AC81256A50B500951BF9 /* AppDelegate.swift */; };
 		0336AC84256A50B500951BF9 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0336AC83256A50B500951BF9 /* ARViewController.swift */; };
 		0336AC86256A50B500951BF9 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 0336AC85256A50B500951BF9 /* Experience.rcproject */; };
@@ -46,6 +58,18 @@
 /* Begin PBXFileReference section */
 		031BB055256C02950048F2C6 /* LessonData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LessonData.json; sourceTree = "<group>"; };
 		031BB061256C09D50048F2C6 /* SubjectData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SubjectData.json; sourceTree = "<group>"; };
+		0328339D256FEF85000ACAC7 /* Identifyinside.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Identifyinside.jpg; sourceTree = "<group>"; };
+		0328339E256FEF85000ACAC7 /* putmask.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = putmask.jpg; sourceTree = "<group>"; };
+		0328339F256FEF86000ACAC7 /* washhand.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = washhand.jpg; sourceTree = "<group>"; };
+		032833A0256FEF86000ACAC7 /* rightmask.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rightmask.jpg; sourceTree = "<group>"; };
+		032833A1256FEF86000ACAC7 /* donttouch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = donttouch.jpg; sourceTree = "<group>"; };
+		032833A2256FEF86000ACAC7 /* metalstrip.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = metalstrip.jpg; sourceTree = "<group>"; };
+		032833AB256FF033000ACAC7 /* checkmask.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = checkmask.jpg; sourceTree = "<group>"; };
+		032833AF256FF334000ACAC7 /* HowSurgicalMasksareMade.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HowSurgicalMasksareMade.jpg; sourceTree = "<group>"; };
+		032833B0256FF334000ACAC7 /* non-woven-fabrics.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "non-woven-fabrics.jpg"; sourceTree = "<group>"; };
+		032833B1256FF334000ACAC7 /* multi-layered.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "multi-layered.jpg"; sourceTree = "<group>"; };
+		032833B2256FF334000ACAC7 /* spun-bond.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "spun-bond.jpg"; sourceTree = "<group>"; };
+		032833B9256FF5F2000ACAC7 /* types.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = types.png; sourceTree = "<group>"; };
 		0336AC7E256A50B500951BF9 /* ARNY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARNY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0336AC81256A50B500951BF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0336AC83256A50B500951BF9 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +117,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0328339C256FEF7C000ACAC7 /* 1000 */ = {
+			isa = PBXGroup;
+			children = (
+				032833A1256FEF86000ACAC7 /* donttouch.jpg */,
+				0328339D256FEF85000ACAC7 /* Identifyinside.jpg */,
+				032833AB256FF033000ACAC7 /* checkmask.jpg */,
+				032833A2256FEF86000ACAC7 /* metalstrip.jpg */,
+				0328339E256FEF85000ACAC7 /* putmask.jpg */,
+				032833A0256FEF86000ACAC7 /* rightmask.jpg */,
+				0328339F256FEF86000ACAC7 /* washhand.jpg */,
+			);
+			path = 1000;
+			sourceTree = "<group>";
+		};
+		032833AE256FF32A000ACAC7 /* 1001 */ = {
+			isa = PBXGroup;
+			children = (
+				032833AF256FF334000ACAC7 /* HowSurgicalMasksareMade.jpg */,
+				032833B1256FF334000ACAC7 /* multi-layered.jpg */,
+				032833B0256FF334000ACAC7 /* non-woven-fabrics.jpg */,
+				032833B2256FF334000ACAC7 /* spun-bond.jpg */,
+			);
+			path = 1001;
+			sourceTree = "<group>";
+		};
+		032833B8256FF5E8000ACAC7 /* 1002 */ = {
+			isa = PBXGroup;
+			children = (
+				032833B9256FF5F2000ACAC7 /* types.png */,
+			);
+			path = 1002;
+			sourceTree = "<group>";
+		};
+		032833BC256FF6BD000ACAC7 /* 1003 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 1003;
+			sourceTree = "<group>";
+		};
+		032833BE256FF8AA000ACAC7 /* 1004 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 1004;
+			sourceTree = "<group>";
+		};
 		0336AC75256A50B500951BF9 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +226,11 @@
 		03D35618256AB045006BD6A7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				032833BE256FF8AA000ACAC7 /* 1004 */,
+				032833BC256FF6BD000ACAC7 /* 1003 */,
+				032833B8256FF5E8000ACAC7 /* 1002 */,
+				032833AE256FF32A000ACAC7 /* 1001 */,
+				0328339C256FEF7C000ACAC7 /* 1000 */,
 				03D3561F256AB064006BD6A7 /* charleyrivers.jpg */,
 				03D35626256AB064006BD6A7 /* chilkoottrail.jpg */,
 				03D3561E256AB064006BD6A7 /* chincoteague.jpg */,
@@ -232,7 +308,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				032833AC256FF033000ACAC7 /* checkmask.jpg in Resources */,
 				03D35632256AB064006BD6A7 /* silversalmoncreek.jpg in Resources */,
+				032833B4256FF335000ACAC7 /* non-woven-fabrics.jpg in Resources */,
 				0336AC8E256A50B800951BF9 /* LaunchScreen.storyboard in Resources */,
 				03D3562F256AB064006BD6A7 /* rainbowlake.jpg in Resources */,
 				03D35631256AB064006BD6A7 /* umbagog.jpg in Resources */,
@@ -242,14 +320,24 @@
 				03D3562C256AB064006BD6A7 /* chincoteague.jpg in Resources */,
 				0336AC8B256A50B800951BF9 /* Assets.xcassets in Resources */,
 				03D3562D256AB064006BD6A7 /* charleyrivers.jpg in Resources */,
+				032833A4256FEF86000ACAC7 /* putmask.jpg in Resources */,
+				032833A5256FEF86000ACAC7 /* washhand.jpg in Resources */,
+				032833B6256FF335000ACAC7 /* spun-bond.jpg in Resources */,
 				03D35633256AB064006BD6A7 /* icybay.jpg in Resources */,
 				0385AE38256BC9A500B16056 /* rate.png in Resources */,
 				031BB056256C02950048F2C6 /* LessonData.json in Resources */,
 				031BB062256C09D50048F2C6 /* SubjectData.json in Resources */,
+				032833A3256FEF86000ACAC7 /* Identifyinside.jpg in Resources */,
+				032833A8256FEF86000ACAC7 /* metalstrip.jpg in Resources */,
+				032833B3256FF335000ACAC7 /* HowSurgicalMasksareMade.jpg in Resources */,
+				032833BA256FF5F2000ACAC7 /* types.png in Resources */,
 				0385AE35256BAA0100B16056 /* Map.png in Resources */,
 				03D35634256AB064006BD6A7 /* chilkoottrail.jpg in Resources */,
 				03D35627256AB064006BD6A7 /* hiddenlake.jpg in Resources */,
+				032833A7256FEF86000ACAC7 /* donttouch.jpg in Resources */,
 				0336AC89256A50B500951BF9 /* Main.storyboard in Resources */,
+				032833A6256FEF86000ACAC7 /* rightmask.jpg in Resources */,
+				032833B5256FF335000ACAC7 /* multi-layered.jpg in Resources */,
 				03D3562A256AB064006BD6A7 /* stmarylake.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

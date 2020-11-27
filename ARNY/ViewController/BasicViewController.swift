@@ -135,7 +135,7 @@ class BasicViewController: UIViewController {
         pointName.text = currentPoint.name
         pointDetail.text = currentPoint.detail
         
-        imgForBasic.image = UIImage(named: currentPoint.imageNameForBasic + ".jpg")
+        imgForBasic.image = UIImage(named: currentPoint.imageNameForBasic)
         imgForBasic.contentMode = .scaleAspectFill
         
         // point为1时隐藏返回按钮

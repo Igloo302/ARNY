@@ -107,7 +107,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate,UIColle
             
             let imageView = cell.viewWithTag(1) as! UIImageView
             let imageName = images0[(indexPath as NSIndexPath).row]
-            imageView.image = UIImage(named: imageName + ".jpg")
+            imageView.image = UIImage(named: imageName)
             imageView.contentMode = .scaleAspectFill
             
             let lessonCatLabel = cell.viewWithTag(2) as! UILabel
@@ -123,7 +123,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate,UIColle
             
             let imageView = cell.viewWithTag(1) as! UIImageView
             let imageName = images1[(indexPath as NSIndexPath).row]
-            imageView.image = UIImage(named: imageName + ".jpg")
+            imageView.image = UIImage(named: imageName)
             imageView.contentMode = .scaleAspectFill
             
             let lessonCatLabel = cell.viewWithTag(2) as! UILabel
@@ -139,7 +139,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate,UIColle
             
             let imageView = cell.viewWithTag(1) as! UIImageView
             let imageName = images2[(indexPath as NSIndexPath).row]
-            imageView.image = UIImage(named: imageName + ".jpg")
+            imageView.image = UIImage(named: imageName)
             imageView.contentMode = .scaleAspectFill
             
             let lessonCatLabel = cell.viewWithTag(2) as! UILabel
@@ -156,7 +156,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate,UIColle
             
             let imageView = cell.viewWithTag(1) as! UIImageView
             let imageName = imagesD[(indexPath as NSIndexPath).row]
-            imageView.image = UIImage(named: imageName + ".jpg")
+            imageView.image = UIImage(named: imageName)
             imageView.contentMode = .scaleAspectFill
             
             let lessonCatLabel = cell.viewWithTag(2) as! UILabel

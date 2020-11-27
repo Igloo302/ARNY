@@ -7,13 +7,17 @@
         "isWithAR": true,
         "intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
         "imageName": "turtlerock",
-        "subLessons": [{
-            "id": 1000
-        }, {
-            "id": 1001
-        }, {
-            "id": 1002
-        }]
+        "subLessons": [
+            {
+                "id": 1000
+            },
+            {
+                "id": 1001
+            },
+            {
+                "id": 1002
+            }
+        ]
     },
     {
         "name": "Engine",
@@ -21,15 +25,19 @@
         "id": 8002,
         "isNew": true,
         "isWithAR": true,
-        "intro": "Get active on your off days and challenge your friends. Get active on your off days and challenge your friends.",
+        "intro": "An engine or motor is a machine designed to convert one form of energy into mechanical energy. Heat engines, like the internal combustion engine, burn a fuel to create heat which is then used to do work. Electric motors convert electrical energy into mechanical motion, pneumatic motors use compressed air, and clockwork motors in wind-up toys use elastic energy. In biological systems, molecular motors, like myosins in muscles, use chemical energy to create forces and ultimately motion.",
         "imageName": "rainbowlake",
-        "subLessons": [{
-            "id": 1000
-        }, {
-            "id": 1001
-        }, {
-            "id": 1002
-        }]
+        "subLessons": [
+            {
+                "id": 1000
+            },
+            {
+                "id": 1001
+            },
+            {
+                "id": 1002
+            }
+        ]
     },
     {
         "name": "Camera",
@@ -37,15 +45,19 @@
         "id": 8003,
         "isNew": true,
         "isWithAR": true,
-        "intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
+        "intro": "Photography is undoubtedly one of the most important inven­tions in history -- it has truly transformed how people conceive of the world. Now we can \"see\" all sorts of things that are actually many miles -- and years -- away from us. Photography lets us capture moments in time and preserve them for years to come.",
         "imageName": "twinlake",
-        "subLessons": [{
-            "id": 1000
-        }, {
-            "id": 1009
-        }, {
-            "id": 1002
-        }]
+        "subLessons": [
+            {
+                "id": 1000
+            },
+            {
+                "id": 1009
+            },
+            {
+                "id": 1002
+            }
+        ]
     },
     {
         "name": "Plastic",
@@ -53,14 +65,18 @@
         "id": 8004,
         "isNew": true,
         "isWithAR": true,
-        "intro": "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.  WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.",
+        "intro": "With the rapid spread of sensational images and heart-wrenching video clips capturing the physical impacts of marine debris, most of us have been faced with the reality that plastic is the least favorable material for environmental health and longevity.",
         "imageName": "umbagog",
-        "subLessons": [{
-            "id": 1000
-        }, {
-            "id": 1001
-        }, {
-            "id": 1002
-        }]
+        "subLessons": [
+            {
+                "id": 1000
+            },
+            {
+                "id": 1001
+            },
+            {
+                "id": 1002
+            }
+        ]
     }
 ]

@@ -7,7 +7,9 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    
     
     // 主题栏
     @IBOutlet weak var subjectStackView: UIStackView!
@@ -17,6 +19,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var covid19: UIImageView!
     
     @IBOutlet weak var searchBar: UIView!
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -118,7 +122,53 @@ class MainViewController: UIViewController {
         self.navigationController?.pushViewController(newVC, animated: true)
     }
     
+    // MARK: - Collection View
+    let numberOfitems = 10
+    var lessons:[Lesson]!
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        lessons = Array(lessonData.shuffled().prefix(upTo: numberOfitems))
+        
+        return numberOfitems
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cellIdentifier = "lessonCell"
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
+        
+        let imageView = cell.viewWithTag(1) as! UIImageView
+        let imageName = lessons![(indexPath as NSIndexPath).row].imageName
+        imageView.image = UIImage(named: imageName)
+        imageView.contentMode = .scaleAspectFill
+        
+        let lessonCatLabel = cell.viewWithTag(2) as! UILabel
+        lessonCatLabel.text = lessons![(indexPath as NSIndexPath).row].category
+        
+        let lessonNameLabel = cell.viewWithTag(3) as! UILabel
+        lessonNameLabel.text = lessons![(indexPath as NSIndexPath).row].name
+        
+        if (lessons![(indexPath as NSIndexPath).row].isNew) {
+            (cell.viewWithTag(4) as! UIImageView).isHidden = false
+        }
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        
+        let lessonID = lessonData[lessonData.firstIndex(where: {$0.name == (cell?.viewWithTag(3)as! UILabel).text })!].id
+        
+        
+        // Navigation模式生效
+        //传递lessonID
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let newVC = storyboard.instantiateViewController(withIdentifier: "lessonView") as! LessonViewController
+        newVC.lessonID = lessonID
+        print("启动Lesson页面,lessonID:", lessonID)
+        self.navigationController?.pushViewController(newVC, animated: true)
+    }
     
     /*
      // MARK: - Navigation

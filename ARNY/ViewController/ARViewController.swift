@@ -145,7 +145,7 @@ class ARViewController: UIViewController {
         notificationBar.isHidden = false
         notiBarName.text = currentLesson.name
         notiBarCat.text = currentLesson.category
-        notiBarImg.image = UIImage(named: currentLesson.imageName + ".jpg")
+        notiBarImg.image = UIImage(named: currentLesson.imageName)
         notiBarImg.contentMode = .scaleAspectFill
         
         // 延迟5s后消失

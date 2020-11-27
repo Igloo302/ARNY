@@ -69,7 +69,7 @@ class SubjectViewController: UIViewController {
         if !subLessonInfo.isWithAR {
             (lessonCard1.viewWithTag(3) as! UIButton).isHidden = true
         }
-        (lessonCard1.viewWithTag(4) as! UIImageView).image = UIImage(named: subLessonInfo.imageName + ".jpg")
+        (lessonCard1.viewWithTag(4) as! UIImageView).image = UIImage(named: subLessonInfo.imageName)
         (lessonCard1.viewWithTag(4) as! UIImageView).contentMode = .scaleAspectFill
         
         (lessonCard1.viewWithTag(5) as! UITextView).text = subLessonInfo.intro
@@ -83,7 +83,7 @@ class SubjectViewController: UIViewController {
         if !subLessonInfo.isWithAR {
             (lessonCard2.viewWithTag(3) as! UIButton).isHidden = true
         }
-        (lessonCard2.viewWithTag(4) as! UIImageView).image = UIImage(named: subLessonInfo.imageName + ".jpg")
+        (lessonCard2.viewWithTag(4) as! UIImageView).image = UIImage(named: subLessonInfo.imageName)
         (lessonCard2.viewWithTag(4) as! UIImageView).contentMode = .scaleAspectFill
         
         (lessonCard2.viewWithTag(5) as! UITextView).text = subLessonInfo.intro
@@ -97,7 +97,7 @@ class SubjectViewController: UIViewController {
         if !subLessonInfo.isWithAR {
             (lessonCard3.viewWithTag(3) as! UIButton).isHidden = true
         }
-        (lessonCard3.viewWithTag(4) as! UIImageView).image = UIImage(named: subLessonInfo.imageName + ".jpg")
+        (lessonCard3.viewWithTag(4) as! UIImageView).image = UIImage(named: subLessonInfo.imageName)
         (lessonCard3.viewWithTag(4) as! UIImageView).contentMode = .scaleAspectFill
         
         (lessonCard3.viewWithTag(5) as! UITextView).text = subLessonInfo.intro

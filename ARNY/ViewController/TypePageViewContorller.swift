@@ -35,6 +35,8 @@ class TypePageViewContorller: UIViewController, UICollectionViewDelegate,UIColle
         
     }
     
+    // MARK: CollectionView
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
     }
@@ -45,7 +47,7 @@ class TypePageViewContorller: UIViewController, UICollectionViewDelegate,UIColle
         
         let imageView = cell.viewWithTag(1) as! UIImageView
         let imageName = images[(indexPath as NSIndexPath).row]
-        imageView.image = UIImage(named: imageName + ".jpg")
+        imageView.image = UIImage(named: imageName)
         imageView.contentMode = .scaleAspectFill
         
         let lessonCatLabel = cell.viewWithTag(2) as! UILabel

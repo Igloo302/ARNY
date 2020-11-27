@@ -51,7 +51,7 @@ class LessonViewController: UIViewController {
         lessonCat.text = currentLesson.category
         lessonName.text = currentLesson.name
         lessonIntro.text = currentLesson.intro
-        lessonImg.image = UIImage(named: currentLesson.imageName + ".jpg")
+        lessonImg.image = UIImage(named: currentLesson.imageName)
         lessonImg.contentMode = .scaleAspectFill
         
         // isWithAR时展示AR按钮
