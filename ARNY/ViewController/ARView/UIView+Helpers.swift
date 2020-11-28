@@ -23,7 +23,7 @@ extension UIView {
         }.startAnimation()
     }
     
-    // Traverses a UIView's superviews until a superview of the specified type is found
+    // Traverses a UIView's superviews until a superview of the specified type is found 遍历一个UIView的上级视图，直到找到指定类型的超级视图。
     func firstSuperViewOfType<T: UIView>(_ type: T.Type) -> T? {
         var view = self
         while let superview = view.superview {

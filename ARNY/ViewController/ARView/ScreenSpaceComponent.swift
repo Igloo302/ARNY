@@ -3,6 +3,7 @@ See LICENSE folder for this sample’s licensing information.
 
 Abstract:
 A custom component which defines properties and functionality of screen space entities.
+一个自定义组件，定义屏幕空间实体的属性和功能。
 */
 
 import RealityKit
@@ -63,7 +64,7 @@ extension HasScreenSpaceView {
     
     /// - Tag: ScreenSpaceViewAnimatedPositionUpdatesTag
 
-    // Animates the entity's screen space view to the the specified screen location, and updates the shouldAnimate state of the entity.
+    // Animates the entity's screen space view to the the specified screen location, and updates the shouldAnimate state of the entity.将实体的屏幕空间视图动画到指定的屏幕位置，并更新实体的shouldAnimate状态。
     func animateTo(_ point: CGPoint) {
 
         let animator = UIViewPropertyAnimator(duration: 0.3, curve: .linear) {
@@ -83,13 +84,14 @@ extension HasScreenSpaceView {
         animator.startAnimation()
     }
     
-    // Updates the screen space position of an entity's screen space view to the current projection.
+    // Updates the screen space position of an entity's screen space view to the current projection. 将实体的屏幕空间视图的屏幕空间位置更新为当前投影。
     func updateScreenPosition() {
         guard let projection = projection else { return }
         let projectedPoint = projection.projectedPoint
         // Hides the sticky note if it can not visible from the current point of view
         isEnabled = projection.isVisible
         view?.isHidden = !isEnabled
+
 
         if shouldAnimate {
             animateTo(projectedPoint)

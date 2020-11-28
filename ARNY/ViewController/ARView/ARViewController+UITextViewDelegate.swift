@@ -16,7 +16,6 @@ extension ARViewController: UITextViewDelegate {
         // Get the main view for this sticky note.
         guard let stickyView = textView.firstSuperViewOfType(StickyNoteView.self) else { return }
         // ...
-        //messageLabel.isHidden = true
         // Fade out the user interface when editting a sticky note.
         trashZone.fadeOut(duration: 0.3)
         
@@ -24,7 +23,8 @@ extension ARViewController: UITextViewDelegate {
         for note in stickyNotes where note.isDragging { note.screenSpaceComponent.isDragging = false }
         
         // If the sticky note being edited has placeholder text, then clear it.
-        clearPlaceholderText(stickyView, textView)
+        // 去掉之后可以保留初始文本
+        //clearPlaceholderText(stickyView, textView)
         
         // Bring the sticky note being edited to the front.
         arView.insertSubview(stickyView, belowSubview: trashZone)

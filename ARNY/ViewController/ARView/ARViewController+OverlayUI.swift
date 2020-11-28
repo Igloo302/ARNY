@@ -26,6 +26,9 @@ extension ARViewController {
         // Adding the ARCoachingOverlayView, which helps guide users to establish tracking.
         addCoachingOverlay()
         
+        // 添加顶部的按钮下的阴影
+        setupTopMaskZone()
+        
     }
     
     fileprivate func setupShadeView() {
@@ -96,5 +99,18 @@ extension ARViewController {
         coachingOverlay.goal = .tracking
         coachingOverlay.session = arView.session
         coachingOverlay.delegate = self
+    }
+    
+    fileprivate func setupTopMaskZone() {
+        topMaskZone = GradientView(topColor: UIColor.white.withAlphaComponent(0.7).cgColor, bottomColor: UIColor.white.withAlphaComponent(0).cgColor)
+        topMaskZone.translatesAutoresizingMaskIntoConstraints = false
+        arView.addSubview(topMaskZone)
+        NSLayoutConstraint.activate([
+            topMaskZone.topAnchor.constraint(equalTo: arView.topAnchor),
+            topMaskZone.leadingAnchor.constraint(equalTo: arView.leadingAnchor),
+            topMaskZone.trailingAnchor.constraint(equalTo: arView.trailingAnchor),
+            topMaskZone.heightAnchor.constraint(equalTo: arView.heightAnchor, multiplier: 105/834)
+        ])
+        topMaskZone.alpha = 0
     }
 }

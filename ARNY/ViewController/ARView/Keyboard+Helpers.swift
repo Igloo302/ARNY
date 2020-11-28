@@ -29,6 +29,7 @@ extension ARViewController {
 extension UITextView {
     
     // Adds a UIToolbar with a dismiss button as UITextView's inputAccesssoryView (which appears on top of the keyboard)
+    // 添加一个带有删除按钮的UIToolbar作为UITextView的inputAccesssoryView（它出现在键盘顶部）。
     func addDismissButton() {
         let dismissToolbar = UIToolbar(frame: CGRect(origin: .zero, size: CGSize(width: UIScreen.main.bounds.width, height: 44)))
         dismissToolbar.barStyle = .default

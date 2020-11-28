@@ -63,5 +63,15 @@
     "libraryIdentifier" : "6dd259465138547009bd9a40c681a57a",
     "format" : "audio",
     "displayName" : "洗手.m4a"
+  },
+  {
+    "libraryIdentifier" : "3827463edd629e694353d69d8adc2a3a",
+    "format" : "arObject",
+    "displayName" : "口罩包装盒.arobject"
+  },
+  {
+    "libraryIdentifier" : "936a4f912b26c1bfa6fc6f11d51150a2",
+    "format" : "arObject",
+    "displayName" : "口罩盒子.arobject"
   }
 ]

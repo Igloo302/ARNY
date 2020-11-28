@@ -121,8 +121,20 @@ class SubjectViewController: UIViewController {
         
         // Navigation模式生效
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var newVC: UIViewController!
-        newVC = (storyboard.instantiateViewController(withIdentifier: "arMode") )
+        let newVC = (storyboard.instantiateViewController(withIdentifier: "arMode") ) as! ARViewController
+    
+        //傻不拉几的区分方法
+        switch (sender as! UIButton).tag {
+        case 13:
+            newVC.lessonID = currentSubject.subLessons[0].id
+        case 23:
+            newVC.lessonID = currentSubject.subLessons[1].id
+        case 33:
+            newVC.lessonID = currentSubject.subLessons[2].id
+        default:
+            newVC.lessonID = 999
+        }
+        
         self.navigationController?.pushViewController(newVC, animated: true)
     }
     

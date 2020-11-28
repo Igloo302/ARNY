@@ -3,6 +3,7 @@ See LICENSE folder for this sample’s licensing information.
 
 Abstract:
 A view used as the background for the AR screen space annotation.
+作为AR屏幕空间标注背景的视图。
 */
 import UIKit
 

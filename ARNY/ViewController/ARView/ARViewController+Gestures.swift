@@ -23,8 +23,9 @@ extension ARViewController {
     }
     
     func stickyNoteGestureSetup(_ note: StickyNoteEntity) {
-        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panOnStickyView))
-        note.view?.addGestureRecognizer(panGesture)
+        // 拖动关掉了
+//        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panOnStickyView))
+//        note.view?.addGestureRecognizer(panGesture)
         
         let tapOnStickyView = UITapGestureRecognizer(target: self, action: #selector(tappedOnStickyView(_:)))
         note.view?.addGestureRecognizer(tapOnStickyView)
@@ -41,7 +42,18 @@ extension ARViewController {
         for note in stickyNotes where note.isEditing { return }
         
         // Create a new sticky note at the tap location.
-        insertNewSticky(sender, lesson1000Anchor.bubble1000!)
+        //insertNewSticky(lesson1000Anchor.bubble1000!)
+        
+        
+        // 点击的时候展示Entity的Name
+        let tapLocation = sender.location(in: arView)
+        
+        if let entityTapped = arView.entity(at: tapLocation) {
+            print(entityTapped.name)
+        }
+        
+        // Add interaciton code here
+        
     }
     
 //    /**
@@ -89,21 +101,29 @@ extension ARViewController {
     Hit test the feature point cloud and use any hit as the position of a new StickyNote. Otherwise, display a tip.
      - Tag: ScreenSpaceViewInsertionTag
      */
-    fileprivate func insertNewSticky(_ sender: UITapGestureRecognizer, _ entity: Entity) {
+    func insertNewSticky(_ entity: Entity) {
         
         // Create a new sticky note positioned at the hit test result's world position.
         let frame = CGRect(origin: CGPoint(x: 0,y: 0), size: CGSize(width: 150, height: 50))
 
         let note = StickyNoteEntity(frame: frame, worldTransform: entity.transform.matrix)
         
-
         // Center the sticky note's view on the tap's screen location.
         //note.setPositionCenter(touchLocation)
 
         // Add the sticky note to the scene's entity hierarchy.
         // arView.scene.addAnchor(note)
-        lesson1000Anchor.addChild(note)
-
+        entity.parent?.addChild(note)
+        
+        // 取个名字用于之后找回，label+xxxx
+        note.name = "label" + entity.name
+        
+        // 标签上的文字更改一下
+        note.view?.textView.text = entity.accessibilityLabel!
+        
+        if entity.accessibilityDescription != nil {
+            note.view?.textView.text =  entity.accessibilityLabel! + "\n" + entity.accessibilityDescription!
+        }
         // Add the sticky note's view to the view hierarchy.
         guard let stickyView = note.view else { return }
         arView.insertSubview(stickyView, belowSubview: trashZone)
@@ -116,6 +136,10 @@ extension ARViewController {
         
         // Volunteer to handle text view callbacks.
         stickyView.textView.delegate = self
+    }
+    
+    func removeSticky(_ entity: Entity) {
+        
     }
 
     /// Dismisses the keyboard.
@@ -140,9 +164,8 @@ extension ARViewController {
         stickyView.textView.becomeFirstResponder()
     }
     //- Tag: PanOnStickyView
+    // 拖动标签🏷️
     fileprivate func panStickyNote(_ sender: UIPanGestureRecognizer, _ stickyView: StickyNoteView, _ panLocation: CGPoint) {
-        //messageLabel.isHidden = true
-        
         let feedbackGenerator = UIImpactFeedbackGenerator()
         
         switch sender.state {
@@ -209,7 +232,18 @@ extension ARViewController {
         note.view?.isInTrashZone = false
     }
     
+    func deleteStickyNote(of entity: Entity) {
+        let noteName = "label" + entity.name
+        guard let index = stickyNotes.firstIndex(where: {$0.name == noteName}) else { return }
+        let note  = stickyNotes[index]
+        note.removeFromParent()
+        stickyNotes.remove(at: index)
+        note.view?.removeFromSuperview()
+        note.view?.isInTrashZone = false
+    }
+    
     /// - Tag: AttemptRepositioning
+    // 拖动标签的时候重新找平面
     fileprivate func attemptRepositioning(_ stickyView: StickyNoteView) {
         // Conducts a ray-cast for feature points using the panned position of the StickyNoteView
         let point = CGPoint(x: stickyView.frame.midX, y: stickyView.frame.midY)

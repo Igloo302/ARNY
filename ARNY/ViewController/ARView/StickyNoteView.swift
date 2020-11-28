@@ -8,6 +8,7 @@ A view used to house the AR screen space annotation.
 import UIKit
 
 /// A subclass of UIView that will be inserted into the scene in "Screen Space", that composes the sticky note's visual appearance.
+/// UIView的一个子类，它将被插入到 "屏幕空间 "的场景中，组成便签的视觉外观。
 class StickyNoteView: UIView {
     var textView: UITextView!
     // ...
@@ -15,7 +16,7 @@ class StickyNoteView: UIView {
     /// Convenience accessor to the StickyNoteView's parent StickyNoteEntity.
     weak var stickyNote: StickyNoteEntity!
     
-    /// Subviews which are used to construct the StickyNoteView.
+    /// Subviews which are used to construct the StickyNoteView. 用于构造StickyNoteView的子视图。
     var blurView: UIVisualEffectView!
     
     /// Indicates whether the sticky note is currently inside of the trash zone.
@@ -55,7 +56,7 @@ class StickyNoteView: UIView {
         blurView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         blurView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         blurView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        blurView.layer.cornerRadius = 20
+        blurView.layer.cornerRadius = 5
         blurView.layer.masksToBounds = true
     }
     
@@ -73,10 +74,12 @@ class StickyNoteView: UIView {
         ])
         textView.backgroundColor = .clear
         textView.font = UIFont(name: "Helvetica", size: 22)
-        textView.textAlignment = .left
-        //textView.addDismissButton()
+        textView.textAlignment = .center
+        textView.addDismissButton()
         textView.text = "New Note..."
-        textView.textColor = .darkGray
+        
+        //textView.textColor = .darkGray
+        textView.textColor = .white
     }
     
 }
