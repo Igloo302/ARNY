@@ -40,21 +40,6 @@
     "displayName" : "Map.png"
   },
   {
-    "libraryIdentifier" : "50bf7e0fc0445a0c0196e19ba1eb9fbf",
-    "format" : "model",
-    "displayName" : "洗手液.usdz"
-  },
-  {
-    "libraryIdentifier" : "3f7344ebed79a59311069610210f3533",
-    "format" : "model",
-    "displayName" : "洗手液.usdz"
-  },
-  {
-    "libraryIdentifier" : "fa3c63376301c3277ede213d1ec5dd71",
-    "format" : "model",
-    "displayName" : "MASK.usdz"
-  },
-  {
     "libraryIdentifier" : "27e076d92b07dba8a8d5ebc99fc4f705",
     "format" : "audio",
     "displayName" : "按压洗手液.m4a"
@@ -65,13 +50,88 @@
     "displayName" : "洗手.m4a"
   },
   {
-    "libraryIdentifier" : "3827463edd629e694353d69d8adc2a3a",
-    "format" : "arObject",
-    "displayName" : "口罩包装盒.arobject"
-  },
-  {
     "libraryIdentifier" : "936a4f912b26c1bfa6fc6f11d51150a2",
     "format" : "arObject",
     "displayName" : "口罩盒子.arobject"
+  },
+  {
+    "libraryIdentifier" : "3c4f565abfd9f8eb8279aad25a454af8",
+    "format" : "model",
+    "displayName" : "MASK.usdz"
+  },
+  {
+    "libraryIdentifier" : "5b96ca47b55b1840bc90be804bc8269e",
+    "format" : "model",
+    "displayName" : "N95_MASK.usdz"
+  },
+  {
+    "libraryIdentifier" : "b7ebe2a1e84f19a705b4f0a9b88c744c",
+    "format" : "model",
+    "displayName" : "带呼吸阀口罩.usdz"
+  },
+  {
+    "libraryIdentifier" : "b4bb32a72a78fc1c578230f8b7871521",
+    "format" : "model",
+    "displayName" : "N95_Mask_Low_Res.usdz"
+  },
+  {
+    "libraryIdentifier" : "05a2f328cc60290a15857882972963e1",
+    "format" : "model",
+    "displayName" : "洗手液.usdz"
+  },
+  {
+    "libraryIdentifier" : "c1aedb7d8a883dcd8ba9984ec5ce5602",
+    "format" : "model",
+    "displayName" : "Face_Masks.usdz"
+  },
+  {
+    "libraryIdentifier" : "9b99362e78036b57bb64549185df92dc",
+    "format" : "model",
+    "displayName" : "box.usdz"
+  },
+  {
+    "libraryIdentifier" : "1877b9f69db1c245d721751221dea399",
+    "format" : "model",
+    "displayName" : "mask.usdz"
+  },
+  {
+    "libraryIdentifier" : "e7a51c002517dc1178e2a12ff32ea9d7",
+    "format" : "model",
+    "displayName" : "Disposable_Medical_Masks.usdz"
+  },
+  {
+    "libraryIdentifier" : "048474b3a95874ecbe2a32a9bb4f172a",
+    "format" : "image",
+    "displayName" : "位图.png"
+  },
+  {
+    "libraryIdentifier" : "1f8c0c2572184c805d478598c2e296ce",
+    "format" : "model",
+    "displayName" : "Covid_19_Virus.usdz"
+  },
+  {
+    "libraryIdentifier" : "9bd9edf0dbfd0bc5b5d3375bf91d147f",
+    "format" : "model",
+    "displayName" : "Nose__Blender_Sculpt.usdz"
+  },
+  {
+    "libraryIdentifier" : "9596df5cd9f86c75aa0da8ebf70629f5",
+    "format" : "model",
+    "displayName" : "MASK.usdz"
+  },
+  {
+    "libraryIdentifier" : "b8f7a242f345f28925ea05c4b7b29a16",
+    "format" : "model",
+    "displayName" : "MASK0.usdz"
+  },
+  {
+    "libraryIdentifier" : "e868882feca2d3db6b9862531b8083f9",
+    "format" : "model",
+    "displayName" : "MASK2.usdz"
+  },
+  {
+    "libraryIdentifier" : "4b93fefd4c9cf45bff013eca5268b42f",
+    "format" : "model",
+    "displayName" : "MASK3.usdz"
   }
 ]

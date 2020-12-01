@@ -147,13 +147,13 @@
         ]
     },
     {
-        "name": "Choosing the Right Coronavirus Mask Type",
-        "category": "Tech",
+        "name": "How to Select the Right Coronavirus Mask Type",
+        "category": "Health",
         "id": 1002,
         "isNew": true,
         "isWithAR": true,
         "isWithSteps": false,
-        "intro": "Wearing a coronavirus mask is important for helping slow the spread of the virus, especially when you decide to go out. It's also important to know what type of mask you should wear and when it's appropriate to wear them.",
+        "intro": "Wearing a coronavirus mask is important for helping slow the spread of the virus, especially when you decide to go out. It's also important to know what type of mask you should wear and when it's appropriate to wear them.\n戴冠状病毒口罩对于帮助减缓病毒的传播很重要，尤其是当你决定外出时。同样重要的是，要知道你应该戴什么类型的口罩，以及什么时候戴口罩合适。",
         "imageName": "types.png",
         "score": 4.5,
         "relatedLessons": [
@@ -166,38 +166,38 @@
         ],
         "points": [
             {
-                "name": "洗手",
+                "name": "普通口罩",
                 "id": 2001,
                 "isNew": false,
                 "isWithAR": true,
-                "detail": "先需要洗手20分钟",
+                "detail": "普通口罩，也叫面罩，是一种宽松的一次性装置，在佩戴者的嘴和鼻子周围形成一道物理屏障，隔开周围环境中潜在的污染物。不同的面罩，用途不同，厚度不同，对人的保护效力也不同，佩戴舒适程度也有所差异。\n常见的棉布口罩和海绵口罩构成十分简单，由不同的纤维压制而成，保护效力有限。",
                 "imageName": "turtlerock.jpg",
                 "imageNameForBasic": "turtlerock.jpg"
             },
             {
-                "name": "洗手",
+                "name": "医用外科口罩",
                 "id": 2002,
                 "isNew": false,
                 "isWithAR": true,
-                "detail": "先需要洗手20分钟",
+                "detail": "医用外科口罩是手术室等有体液、血液飞溅风险环境常用的医用口罩，可阻隔血液、体液穿过口罩污染佩戴者，同时对细菌的过滤效率有95%以上，但对颗粒的过滤效率有限，且多为长方形设计，与面部的密合度不如医用防护口罩那么严密。常见的医用外科口罩有绑带式、耳挂式等",
                 "imageName": "turtlerock.jpg",
                 "imageNameForBasic": "turtlerock.jpg"
             },
             {
-                "name": "洗手",
+                "name": "医用外科口罩和一次性使用医用口罩的区别",
                 "id": 2003,
                 "isNew": false,
                 "isWithAR": true,
-                "detail": "先需要洗手20分钟",
+                "detail": "医用外科口罩符合YY 0469-2011《医用外科口罩》医药标准的要求，一次性使用医用口罩符合YY/T 0969-2013《一次性使用医用口罩》的要求。\n两种口罩都要求细菌过滤效率达到95%以上，也就是说两种口罩都明确可以阻隔细菌。但有一个显著的差别是，医用外科口罩对直径0.3μm的非油性颗粒过滤效率超过30%，对血液、体液等飞溅（飞沫）时流体阻力达到120mmHg，但一次性使用医用口罩对此并无要求。这说明，医用外科口罩除了隔离细菌外，还可以隔离血液、体液飞溅及非油性颗粒，而一次性使用医用口罩对血液、体液飞溅及非油性颗粒隔离效果并不可知。",
                 "imageName": "turtlerock.jpg",
                 "imageNameForBasic": "turtlerock.jpg"
             },
             {
-                "name": "洗手",
+                "name": "N95口罩",
                 "id": 2004,
                 "isNew": false,
                 "isWithAR": true,
-                "detail": "先需要洗手20分钟",
+                "detail": "N95口罩符合GB19083-2010 医用防护口罩技术要求。\nN95口罩其实属于呼吸器 (respirator)，呼吸器是一种呼吸防护设备，在设计上相较于普通口罩来说贴合面部更加紧密，可以非常有效地过滤空气中的颗粒物。其中，N表示Not resistant to oil, 可以用于防护非油性悬浮颗粒；95的意思是过滤效率大于等于95%，表明经仔细测试后，这种呼吸器可以阻挡至少95％的非常小的（0.3微米级别）测试颗粒。",
                 "imageName": "turtlerock.jpg",
                 "imageNameForBasic": "turtlerock.jpg"
             },
@@ -226,7 +226,7 @@
         "category": "Tech",
         "id": 1003,
         "isNew": false,
-        "isWithAR": false,
+        "isWithAR": true,
         "isWithSteps": false,
         "intro": "A clean engine bay can make it easier to conduct repairs or maintenance. If it's been a long time since you cleaned your engine, it may take a bit of time to allow the degreaser to soak through the grime, and a bit of elbow grease to brush off deposits of oil. It is best to clean your engine and engine bay before washing your car, so you can ensure you wash and rinse off any degreaser that may reach painted components. Cleaning the engine regularly will prevent rust from developing. Road grime and salt are the biggest culprits in developing rust, so rinsing the engine bay will prolong the life of your vehicle's engine.\n",
         "imageName": "engine3.jpg",
@@ -292,7 +292,7 @@
         "category": "Tech",
         "id": 1004,
         "isNew": true,
-        "isWithAR": false,
+        "isWithAR": true,
         "isWithSteps": false,
         "intro": "Combustion, also known as burning, is the basic chemical process of releasing energy from a fuel and air mixture.  In an internal combustion engine (ICE), the ignition and combustion of the fuel occurs within the engine itself. The engine then partially converts the energy from the combustion to work. The engine consists of a fixed cylinder and a moving piston. The expanding combustion gases push the piston, which in turn rotates the crankshaft. Ultimately, through a system of gears in the powertrain, this motion drives the vehicle’s wheels.",
         "imageName": "engine2.jpg",

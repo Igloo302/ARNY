@@ -32,6 +32,8 @@
 		033A0AD32572B0D8001CD0EA /* Lesson1001.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033A0AD22572B0D8001CD0EA /* Lesson1001.swift */; };
 		0345576A2572343B0057539B /* Lesson1000.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034557692572343B0057539B /* Lesson1000.swift */; };
 		0345576D257234F90057539B /* ARNYthing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0345576C257234F90057539B /* ARNYthing.swift */; };
+		0365F04F2573EFF10024ECB9 /* Lesson1003.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0365F04E2573EFF10024ECB9 /* Lesson1003.swift */; };
+		0365F0552574D8D90024ECB9 /* Lesson1004.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0365F0542574D8D90024ECB9 /* Lesson1004.swift */; };
 		036EB61B2570D2A800E12C8E /* battery.png in Resources */ = {isa = PBXBuildFile; fileRef = 036EB6112570D2A700E12C8E /* battery.png */; };
 		036EB61C2570D2A800E12C8E /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 036EB6122570D2A700E12C8E /* dog.jpg */; };
 		036EB61D2570D2A800E12C8E /* blue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 036EB6132570D2A700E12C8E /* blue.jpg */; };
@@ -70,6 +72,7 @@
 		039A7618256B86AD0033E5A7 /* TypePageViewContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A7617256B86AD0033E5A7 /* TypePageViewContorller.swift */; };
 		039A761B256B89A50033E5A7 /* SketchShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A761A256B89A50033E5A7 /* SketchShadow.swift */; };
 		039A7623256B9E5F0033E5A7 /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039A7622256B9E5F0033E5A7 /* SubjectViewController.swift */; };
+		03C73D682574DAF700C511C1 /* VirusSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C73D672574DAF700C511C1 /* VirusSimulation.swift */; };
 		03D3560C256A80D3006BD6A7 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D3560B256A80D3006BD6A7 /* DiscoverViewController.swift */; };
 		03D35616256AB024006BD6A7 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D35615256AB024006BD6A7 /* Data.swift */; };
 		03D3563E256AB33A006BD6A7 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D3563D256AB33A006BD6A7 /* UserData.swift */; };
@@ -105,6 +108,8 @@
 		033A0AD22572B0D8001CD0EA /* Lesson1001.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson1001.swift; sourceTree = "<group>"; };
 		034557692572343B0057539B /* Lesson1000.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson1000.swift; sourceTree = "<group>"; };
 		0345576C257234F90057539B /* ARNYthing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARNYthing.swift; sourceTree = "<group>"; };
+		0365F04E2573EFF10024ECB9 /* Lesson1003.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson1003.swift; sourceTree = "<group>"; };
+		0365F0542574D8D90024ECB9 /* Lesson1004.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson1004.swift; sourceTree = "<group>"; };
 		036EB6112570D2A700E12C8E /* battery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = battery.png; sourceTree = "<group>"; };
 		036EB6122570D2A700E12C8E /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpg; sourceTree = "<group>"; };
 		036EB6132570D2A700E12C8E /* blue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue.jpg; sourceTree = "<group>"; };
@@ -143,6 +148,7 @@
 		039A7617256B86AD0033E5A7 /* TypePageViewContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypePageViewContorller.swift; sourceTree = "<group>"; };
 		039A761A256B89A50033E5A7 /* SketchShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchShadow.swift; sourceTree = "<group>"; };
 		039A7622256B9E5F0033E5A7 /* SubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
+		03C73D672574DAF700C511C1 /* VirusSimulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirusSimulation.swift; sourceTree = "<group>"; };
 		03D3560B256A80D3006BD6A7 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		03D35615256AB024006BD6A7 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		03D3563D256AB33A006BD6A7 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -255,6 +261,23 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		0365F0512573F16D0024ECB9 /* StikyNote */ = {
+			isa = PBXGroup;
+			children = (
+				036EB6692571091700E12C8E /* ARViewController+UITextViewDelegate.swift */,
+				0385AE40256BF93000B16056 /* ARViewController+ARCoachingOverlayDelegate.swift */,
+				036EB650257103A700E12C8E /* StikyNoteEntity.swift */,
+				036EB6542571041500E12C8E /* ScreenSpaceComponent.swift */,
+				036EB6572571044000E12C8E /* StickyNoteView.swift */,
+				036EB65C2571062800E12C8E /* ARViewController+Gestures.swift */,
+				036EB67325710AAD00E12C8E /* ARViewController+OverlayUI.swift */,
+				036EB660257106C400E12C8E /* GradientView.swift */,
+				036EB6632571073800E12C8E /* UIView+Helpers.swift */,
+				036EB66D2571097B00E12C8E /* Keyboard+Helpers.swift */,
+			);
+			path = StikyNote;
+			sourceTree = "<group>";
+		};
 		036EB5ED2570CFF800E12C8E /* lessonImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,21 +313,15 @@
 		036EB64F2571038800E12C8E /* ARView */ = {
 			isa = PBXGroup;
 			children = (
+				0365F0512573F16D0024ECB9 /* StikyNote */,
 				0336AC83256A50B500951BF9 /* ARViewController.swift */,
 				0345576C257234F90057539B /* ARNYthing.swift */,
 				034557692572343B0057539B /* Lesson1000.swift */,
+				03C73D672574DAF700C511C1 /* VirusSimulation.swift */,
 				033A0AD22572B0D8001CD0EA /* Lesson1001.swift */,
 				033A0ACE2572AF89001CD0EA /* Lesson1002.swift */,
-				036EB6692571091700E12C8E /* ARViewController+UITextViewDelegate.swift */,
-				0385AE40256BF93000B16056 /* ARViewController+ARCoachingOverlayDelegate.swift */,
-				036EB650257103A700E12C8E /* StikyNoteEntity.swift */,
-				036EB6542571041500E12C8E /* ScreenSpaceComponent.swift */,
-				036EB6572571044000E12C8E /* StickyNoteView.swift */,
-				036EB65C2571062800E12C8E /* ARViewController+Gestures.swift */,
-				036EB67325710AAD00E12C8E /* ARViewController+OverlayUI.swift */,
-				036EB660257106C400E12C8E /* GradientView.swift */,
-				036EB6632571073800E12C8E /* UIView+Helpers.swift */,
-				036EB66D2571097B00E12C8E /* Keyboard+Helpers.swift */,
+				0365F04E2573EFF10024ECB9 /* Lesson1003.swift */,
+				0365F0542574D8D90024ECB9 /* Lesson1004.swift */,
 			);
 			path = ARView;
 			sourceTree = "<group>";
@@ -448,8 +465,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0365F0552574D8D90024ECB9 /* Lesson1004.swift in Sources */,
 				0385AE3B256BD68000B16056 /* LessonViewController.swift in Sources */,
 				036EB66A2571091700E12C8E /* ARViewController+UITextViewDelegate.swift in Sources */,
+				03C73D682574DAF700C511C1 /* VirusSimulation.swift in Sources */,
 				0336AC84256A50B500951BF9 /* ARViewController.swift in Sources */,
 				036EB661257106C400E12C8E /* GradientView.swift in Sources */,
 				039A7623256B9E5F0033E5A7 /* SubjectViewController.swift in Sources */,
@@ -473,6 +492,7 @@
 				033A0ACF2572AF89001CD0EA /* Lesson1002.swift in Sources */,
 				03D3560C256A80D3006BD6A7 /* DiscoverViewController.swift in Sources */,
 				03D3564A256AB8D7006BD6A7 /* Lesson.swift in Sources */,
+				0365F04F2573EFF10024ECB9 /* Lesson1003.swift in Sources */,
 				036EB6582571044000E12C8E /* StickyNoteView.swift in Sources */,
 				0385AE3E256BEEA800B16056 /* BasicViewController.swift in Sources */,
 				036EB6552571041500E12C8E /* ScreenSpaceComponent.swift in Sources */,

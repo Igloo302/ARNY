@@ -67,7 +67,7 @@ class SubjectViewController: UIViewController {
         (lessonCard1.viewWithTag(1) as! UILabel).text = subLessonInfo.name
         
         if !subLessonInfo.isWithAR {
-            (lessonCard1.viewWithTag(3) as! UIButton).isHidden = true
+            (lessonCard1.viewWithTag(13) as! UIButton).isHidden = true
         }
         (lessonCard1.viewWithTag(4) as! UIImageView).image = UIImage(named: subLessonInfo.imageName)
         (lessonCard1.viewWithTag(4) as! UIImageView).contentMode = .scaleAspectFill
@@ -81,7 +81,7 @@ class SubjectViewController: UIViewController {
         (lessonCard2.viewWithTag(1) as! UILabel).text = subLessonInfo.name
         
         if !subLessonInfo.isWithAR {
-            (lessonCard2.viewWithTag(3) as! UIButton).isHidden = true
+            (lessonCard2.viewWithTag(23) as! UIButton).isHidden = true
         }
         (lessonCard2.viewWithTag(4) as! UIImageView).image = UIImage(named: subLessonInfo.imageName)
         (lessonCard2.viewWithTag(4) as! UIImageView).contentMode = .scaleAspectFill
@@ -95,7 +95,7 @@ class SubjectViewController: UIViewController {
         (lessonCard3.viewWithTag(1) as! UILabel).text = subLessonInfo.name
         
         if !subLessonInfo.isWithAR {
-            (lessonCard3.viewWithTag(3) as! UIButton).isHidden = true
+            (lessonCard3.viewWithTag(33) as! UIButton).isHidden = true
         }
         (lessonCard3.viewWithTag(4) as! UIImageView).image = UIImage(named: subLessonInfo.imageName)
         (lessonCard3.viewWithTag(4) as! UIImageView).contentMode = .scaleAspectFill

@@ -46,9 +46,14 @@ class ARViewController: UIViewController,ARSessionDelegate {
     // AR resources
     var worldAnchor : AnchorEntity!
     
-    var lesson1000BoxAnchor: Experience.Lesson1000Box!
+    //var lessonAnchors: [AnchorEntity]!
     var lesson1000Anchor: Experience.Lesson1000!
     var lesson1000FaceAnchor : Experience.Lesson1000Face!
+    var lesson1000SimulationAnchor: Experience.Lesosn1000Simulation!
+    var lesson1001Anchor: Experience.Lesson1001!
+    var lesson1002Anchor: Experience.Lesson1002!
+    var lesson1003Anchor: Experience.Lesson1003!
+    var lesson1004Anchor: Experience.Lesson1004!
     
     // StikyNotes
     var stickyNotes = [StickyNoteEntity]()
@@ -60,6 +65,7 @@ class ARViewController: UIViewController,ARSessionDelegate {
     var topMaskZone: GradientView!
     
     
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,10 +86,11 @@ class ARViewController: UIViewController,ARSessionDelegate {
         arViewGestureSetup()
         overlayUISetup()
         arView.session.delegate = self
-
+        
         
         worldAnchor = AnchorEntity(world: .zero)
         arView.scene.anchors.append(worldAnchor)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -107,6 +114,29 @@ class ARViewController: UIViewController,ARSessionDelegate {
         
     }
     
+    // MARK: - AR Lesson Resources
+    func setupARLessonResources() {
+        // AR 配置工作
+        switch  lessonID {
+        case 999:
+            loadARNY()
+        case 1000:
+            loadLesson1000()
+        case 1001:
+            loadLesson1001()
+        case 1002:
+            loadLesson1002()
+        case 1003:
+            loadLesson1003()
+        case 1004:
+            loadLesson1004()
+        default:
+            print("本课程AR课程未就绪")
+            loadARNY()
+        }
+        
+    }
+    
     // MARK: - StikyNote
     func updateScene(on event: SceneEvents.Update) {
         let notesToUpdate = stickyNotes.compactMap { !$0.isEditing && !$0.isDragging ? $0 : nil }
@@ -122,7 +152,7 @@ class ARViewController: UIViewController,ARSessionDelegate {
             let cameraToWorldPointDirection = normalize(note.position(relativeTo: note.parent?.parent?.parent?.parent) - arView.cameraTransform.translation)
             let dotProduct = dot(cameraForward, cameraToWorldPointDirection)
             let isVisible = dotProduct < 0
-
+            
             // Updates the screen position of the note based on its visibility
             note.projection = Projection(projectedPoint: projectedPoint, isVisible: isVisible)
             note.updateScreenPosition()
@@ -162,48 +192,29 @@ class ARViewController: UIViewController,ARSessionDelegate {
         }
     }
     
-    // MARK: - AR Lesson Resources
-    func setupARLessonResources() {
-        // AR 配置工作
-        switch  lessonID {
-        case 999:
-            loadARNY()
-        case 1000:
-            loadLesson1000()
-        case 1002:
-            loadLesson1002()
-        default:
-            print("本课程AR课程未就绪")
-            loadARNY()
-        }
-        
-    }
-    
-    
     // MARK: - Lesson & Point Content
     func initLP(){
         // 课程信息初始化
         if lessonID != 999 {
             print("从上级页面接收lessonID=", lessonID)
+            currentLesson = lessonData[lessonData.firstIndex(where: {$0.id == lessonID})!]
+            
+            if pointID != 999 {
+                print("从上级页面接收pointID=", pointID)
+                updatePoints()
+            } else {
+                currentPoint = currentLesson.points.first!
+                pointID = currentPoint.id
+                print("未从上级页面接收到PointID，设置为PointID默认值", pointID)
+                
+            }
+            
+            pointsCount = currentLesson.points.count
+            print("课程信息载入完成，当前课程位于",lessonID, pointID,"课程共有",pointsCount)
         } else {
-            lessonID = 1000
-            print("未从上级页面接收到lessonID，设置为leeson默认值")
+            //lessonID = 1000
+            print("未从上级页面接收到lessonID")
         }
-        currentLesson = lessonData[lessonData.firstIndex(where: {$0.id == lessonID})!]
-        
-        
-        if pointID != 999 {
-            print("从上级页面接收pointID=", pointID)
-            updatePoints()
-        } else {
-            currentPoint = currentLesson.points.first!
-            pointID = currentPoint.id
-            print("未从上级页面接收到PointID，设置为PointID默认值", pointID)
-        }
-        
-        pointsCount = currentLesson.points.count
-        
-        print("当前课程位于",lessonID, pointID)
     }
     
     func updatePoints(){
@@ -220,9 +231,12 @@ class ARViewController: UIViewController,ARSessionDelegate {
             buttonSwitchCamera.isHidden = true
         }
         
-        // lessonID不为0，进入学习流程，不展示相机切换按钮
-        if lessonID != 0 {
-            buttonSwitchCamera.isHidden = false
+        switch lessonID {
+        // ARNY
+        case 999:
+            buttonSwitchCamera.isHidden  = false
+        default:
+            buttonSwitchCamera.isHidden = true
         }
     }
     
@@ -234,10 +248,21 @@ class ARViewController: UIViewController,ARSessionDelegate {
         // controllBack.isHidden = false
         
         // 根据lessionID和pointID查找数据
-        let index = currentLesson.points.firstIndex(where: { $0.id == pointID })!
-        pointNStep.text = "STEP " + String(index+1) + "/" + String(pointsCount)
+        guard let index = currentLesson.points.firstIndex(where: { $0.id == pointID }) else {
+            print("没有找到pointID", pointID)
+            return
+        }
+        currentPoint = currentLesson.points[index]
+        
+        if currentLesson.isWithSteps {
+            pointNStep.text = "STEP " + String(index+1) + "/" + String(pointsCount)
+        } else {
+            pointNStep.text = currentLesson.category
+        }
         pointName.text = currentPoint.name
         pointDetail.text = currentPoint.detail
+        
+        print("更新Point数据",pointID)
         
         
     }
@@ -262,7 +287,14 @@ class ARViewController: UIViewController,ARSessionDelegate {
     override var prefersHomeIndicatorAutoHidden: Bool {
         return true
     }
-
+    
+    
+    func setColor(entity : Entity, color: UIColor){
+        var noseModelComp: ModelComponent = (entity.components[ModelComponent])!
+        let material = SimpleMaterial(color: color, isMetallic: false)
+        noseModelComp.materials[0] = material
+        entity.components.set(noseModelComp)
+    }
     
     // MARK: - UI Interaction
     
@@ -275,15 +307,24 @@ class ARViewController: UIViewController,ARSessionDelegate {
     @IBAction func buttonSwitchCamera(_ sender: Any) {
         // 加载不同ARkit配置，切换相机
         if arView.session.configuration is ARFaceTrackingConfiguration {
+            self.arView.scene.anchors.removeAll()
             arView.session.run(ARWorldTrackingConfiguration(), options: [.resetTracking, .removeExistingAnchors])
             setupARLessonResources()
             print("切换回之后无法进行追踪，暂时无法解决⚠️")
         } else {
+            self.arView.scene.anchors.removeAll()
             // 开启前置摄像头面部识别Indicate to use the FaceTrackingConfiguration (front camera)
             guard ARFaceTrackingConfiguration.isSupported else { return }
             let configuration = ARFaceTrackingConfiguration()
             configuration.isLightEstimationEnabled = true
+            
             arView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+            
+//            // ARNY Mode 和lesson1000专属放行
+//            if ((lessonID == 1000) || (lessonID == 999)) {
+//                loadLesson1000Face()
+//            }
+            
         }
     }
     
@@ -292,16 +333,29 @@ class ARViewController: UIViewController,ARSessionDelegate {
         switch lessonID {
         case 1000:
             startLesson1000()
+        case 1001:
+            startLesson1001()
         case 1002:
             startLesson1002()
+        case 1003:
+            startLesson1003()
+        case 1004:
+            startLesson1004()
         default:
             startLessonARNY()
         }
         
-        
-        
         notificationBar.isHidden = true
     }
+    
+    @IBAction func controllNext(_ sender: Any) {
+        // 单独为病毒模拟写一个逻辑
+        if lessonID == 1000{
+            self.startSimulation()
+        }
+    }
+    
+    
     
     
     /*
