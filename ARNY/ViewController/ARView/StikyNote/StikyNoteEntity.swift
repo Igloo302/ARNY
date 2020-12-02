@@ -16,7 +16,7 @@ class StickyNoteEntity: Entity, HasScreenSpaceView {
     
     /// Initializes a new StickyNoteEntity and assigns the specified transform.
     /// Also automatically initializes an associated StickyNoteView with the specified frame.
-    init(frame: CGRect, worldTransform: simd_float4x4) {
+    init(frame: CGRect, worldTransform: simd_float4x4, offset: SIMD3<Float>? = [0,0,0]) {
         super.init()
         
         // 可视化StickyNoteEntity的位置
@@ -27,9 +27,8 @@ class StickyNoteEntity: Entity, HasScreenSpaceView {
         
         self.transform.matrix = worldTransform
         
-        // 暂定抬升2CM
-        //self.position.y += 0.05
-        self.position.x += 0.05
+        // 偏移
+        self.position += offset ?? [0,0,0]
         // ...
         screenSpaceComponent.view = StickyNoteView(frame: frame, note: self)
     }

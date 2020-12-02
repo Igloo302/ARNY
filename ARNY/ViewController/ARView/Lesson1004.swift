@@ -12,6 +12,8 @@ extension ARViewController {
     func loadLesson1004(){
         print("⌚️开始载入...")
         
+        self.loadingView.isHidden = false
+        
         // Create a session configuration
         let configuration = ARFaceTrackingConfiguration()
         // Yasss estimate light for me
@@ -31,7 +33,8 @@ extension ARViewController {
                 // ...
                 self.setupNotifyActions1004()
                 print("👌lesson1004加载完成")
-
+                
+                self.loadingView.isHidden = true
             
                 
             } catch {

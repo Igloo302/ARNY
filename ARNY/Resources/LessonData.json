@@ -49,7 +49,7 @@
                 "imageNameForBasic": "checkmask.jpg"
             },
             {
-                "name": "Identify the inside 确认内部",
+                "name": "Identify the inside 确认内外部",
                 "id": 2004,
                 "isNew": false,
                 "isWithAR": true,
@@ -92,8 +92,8 @@
         "id": 1001,
         "isNew": false,
         "isWithAR": true,
-        "isWithSteps": true,
-        "intro": "Surgical masks, once simply a strip of cloth tied around the face of a doctor or nurse, are today manufactured using non-woven fabrics made from plastics like polypropylene to filter and protect. They are also available in many different styles and grades depending on the level of protection the user requires. Looking for more information on surgical masks to meet your medical sourcing needs? We’ve created this guide outlining some basics about these masks as well as how they’re manufactured. If you're interested in finding out more information about how respirators, gowns, and other personal protection equipment is made, you can also visit our overview of how PPE is manufactured.\n外科口罩曾经只是简单地用布条绑在医生或护士的脸上，现在则使用聚丙烯等塑料制成的无纺布来过滤和保护。它们也有许多不同的风格和等级，取决于用户所需的保护水平。正在寻找更多关于手术口罩的信息以满足您的医疗采购需求？我们已经创建了这个指南，概述了这些口罩的一些基本知识，以及它们是如何制造的。如果您有兴趣了解更多关于呼吸器、防护服和其他个人防护设备的制造方法，您还可以访问我们关于个人防护设备制造方法的概述。",
+        "isWithSteps": false,
+        "intro": "Surgical masks, once simply a strip of cloth tied around the face of a doctor or nurse, are today manufactured using non-woven fabrics made from plastics like polypropylene to filter and protect. They are also available in many different styles and grades depending on the level of protection the user requires.\n外科口罩曾经只是简单地用布条绑在医生或护士的脸上，现在则使用聚丙烯等塑料制成的无纺布来过滤和保护。它们也有许多不同的风格和等级，取决于用户所需的保护水平。",
         "imageName": "HowSurgicalMasksareMade.jpg",
         "score": 4.5,
         "relatedLessons": [
@@ -109,38 +109,47 @@
         ],
         "points": [
             {
-                "name": "Non-woven fabric",
+                "name": "多层结构Multi-layered structure",
                 "id": 2001,
                 "isNew": false,
                 "isWithAR": true,
-                "detail": "Surgical face masks are made with non-woven fabric, which has better bacteria filtration and air permeability while remaining less slippery than woven cloth. The material most commonly used to make them is polypropylene, either 20 or 25 grams per square meter (gsm) in density. Masks can also be made of polystyrene, polycarbonate, polyethylene, or polyester.\n外科口罩采用无纺布制作，无纺布具有较好的细菌过滤性和透气性，同时比机织布更不滑腻。最常用的制作材料是聚丙烯，密度为20或25克/平方米（gsm）。口罩也可以用聚苯乙烯、聚碳酸酯、聚乙烯或聚酯制成。",
-                "imageName": "non-woven-fabrics.jpg",
-                "imageNameForBasic": "non-woven-fabrics.jpg"
-            },
-            {
-                "name": "Spunbond process",
-                "id": 2002,
-                "isNew": false,
-                "isWithAR": true,
-                "detail": "20 gsm mask material is made in a spunbond process, which involves extruding the melted plastic onto a conveyor. The material is extruded in a web, in which strands bond with each other as they cool. 25 gsm fabric is made through meltblown technology, which is a similar process where plastic is extruded through a die with hundreds of small nozzles and blown by hot air to become tiny fibers, again cooling and binding on a conveyor. These fibers are less than a micron in diameter. \n20克/平方米的口罩材料是用纺粘工艺制造的，包括将熔化的塑料挤压到传送带上。材料被挤压成网状，其中股线在冷却时相互粘合。25克/平方米的织物是通过熔喷技术制成的，这是一种类似的工艺，塑料通过一个带有数百个小喷嘴的模具被挤出，并被热空气吹成细小的纤维，再次在传送带上冷却和粘合。这些纤维的直径不到一微米。",
-                "imageName": "spun-bond.jpg",
-                "imageNameForBasic": "spun-bond.jpg"
-            },
-            {
-                "name": "Multi-layered structure",
-                "id": 2003,
-                "isNew": false,
-                "isWithAR": true,
-                "detail": "Surgical masks are made up of a multi-layered structure, generally by covering a layer of textile with non-woven bonded fabric on both sides. Non-wovens, which are cheaper to make and cleaner thanks to their disposable nature, are made with three or four layers. These disposable masks are often made with two filter layers effective at filtering out particles such as bacteria above 1 micron. The filtration level of a mask, however, depends on the fiber, the way it’s manufactured, the web’s structure, and the fiber’s cross-sectional shape. Masks are made on a machine line that assembles the nonwovens from bobbins, ultrasonically welds the layers together, and stamps the masks with nose strips, ear loops, and other pieces.\n手术口罩是由多层结构组成的，一般是在两面用无纺布粘合织物覆盖一层纺织品。无纺布由于其一次性的特点，制作成本较低，而且比较干净，有三层或四层。这种一次性口罩通常采用两层过滤层，能有效过滤掉1微米以上的细菌等颗粒。然而，口罩的过滤水平取决于纤维、制造方式、网状结构和纤维的横截面形状。口罩是在一条机器生产线上制造的，它将无纺布从线轴上组装起来，用超声波将各层无纺布焊接在一起，并在口罩上盖上鼻条、耳环和其他部件。",
+                "detail": "手术口罩是由多层结构组成的，一般是在两面用无纺布粘合织物覆盖一层纺织品。医用口罩一般采用SMS（纺粘-熔喷-纺粘）复合多层结构，里外的S为纺粘无纺布，英文为Spunbond；中间M为熔喷无纺布，英文为Meltblowing。\n无纺布由于其一次性的特点，制作成本较低，而且比较干净。\n机器生产线将无纺布从线轴上组装起来，用超声波将各层无纺布焊接在一起，并在口罩上盖上鼻条、耳环和其他部件。",
                 "imageName": "multi-layered.jpg",
                 "imageNameForBasic": "multi-layered.jpg"
             },
             {
-                "name": "Sterilized",
+                "name": "无纺布Non-woven fabric",
+                "id": 2002,
+                "isNew": false,
+                "isWithAR": true,
+                "detail": "医用外科口罩采用无纺布制作，无纺布具有较好的细菌过滤性和透气性，同时比机织布更不滑腻。最常用的制作材料是聚丙烯，密度为20或25克/平方米。口罩也可以用聚苯乙烯、聚碳酸酯、聚乙烯或聚酯制成。",
+                "imageName": "non-woven-fabrics.jpg",
+                "imageNameForBasic": "non-woven-fabrics.jpg"
+            },
+            {
+                "name": "纺粘布Spunbond",
+                "id": 2003,
+                "isNew": false,
+                "isWithAR": true,
+                "detail": "纺粘无纺布是用纺粘工艺制造的，将熔化的塑料挤压到传送带上。材料被挤压成网状，其中股线在冷却时相互粘合。",
+                "imageName": "spun-bond.jpg",
+                "imageNameForBasic": "spun-bond.jpg"
+            },
+            {
+                "name": "熔喷布Meltblown",
                 "id": 2004,
                 "isNew": false,
                 "isWithAR": true,
-                "detail": "Completed masks are then sterilized before being sent out of the factory.\n完成的口罩在送出工厂前要进行消毒。",
+                "detail": "熔喷布是无纺布的一种，是指通过熔喷工艺制备的无纺布，塑料通过一个带有数百个小喷嘴的模具被挤出，并被热空气吹成细小的纤维，再次在传送带上冷却和粘合。",
+                "imageName": "spun-bond.jpg",
+                "imageNameForBasic": "spun-bond.jpg"
+            },
+            {
+                "name": "纤维尺度 Fiber Scale",
+                "id": 2005,
+                "isNew": false,
+                "isWithAR": true,
+                "detail": "S表示纺粘层（Spunbond），其纤维直径比较粗，在20微米（μm）左右。\n，熔喷层的纤维直径比较细，在1-5微米（μm）左右，所以只有纺粘层直径的十分之一，这个对防止细菌、血液渗透其至关重要的作用。\n纺粘层S纤维直径是头发直径的1/3，而熔喷层M纤维直径接近头发直径的1/30，当然，研发人员还在开发更细的纤维，来保证更好的抗菌阻隔性。",
                 "imageName": "multi-layered.jpg",
                 "imageNameForBasic": "multi-layered.jpg"
             }

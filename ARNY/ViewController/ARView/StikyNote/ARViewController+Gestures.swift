@@ -103,7 +103,7 @@ extension ARViewController {
     Hit test the feature point cloud and use any hit as the position of a new StickyNote. Otherwise, display a tip.
      - Tag: ScreenSpaceViewInsertionTag
      */
-    func insertNewSticky(_ entity: Entity) {
+    func insertNewSticky(_ entity: Entity,offset: SIMD3<Float>? = [0,0,0]) {
         
         // 如果已经创建了同名Note则弹出
         let noteName = "label" + entity.name
@@ -117,8 +117,8 @@ extension ARViewController {
         // Create a new sticky note positioned at the hit test result's world position.
         let frame = CGRect(origin: CGPoint(x: 0,y: 0), size: CGSize(width: 150, height: 50))
 
-        let note = StickyNoteEntity(frame: frame, worldTransform: entity.transform.matrix)
-        
+        let note = StickyNoteEntity(frame: frame, worldTransform: entity.transform.matrix,offset: offset)
+    
         // Center the sticky note's view on the tap's screen location.
         //note.setPositionCenter(touchLocation)
 
@@ -150,6 +150,7 @@ extension ARViewController {
         
         print("创建标签",noteName)
     }
+    
     
     func removeSticky(_ entity: Entity) {
         

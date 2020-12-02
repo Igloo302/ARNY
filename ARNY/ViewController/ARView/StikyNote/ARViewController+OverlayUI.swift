@@ -21,13 +21,17 @@ extension ARViewController {
         setupTrashZone()
         
         // Adding a Reset button, the user should always be able to reset the AR Experience at all times.
-        addResetButton()
+        //addResetButton()
         
         // Adding the ARCoachingOverlayView, which helps guide users to establish tracking.
         addCoachingOverlay()
         
         // 添加顶部的按钮下的阴影
         setupTopMaskZone()
+        
+        // Adding loading View
+        setupLoadingView()
+        addProcessView()
         
     }
     
@@ -112,5 +116,44 @@ extension ARViewController {
             topMaskZone.heightAnchor.constraint(equalTo: arView.heightAnchor, multiplier: 105/834)
         ])
         topMaskZone.alpha = 0
+    }
+    
+    fileprivate func setupLoadingView() {
+        loadingView = UIView(frame: .zero)
+        loadingView.translatesAutoresizingMaskIntoConstraints = false
+        arView.addSubview(loadingView)
+        NSLayoutConstraint.activate([
+            loadingView.topAnchor.constraint(equalTo: arView.topAnchor),
+            loadingView.leadingAnchor.constraint(equalTo: arView.leadingAnchor),
+            loadingView.trailingAnchor.constraint(equalTo: arView.trailingAnchor),
+            loadingView.bottomAnchor.constraint(equalTo: arView.bottomAnchor)
+        ])
+        loadingView.backgroundColor = UIColor.white
+    }
+    
+    
+    fileprivate func addProcessView() {
+        let processLabel = UILabel()
+        processLabel.translatesAutoresizingMaskIntoConstraints = false
+        loadingView.addSubview(processLabel)
+        processLabel.text = "Now Loading..."
+
+        let processView = UIProgressView()
+        processView.translatesAutoresizingMaskIntoConstraints = false
+        loadingView.addSubview(processView)
+        processView.setProgress(0.9, animated: true)
+        
+        NSLayoutConstraint.activate([
+            processLabel.widthAnchor.constraint(equalToConstant: 300),
+            processLabel.heightAnchor.constraint(equalToConstant: 30),
+            processLabel.centerXAnchor.constraint(equalTo: loadingView.centerXAnchor),
+            processLabel.bottomAnchor.constraint(equalTo:processView.topAnchor , constant: 50),
+            
+            processView.widthAnchor.constraint(equalToConstant: 300),
+            processView.heightAnchor.constraint(equalToConstant: 10),
+            processView.centerXAnchor.constraint(equalTo: loadingView.centerXAnchor),
+            processView.centerYAnchor.constraint(equalTo: loadingView.centerYAnchor)
+        ])
+        
     }
 }

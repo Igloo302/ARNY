@@ -35,6 +35,17 @@ class ARViewController: UIViewController,ARSessionDelegate {
     @IBOutlet var controllNext: UIButton!
     @IBOutlet var controllBack: UIButton!
     @IBOutlet var controllStackView: UIStackView!
+    var segmentedControl : UISegmentedControl!
+    var switchControl:UISwitch!
+    var pickView:UIPickerView!
+    
+    /// POP
+    @IBOutlet var popView: UIView!
+    var popImageView: UIImageView!
+    var popLeftButton: UIButton!
+    var popRightButton: UIButton!
+    var popStarSegmentControl: UISegmentedControl!
+    var popLabel: UILabel!
     
     // 课程信息
     var lessonID:Int = 999
@@ -42,6 +53,8 @@ class ARViewController: UIViewController,ARSessionDelegate {
     var currentLesson: Lesson!
     var currentPoint: Lesson.point!
     var pointsCount: Int = 0
+    /// 分支流程太多了，需要一个变量来代表一下当前走的分支流程是哪一个！！
+    var lessonPath: Int = 0
     
     // AR resources
     var worldAnchor : AnchorEntity!
@@ -50,10 +63,15 @@ class ARViewController: UIViewController,ARSessionDelegate {
     var lesson1000Anchor: Experience.Lesson1000!
     var lesson1000FaceAnchor : Experience.Lesson1000Face!
     var lesson1000SimulationAnchor: Experience.Lesosn1000Simulation!
+    var lesson10000MaskAnchor: Experience.Lesson1000WithRealMask!
     var lesson1001Anchor: Experience.Lesson1001!
+    var lesson1001ScaleAnchor: Experience.Lesson1001Scale!
     var lesson1002Anchor: Experience.Lesson1002!
     var lesson1003Anchor: Experience.Lesson1003!
     var lesson1004Anchor: Experience.Lesson1004!
+    
+    
+    var loadingView:UIView!
     
     // StikyNotes
     var stickyNotes = [StickyNoteEntity]()
@@ -70,6 +88,8 @@ class ARViewController: UIViewController,ARSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        overlayUISetup()
+        
         //课程信息初始化
         initLP()
         
@@ -84,7 +104,7 @@ class ARViewController: UIViewController,ARSessionDelegate {
             self.updateScene(on: $0)//这句话什么意思
         }
         arViewGestureSetup()
-        overlayUISetup()
+        
         arView.session.delegate = self
         
         
@@ -116,6 +136,9 @@ class ARViewController: UIViewController,ARSessionDelegate {
     
     // MARK: - AR Lesson Resources
     func setupARLessonResources() {
+        // 重启一下
+        reset()
+        
         // AR 配置工作
         switch  lessonID {
         case 999:
@@ -165,6 +188,7 @@ class ARViewController: UIViewController,ARSessionDelegate {
         for note in stickyNotes {
             deleteStickyNote(note)
         }
+        print("sesson reset")
     }
     
     
@@ -213,7 +237,7 @@ class ARViewController: UIViewController,ARSessionDelegate {
             print("课程信息载入完成，当前课程位于",lessonID, pointID,"课程共有",pointsCount)
         } else {
             //lessonID = 1000
-            print("未从上级页面接收到lessonID")
+            print("未从上级页面接收到lessonID，进入ARNY")
         }
     }
     
@@ -238,14 +262,28 @@ class ARViewController: UIViewController,ARSessionDelegate {
         default:
             buttonSwitchCamera.isHidden = true
         }
+        
+        
+        segmentedControl = (controllStackView.viewWithTag(12) as! UISegmentedControl)
+        pickView = (controllStackView.viewWithTag(22) as! UIPickerView)
+        switchControl = (controllStackView.viewWithTag(32) as! UISwitch)
+        
+        popStarSegmentControl = (popView.viewWithTag(1) as! UISegmentedControl)
+        popImageView = (popView.viewWithTag(2) as! UIImageView)
+        popLeftButton =  (popView.viewWithTag(3) as! UIButton)
+        popRightButton =  (popView.viewWithTag(4) as! UIButton)
+        popLabel = (popView.viewWithTag(5) as! UILabel)
     }
     
+    /// 更新UI元素
     func updateUI(_ lessionID: Int, _ pointID: Int){
         
         // 界面元素（需要根据课程是否有信息展示）
         InfoView.isHidden = false
+        controllStackView.isHidden = true
         // controllNext.isHidden = false
         // controllBack.isHidden = false
+        
         
         // 根据lessionID和pointID查找数据
         guard let index = currentLesson.points.firstIndex(where: { $0.id == pointID }) else {
@@ -264,10 +302,37 @@ class ARViewController: UIViewController,ARSessionDelegate {
         
         print("更新Point数据",pointID)
         
+        // 步骤按钮
+        if currentLesson.isWithSteps {
+            // 暂不做处理
+            
+        } else
+        {   // 不是按照步骤，而是按照知识点的
+            self.controllNext.setTitle("Next Point", for: .normal)
+            self.controllNext.isHidden = false
+            
+            // point为1时隐藏返回按钮
+            if ((pointID - 2000) == 1) {
+                controllBack.isHidden = true
+            }else {
+                controllBack.isHidden = false
+            }
+            
+            if ((index+1) == pointsCount) {
+                controllNext.setTitle("End Lesson", for: .normal)
+            }else {
+                controllNext.isHidden = false
+            }
+        }
+        
+        
         
     }
     
     func showNotification(_ lessionID: Int){
+        //读取课程信息，使用局部变量
+        let currentLesson = lessonData[lessonData.firstIndex(where: {$0.id == self.lessonID})!]
+        
         notificationBar.isHidden = false
         notiBarName.text = currentLesson.name
         notiBarCat.text = currentLesson.category
@@ -299,9 +364,18 @@ class ARViewController: UIViewController,ARSessionDelegate {
     // MARK: - UI Interaction
     
     @IBAction func BtnBack(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
         
-        //self.dismiss(animated: true, completion:nil)
+        //pop确认
+        popView.isHidden = false
+        popStarSegmentControl.isHidden = true
+        
+        popLabel.text = "😔Lesson isn't Finished"
+        
+        popRightButton.setTitle("Exit", for: .normal)
+        popRightButton.addTarget(self, action: #selector(popRightButtonRateNExit(_ :)), for: .touchUpInside)
+        
+        popLeftButton.setTitle("Close", for: .normal)
+        popLeftButton.addTarget(self, action:#selector(popLeftButtonClose(_ :)), for: .touchUpInside)
     }
     
     @IBAction func buttonSwitchCamera(_ sender: Any) {
@@ -320,10 +394,10 @@ class ARViewController: UIViewController,ARSessionDelegate {
             
             arView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
             
-//            // ARNY Mode 和lesson1000专属放行
-//            if ((lessonID == 1000) || (lessonID == 999)) {
-//                loadLesson1000Face()
-//            }
+            //            // ARNY Mode 和lesson1000专属放行
+            //            if ((lessonID == 1000) || (lessonID == 999)) {
+            //                loadLesson1000Face()
+            //            }
             
         }
     }
@@ -349,13 +423,75 @@ class ARViewController: UIViewController,ARSessionDelegate {
     }
     
     @IBAction func controllNext(_ sender: Any) {
-        // 单独为病毒模拟写一个逻辑
-        if lessonID == 1000{
-            self.startSimulation()
+        /// 结束课程
+        if (self.controllNext.titleLabel?.text == "End Lesson") {
+            //pop
+            popView.isHidden = false
+            popStarSegmentControl.isHidden = false
+            
+            popLabel.text = "🎉🎉🎉The Lesson is Finished"
+            
+            popRightButton.setTitle("Rate&Exit", for: .normal)
+            popRightButton.addTarget(self, action: #selector(popRightButtonRateNExit(_ :)), for: .touchUpInside)
+            
+            popLeftButton.setTitle("Close&Stay", for: .normal)
+            popLeftButton.addTarget(self, action:#selector(popLeftButtonClose(_ :)), for: .touchUpInside)
+        } else {
+            // 正常Next
+            // 先执行本课程中的任务
+            switch lessonID {
+            case 1000:
+                do{
+                    perform1000(at: pointID)
+                }
+            case 1001:
+                do {
+                    //perform1001(to: pointID)
+                }
+            default: break
+            //
+            }
+            
+            pointID += 1
+            updateUI(lessonID, pointID)
         }
     }
     
+    @IBAction func controlBack(_ sender: Any) {
+        
+        pointID -= 1
+        updateUI(lessonID, pointID)
+        
+        
+        switch lessonID {
+        case 1000:
+            do {
+                
+                //perform1000(at: pointID)
+            }
+        case 1001:
+            do {
+                
+                //perform1001(to: pointID)
+            }
+        default: break
+        //
+        }
+    }
     
+    /// EndLessonPopComfirm
+    @objc func popRightButtonRateNExit(_ sender: UIButton){
+        self.popView.isHidden = true
+        // 打分存储
+        
+        // 退出
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func popLeftButtonClose(_ sender: UIButton){
+        //close the pop view and do nothing
+        self.popView.isHidden = true
+    }
     
     
     /*

@@ -17,6 +17,8 @@ extension ARViewController {
     
     func loadLesson1002(){
         print("⌚️开始载入...")
+        
+        self.loadingView.isHidden = false
         Experience.loadLesson1002Async(completion: { (result) in
             do {
                 self.lesson1002Anchor = try result.get()
@@ -24,6 +26,8 @@ extension ARViewController {
                 // ...
                 self.setupNotifyActions1002()
                 print("👌lesson1000Box加载完成")
+                
+                self.loadingView.isHidden = true
             } catch {
                 // handle error
                 print("❌lesson1000Box加载失败")
@@ -37,7 +41,6 @@ extension ARViewController {
             // 出现盒子
             // 场景出现
             self.lessonID = 1002
-            self.currentLesson = lessonData[lessonData.firstIndex(where: {$0.id == self.lessonID})!]
             self.showNotification(self.lessonID)
         }
         

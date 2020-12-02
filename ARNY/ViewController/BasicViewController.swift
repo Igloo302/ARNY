@@ -14,14 +14,25 @@ class BasicViewController: UIViewController {
     @IBOutlet var pointNStep: UILabel!
     @IBOutlet var pointName: UILabel!
     @IBOutlet var pointDetail: UITextView!
-
+    
     @IBOutlet weak var imgForBasic: UIImageView!
+    
+    /// POP
+    @IBOutlet var popView: UIView!
+    var popImageView: UIImageView!
+    var popLeftButton: UIButton!
+    var popRightButton: UIButton!
+    var popStarSegmentControl: UISegmentedControl!
+    var popLabel: UILabel!
     
     
     // 控制栏
     @IBOutlet var controllNext: UIButton!
     @IBOutlet var controllBack: UIButton!
     @IBOutlet var controllStackView: UIStackView!
+    var segmentedControl : UISegmentedControl!
+    var switchControl:UISwitch!
+    var pickView:UIPickerView!
     
     // 课程信息
     var lessonID:Int = 999
@@ -34,11 +45,9 @@ class BasicViewController: UIViewController {
     @IBOutlet weak var buttonAR: UIButton!
     @IBOutlet weak var lessonName: UILabel!
     
-    @IBOutlet weak var infoViewConstraintsButton: NSLayoutConstraint!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         //课程信息初始化
@@ -51,15 +60,24 @@ class BasicViewController: UIViewController {
     
     // MARK: - UI Interaction
     @IBAction func buttonBack(_ sender: Any) {
-        //self.dismiss(animated: true, completion:nil)
-        navigationController?.popViewController(animated: true)
+        //pop确认
+        popView.isHidden = false
+        popStarSegmentControl.isHidden = true
+        
+        popLabel.text = "😔Lesson isn't Finished"
+        
+        popRightButton.setTitle("Exit", for: .normal)
+        popRightButton.addTarget(self, action: #selector(popRightButtonRateNExit(_ :)), for: .touchUpInside)
+        
+        popLeftButton.setTitle("Close", for: .normal)
+        popLeftButton.addTarget(self, action:#selector(popLeftButtonClose(_ :)), for: .touchUpInside)
     }
     
     @IBAction func buttonAR(_ sender: Any) {
         print("启动AR Mode")
         
-//        // Segue方式跳转
-//        performSegue(withIdentifier: "ToARView", sender: self)
+        //        // Segue方式跳转
+        //        performSegue(withIdentifier: "ToARView", sender: self)
         
         // Navigation模式生效
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -70,10 +88,28 @@ class BasicViewController: UIViewController {
     }
     
     @IBAction func controllNext(_ sender: Any) {
-        pointID += 1
-        updatePoints()
-        print(lessonID, pointID)
-        updateUI(lessonID, pointID)
+        
+        /// 结束课程
+        if (self.controllNext.titleLabel?.text == "End Lesson") {
+            //pop
+            popView.isHidden = false
+            popStarSegmentControl.isHidden = false
+            
+            popLabel.text = "🎉🎉🎉Lesson is Finished"
+            
+            popRightButton.setTitle("Rate&Exit", for: .normal)
+            popRightButton.addTarget(self, action: #selector(popRightButtonRateNExit(_ :)), for: .touchUpInside)
+            
+            popLeftButton.setTitle("Close&Stay", for: .normal)
+            popLeftButton.addTarget(self, action:#selector(popLeftButtonClose(_ :)), for: .touchUpInside)
+        } else {
+            pointID += 1
+            updatePoints()
+            print(lessonID, pointID)
+            updateUI(lessonID, pointID)
+        }
+        
+        
     }
     
     
@@ -83,6 +119,21 @@ class BasicViewController: UIViewController {
         print(lessonID, pointID)
         updateUI(lessonID, pointID)
     }
+    
+    /// EndLessonPopComfirm
+    @objc func popRightButtonRateNExit(_ sender: UIButton){
+        self.popView.isHidden = true
+        // 打分存储
+        
+        // 退出
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func popLeftButtonClose(_ sender: UIButton){
+        //close the pop view and do nothing
+        self.popView.isHidden = true
+    }
+    
     
     
     // MARK: - Lesson & Point Content
@@ -105,7 +156,7 @@ class BasicViewController: UIViewController {
             pointID = currentPoint.id
             print("未从上级页面接收到pointID，设置为pointID默认值", pointID)
         }
-
+        
         pointsCount = currentLesson.points.count
         
         print("当前课程位于",lessonID, pointID)
@@ -121,10 +172,21 @@ class BasicViewController: UIViewController {
         // 更新UI信息，包括文案、按钮
         // 标题
         lessonName.text = currentLesson.name
-
+        
         //隐藏控制栏
         controllStackView.isHidden = true
-        infoViewConstraintsButton.constant -= controllStackView.frame.height
+        
+        //Control
+        segmentedControl = (controllStackView.viewWithTag(12) as! UISegmentedControl)
+        pickView = (controllStackView.viewWithTag(22) as! UIPickerView)
+        switchControl = (controllStackView.viewWithTag(32) as! UISwitch)
+        
+        //PopView
+        popStarSegmentControl = (popView.viewWithTag(1) as! UISegmentedControl)
+        popImageView = (popView.viewWithTag(2) as! UIImageView)
+        popLeftButton =  (popView.viewWithTag(3) as! UIButton)
+        popRightButton =  (popView.viewWithTag(4) as! UIButton)
+        popLabel = (popView.viewWithTag(5) as! UILabel)
         
     }
     
@@ -146,7 +208,8 @@ class BasicViewController: UIViewController {
         }
         
         if ((index+1) == pointsCount) {
-            controllNext.isHidden = true
+            //controllNext.isHidden = true
+            controllNext.setTitle("End Lesson", for: .normal)
         }else {
             controllNext.isHidden = false
         }
@@ -159,15 +222,15 @@ class BasicViewController: UIViewController {
         }
         
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

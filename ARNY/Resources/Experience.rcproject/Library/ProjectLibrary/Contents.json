@@ -5,11 +5,6 @@
     "displayName" : "IMG_7642.heic"
   },
   {
-    "libraryIdentifier" : "ef43313a40b71ab210eb820bca3e7020",
-    "format" : "image",
-    "displayName" : "IMG_7643.heic"
-  },
-  {
     "libraryIdentifier" : "1da459186a97f60c594539c1520b329b",
     "format" : "image",
     "displayName" : "IMG_7644.heic"
@@ -18,11 +13,6 @@
     "libraryIdentifier" : "ed89cdd72a2b575cab5b629294805b22",
     "format" : "image",
     "displayName" : "编组 8.png"
-  },
-  {
-    "libraryIdentifier" : "33a81d1f2d80b276780335807d29241b",
-    "format" : "image",
-    "displayName" : "编组 9.png"
   },
   {
     "libraryIdentifier" : "8826847787be7bef0552e44a7109b226",
@@ -115,11 +105,6 @@
     "displayName" : "Nose__Blender_Sculpt.usdz"
   },
   {
-    "libraryIdentifier" : "9596df5cd9f86c75aa0da8ebf70629f5",
-    "format" : "model",
-    "displayName" : "MASK.usdz"
-  },
-  {
     "libraryIdentifier" : "b8f7a242f345f28925ea05c4b7b29a16",
     "format" : "model",
     "displayName" : "MASK0.usdz"
@@ -133,5 +118,95 @@
     "libraryIdentifier" : "4b93fefd4c9cf45bff013eca5268b42f",
     "format" : "model",
     "displayName" : "MASK3.usdz"
+  },
+  {
+    "libraryIdentifier" : "1568c259f95a8d8e8a2700d3c9bc7f0a",
+    "format" : "image",
+    "displayName" : "编组 10.png"
+  },
+  {
+    "libraryIdentifier" : "ec42bcf734f91711243147b06c8d9151",
+    "format" : "image",
+    "displayName" : "编组 12.png"
+  },
+  {
+    "libraryIdentifier" : "c59ffd8e5149db31a7cb618aa132c04c",
+    "format" : "image",
+    "displayName" : "编组 11.png"
+  },
+  {
+    "libraryIdentifier" : "44fb84340519146d2b8cea47eeeb6208",
+    "format" : "image",
+    "displayName" : "IMG_5AB117A4F073-1.jpeg"
+  },
+  {
+    "libraryIdentifier" : "af4cce95a314e5141cda0fb62e19ac94",
+    "format" : "image",
+    "displayName" : "编组 10.png"
+  },
+  {
+    "libraryIdentifier" : "23666c4cee6f01ed7478496e152aa739",
+    "format" : "image",
+    "displayName" : "编组 10备份.png"
+  },
+  {
+    "libraryIdentifier" : "63aa3db598a210897e80df72e8c1e8f6",
+    "format" : "image",
+    "displayName" : "IMG_C0FE7F240EC3-1.jpeg"
+  },
+  {
+    "libraryIdentifier" : "4bf47b8e72029df89d963215b290dd52",
+    "format" : "image",
+    "displayName" : "628496785.727844.jpeg"
+  },
+  {
+    "libraryIdentifier" : "ec94ff7abcc0b52889e518bcfb6935a3",
+    "format" : "image",
+    "displayName" : "画板 1.png"
+  },
+  {
+    "libraryIdentifier" : "5064cde404df82222d1df2f73eb4a9b1",
+    "format" : "image",
+    "displayName" : "IMG_1D5F50FC3637-1.jpeg"
+  },
+  {
+    "libraryIdentifier" : "e8c251572e97f9418ed3abdc7739da7e",
+    "format" : "image",
+    "displayName" : "熔喷布纤维.png"
+  },
+  {
+    "libraryIdentifier" : "d024a50e7df0090fb9ddda0867c1594b",
+    "format" : "image",
+    "displayName" : "熔喷布纤维备份.png"
+  },
+  {
+    "libraryIdentifier" : "39962f5aa4a3426504850f462764fb68",
+    "format" : "image",
+    "displayName" : "编组 10备份 2.png"
+  },
+  {
+    "libraryIdentifier" : "f4c551d2cd6b91965f765c42e0e8e4b4",
+    "format" : "image",
+    "displayName" : "编组 13.png"
+  },
+  {
+    "libraryIdentifier" : "d8490f81abeb9280ebc412994a44bcd2",
+    "format" : "image",
+    "displayName" : "编组 10备份 3.png"
+  },
+  {
+    "libraryIdentifier" : "524e4bb94db15f473e85974e04298edd",
+    "format" : "image",
+    "displayName" : "编组 10备份 4.png"
+  },
+  {
+    "libraryIdentifier" : "e23bf8462225d3e2f6c577d44f4a8107",
+    "format" : "arObject",
+    "displayName" : "Scan_17-44-06.arobject"
+  },
+  {
+    "libraryIdentifier" : "deb93c04a169c9bff11585c768d4d0a6",
+    "format" : "model",
+    "displayName" : "123123.usdz"
   }
 ]
