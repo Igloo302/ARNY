@@ -133,26 +133,38 @@ extension ARViewController {
     
     
     fileprivate func addProcessView() {
-        let processLabel = UILabel()
-        processLabel.translatesAutoresizingMaskIntoConstraints = false
-        loadingView.addSubview(processLabel)
-        processLabel.text = "Now Loading..."
+        processImageView = UIImageView()
+        processImageView.contentMode = .scaleAspectFill
+//        loadingView.addSubview(processImageView)
+
 
         let processView = UIProgressView()
         processView.translatesAutoresizingMaskIntoConstraints = false
         loadingView.addSubview(processView)
         processView.setProgress(0.9, animated: true)
         
+        let processLabel = UILabel()
+        processLabel.translatesAutoresizingMaskIntoConstraints = false
+        loadingView.addSubview(processLabel)
+        processLabel.text = "Now Loading..."
+        
         NSLayoutConstraint.activate([
-            processLabel.widthAnchor.constraint(equalToConstant: 300),
-            processLabel.heightAnchor.constraint(equalToConstant: 30),
-            processLabel.centerXAnchor.constraint(equalTo: loadingView.centerXAnchor),
-            processLabel.bottomAnchor.constraint(equalTo:processView.topAnchor , constant: 50),
+//            processImageView.widthAnchor.constraint(equalToConstant: 300),
+//            processImageView.heightAnchor.constraint(equalToConstant: 200),
+//            processImageView.centerYAnchor.constraint(equalTo: loadingView.centerYAnchor),
+//            processImageView.centerXAnchor.constraint(equalTo: loadingView.centerXAnchor),
             
             processView.widthAnchor.constraint(equalToConstant: 300),
             processView.heightAnchor.constraint(equalToConstant: 10),
             processView.centerXAnchor.constraint(equalTo: loadingView.centerXAnchor),
-            processView.centerYAnchor.constraint(equalTo: loadingView.centerYAnchor)
+            processView.centerYAnchor.constraint(equalTo: loadingView.centerYAnchor),
+            
+            processLabel.widthAnchor.constraint(equalToConstant: 300),
+            processLabel.heightAnchor.constraint(equalToConstant: 30),
+            processLabel.centerXAnchor.constraint(equalTo: loadingView.centerXAnchor),
+            processLabel.topAnchor.constraint(equalTo: processView.bottomAnchor, constant: 10),
+            
+            
         ])
         
     }

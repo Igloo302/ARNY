@@ -64,7 +64,6 @@
 		036EB661257106C400E12C8E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EB660257106C400E12C8E /* GradientView.swift */; };
 		036EB6642571073800E12C8E /* UIView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EB6632571073800E12C8E /* UIView+Helpers.swift */; };
 		036EB66A2571091700E12C8E /* ARViewController+UITextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EB6692571091700E12C8E /* ARViewController+UITextViewDelegate.swift */; };
-		036EB66E2571097B00E12C8E /* Keyboard+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EB66D2571097B00E12C8E /* Keyboard+Helpers.swift */; };
 		036EB67425710AAD00E12C8E /* ARViewController+OverlayUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EB67325710AAD00E12C8E /* ARViewController+OverlayUI.swift */; };
 		0385AE3B256BD68000B16056 /* LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0385AE3A256BD68000B16056 /* LessonViewController.swift */; };
 		0385AE3E256BEEA800B16056 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0385AE3D256BEEA800B16056 /* BasicViewController.swift */; };
@@ -140,7 +139,6 @@
 		036EB660257106C400E12C8E /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		036EB6632571073800E12C8E /* UIView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Helpers.swift"; sourceTree = "<group>"; };
 		036EB6692571091700E12C8E /* ARViewController+UITextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+UITextViewDelegate.swift"; sourceTree = "<group>"; };
-		036EB66D2571097B00E12C8E /* Keyboard+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+Helpers.swift"; sourceTree = "<group>"; };
 		036EB67325710AAD00E12C8E /* ARViewController+OverlayUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+OverlayUI.swift"; sourceTree = "<group>"; };
 		0385AE3A256BD68000B16056 /* LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonViewController.swift; sourceTree = "<group>"; };
 		0385AE3D256BEEA800B16056 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
@@ -273,7 +271,6 @@
 				036EB67325710AAD00E12C8E /* ARViewController+OverlayUI.swift */,
 				036EB660257106C400E12C8E /* GradientView.swift */,
 				036EB6632571073800E12C8E /* UIView+Helpers.swift */,
-				036EB66D2571097B00E12C8E /* Keyboard+Helpers.swift */,
 			);
 			path = StikyNote;
 			sourceTree = "<group>";
@@ -481,7 +478,6 @@
 				0345576A2572343B0057539B /* Lesson1000.swift in Sources */,
 				03D35616256AB024006BD6A7 /* Data.swift in Sources */,
 				036EB651257103A700E12C8E /* StikyNoteEntity.swift in Sources */,
-				036EB66E2571097B00E12C8E /* Keyboard+Helpers.swift in Sources */,
 				0345576D257234F90057539B /* ARNYthing.swift in Sources */,
 				039A7618256B86AD0033E5A7 /* TypePageViewContorller.swift in Sources */,
 				0336AC82256A50B500951BF9 /* AppDelegate.swift in Sources */,

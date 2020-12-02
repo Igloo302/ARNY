@@ -49,7 +49,7 @@ class StickyNoteView: UIView {
     }
     
     fileprivate func setupBlurViewContainer() {
-        blurView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
+        blurView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
         blurView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(blurView)
         blurView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
@@ -61,7 +61,7 @@ class StickyNoteView: UIView {
     }
     
     fileprivate func setupTextView() {
-        let paddingSpace: CGFloat = 5
+        let paddingSpace: CGFloat = 2
         
         textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
@@ -74,12 +74,15 @@ class StickyNoteView: UIView {
         ])
         textView.backgroundColor = .clear
         textView.font = UIFont(name: "Helvetica", size: 22)
-        textView.textAlignment = .center
-        textView.addDismissButton()
+        textView.textAlignment = .left
+        //textView.addDismissButton()
         textView.text = "New Note..."
         
         //textView.textColor = .darkGray
         textView.textColor = .white
+        
+        textView.isEditable = false
+        textView.isSelectable = false
     }
     
 }

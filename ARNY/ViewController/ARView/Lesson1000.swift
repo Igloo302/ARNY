@@ -19,10 +19,6 @@ extension ARViewController {
         case 3:
             do{
                 switch lessonPoint {
-                case 2003:
-                    lesson10000MaskAnchor.notifications.up.post()
-                case 2004:
-                    lesson10000MaskAnchor.notifications.front.post()
                 default:
                     return
                 }
@@ -147,6 +143,19 @@ extension ARViewController {
             // update UI
             self.pointID = 2001
             self.updateUI(self.lessonID, self.pointID)
+            
+            //
+            self.insertNewSticky(entity!)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+                self.deleteStickyNote(of: entity!)
+            }
+        }
+        
+        lesson1000Anchor.actions.showOpen.onAction = {entity in
+            self.insertNewSticky(entity!)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+                self.deleteStickyNote(of: entity!)
+            }
         }
         
         lesson1000Anchor.actions.showPoint2Switch.onAction = {entity in
@@ -165,11 +174,26 @@ extension ARViewController {
         }
         
         
+        lesson1000Anchor.actions.showPoint2.onAction = {entity in
+            // Check Mask
+            self.insertNewSticky(entity!)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+                self.deleteStickyNote(of: entity!)
+            }
+
+        }
+        
         
         lesson1000Anchor.actions.showPoint3.onAction = {entity in
             // update UI
             self.pointID = 2003
             self.updateUI(self.lessonID, self.pointID)
+            
+            // Mental
+            self.insertNewSticky(entity!)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+                self.deleteStickyNote(of: entity!)
+            }
         }
         
         lesson1000Anchor.actions.showPoint4.onAction = {entity in
@@ -178,14 +202,6 @@ extension ARViewController {
             self.updateUI(self.lessonID, self.pointID)
             
             // 内部白色
-            self.insertNewSticky(entity!)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3){
-                self.deleteStickyNote(of: entity!)
-            }
-        }
-        
-        lesson1000Anchor.actions.goToPutOn.onAction = {entity in
-            // 引导用户去佩戴口罩
             self.insertNewSticky(entity!)
             DispatchQueue.main.asyncAfter(deadline: .now() + 3){
                 self.deleteStickyNote(of: entity!)
@@ -231,7 +247,7 @@ extension ARViewController {
             
             // 显示点击金属条
             self.insertNewSticky(entity!)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5){
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3){
                 self.deleteStickyNote(of: entity!)
             }
         }
@@ -250,7 +266,7 @@ extension ARViewController {
         lesson1000Anchor.actions.clickMask.onAction = {entity in
             // 点击口罩
             self.insertNewSticky(entity!)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5){
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1){
                 self.deleteStickyNote(of: entity!)
             }
         }
@@ -263,6 +279,10 @@ extension ARViewController {
             //self.currentLesson = lessonData[lessonData.firstIndex(where: {$0.id == self.lessonID})!]
             //self.showNotification(self.lessonID)
             
+            //知识点5
+            self.pointID = 2005
+            self.updateUI(self.lessonID, self.pointID)
+            
         }
         lesson1000FaceAnchor.actions.showPoint6.onAction = {entity in
             //知识点6
@@ -271,7 +291,7 @@ extension ARViewController {
             
             // 显示点击金属条
             self.insertNewSticky(entity!)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5){
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3){
                 self.deleteStickyNote(of: entity!)
             }
         }
@@ -302,9 +322,6 @@ extension ARViewController {
             self.controllNext.isHidden = false
             self.controllNext.setTitle("End Lesson", for: .normal)
             
-            //self.controllBack.isHidden = false
-            //self.controllBack.currentImage =
-            
             self.controllStackView.isHidden = false
             
             // 地点，比较麻烦，不写了
@@ -326,12 +343,7 @@ extension ARViewController {
     }
     
     func setupNotifyActions1000Simulation(){
-        //        lesson1000SimulationAnchor.actions.prepareFly.onAction = {entity in
-        //            // lesson1000SimulationAnchor.notifications.reset.post()
-        //            let dynamic: PhysicsBodyComponent = .init(massProperties: .default,material: nil,mode: .dynamic)
-        //            let virus = self.lesson1000SimulationAnchor.virus as! Entity & HasPhysics & HasCollision
-        //            virus.components.set(dynamic)
-        //        }
+
         
         lesson1000SimulationAnchor.actions.flying.onAction = {entity in
             
@@ -348,7 +360,6 @@ extension ARViewController {
                 self.lesson1000SimulationAnchor.notifications.hi.post()
             }
             
-            //self.lesson1000SimulationAnchor.notifications.reset.post()
         }
         
         lesson1000SimulationAnchor.actions.goFly.onAction = {entity in
@@ -366,33 +377,25 @@ extension ARViewController {
         
         lesson10000MaskAnchor.actions.onShow.onAction = {entity in
             // 加载自己的口罩成功
-            
             self.pointID = 2003
             self.updateUI(self.lessonID, self.pointID)
+            
+            // 显示点击金属条
+            self.insertNewSticky(entity!)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+                self.deleteStickyNote(of: entity!)
+            }
         }
         
-        lesson10000MaskAnchor.actions.up.onAction = {entity in
+        lesson10000MaskAnchor.actions.showPoint4.onAction = {entity in
             //请求点击箭头
             self.pointID = 2004
             self.updateUI(self.lessonID, self.pointID)
-        }
-        
-        lesson10000MaskAnchor.actions.clickMental.onAction = {entity in
-            //点击金属开启下一流程
-            self.perform1000(at: self.pointID)
-        }
-        
-        
-        
-        lesson10000MaskAnchor.actions.clickArrorw.onAction = {entity in
-            //点击箭头开启下一流程
-            self.perform1000(at: self.pointID)
-        }
-        
-        lesson10000MaskAnchor.actions.front.onAction = {entity in
-            //请求按钮开始戴口罩
-            self.pointID = 2005
-            self.updateUI(self.lessonID, self.pointID)
+            
+            self.insertNewSticky(entity!)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+                self.deleteStickyNote(of: entity!)
+            }
         }
         
         lesson10000MaskAnchor.actions.clickput.onAction = {entity in
@@ -408,10 +411,6 @@ extension ARViewController {
                 
                 // 添加FaceAnchor
                 self.loadLesson1000Face()
-                
-                // UI不用了关掉
-                self.controllNext.isHidden  = true
-                self.controllBack.isHidden = true
             }
             else {
                 // 非前置摄像头流程

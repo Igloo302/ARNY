@@ -72,6 +72,7 @@ class ARViewController: UIViewController,ARSessionDelegate {
     
     
     var loadingView:UIView!
+    var processImageView:UIImageView!
     
     // StikyNotes
     var stickyNotes = [StickyNoteEntity]()
@@ -185,6 +186,7 @@ class ARViewController: UIViewController,ARSessionDelegate {
     func reset() {
         guard let configuration = arView.session.configuration else { return }
         arView.session.run(configuration, options: .removeExistingAnchors)
+        arView.scene.anchors.removeAll()
         for note in stickyNotes {
             deleteStickyNote(note)
         }
@@ -273,7 +275,9 @@ class ARViewController: UIViewController,ARSessionDelegate {
         popLeftButton =  (popView.viewWithTag(3) as! UIButton)
         popRightButton =  (popView.viewWithTag(4) as! UIButton)
         popLabel = (popView.viewWithTag(5) as! UILabel)
-    }
+        
+        // processImageView
+        processImageView.image = UIImage(named: currentLesson.imageName)    }
     
     /// 更新UI元素
     func updateUI(_ lessionID: Int, _ pointID: Int){
