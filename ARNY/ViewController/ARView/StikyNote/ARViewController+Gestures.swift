@@ -17,9 +17,9 @@
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tappedOnARView))
             arView.addGestureRecognizer(tapGesture)
             
-//            let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipedDownOnARView))
-//            swipeGesture.direction = .down
-//            arView.addGestureRecognizer(swipeGesture)
+            //            let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipedDownOnARView))
+            //            swipeGesture.direction = .down
+            //            arView.addGestureRecognizer(swipeGesture)
         }
         
         func stickyNoteGestureSetup(_ note: StickyNoteEntity) {
@@ -50,20 +50,20 @@
             print(entityTapped.name)
             
             
-            // 尝试失败，大概原因是通过Hittesting无法直接获得看到的那个entity的路径，而是其父路径。
-            //        insertNewSticky(entityTapped)
-            //        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
-            //            self.deleteStickyNote(of: entityTapped)
-            //        }
+            // 短暂显示标签
+            insertNewSticky(entityTapped, offset: .zero)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+                self.deleteStickyNote(of: entityTapped)
+            }
         }
         
-
+        
         /**
          添加标签修改版
          Hit test the feature point cloud and use any hit as the position of a new StickyNote. Otherwise, display a tip.
          - Tag: ScreenSpaceViewInsertionTag
          */
-        func insertNewSticky(_ entity: Entity,offset: SIMD3<Float>? = [0,0,0]) {
+        func insertNewSticky(_ entity: Entity,offset: SIMD3<Float>? = [0,0,0], label: String? = "") {
             
             // 如果已经创建了同名Note则弹出
             let noteName = "label" + entity.name
@@ -97,10 +97,11 @@
             }
             // Add the sticky note's view to the view hierarchy.
             guard let stickyView = note.view else { return }
-            arView.insertSubview(stickyView, belowSubview: trashZone)
+            arView.insertSubview(stickyView, belowSubview: arView)
             
             // Enable gestures on the sticky note.
-            stickyNoteGestureSetup(note)
+            // 关掉了
+            //stickyNoteGestureSetup(note)
             
             // Save a reference to the sticky note.
             stickyNotes.append(note)
@@ -110,7 +111,7 @@
             
             print("创建标签",noteName)
         }
-
+        
         
         @objc
         func tappedOnStickyView(_ sender: UITapGestureRecognizer) {
@@ -226,39 +227,44 @@
             note.view?.isInTrashZone = false
         }
         
-//        /// - Tag: AttemptRepositioning
-//        // 拖动标签的时候重新找平面
-//        fileprivate func attemptRepositioning(_ stickyView: StickyNoteView) {
-//            // Conducts a ray-cast for feature points using the panned position of the StickyNoteView
-//            let point = CGPoint(x: stickyView.frame.midX, y: stickyView.frame.midY)
-//            if let result = arView.raycast(from: point, allowing: .estimatedPlane, alignment: .any).first {
-//                stickyView.stickyNote.transform.matrix = result.worldTransform
-//            } else {
-//                print("No surface detected, unable to reposition note.")
-//                stickyView.stickyNote.shouldAnimate = true
-//            }
-//        }
-//
-//        fileprivate func trashZoneThresholdFeedback(_ sender: UIPanGestureRecognizer, _ feedbackGenerator: UIImpactFeedbackGenerator) {
-//
-//            guard let stickyView = sender.view as? StickyNoteView else { return }
-//
-//            let panLocation = sender.location(in: trashZone)
-//
-//            if trashZone.frame.contains(panLocation), !stickyView.isInTrashZone {
-//                stickyView.isInTrashZone = true
-//                feedbackGenerator.impactOccurred()
-//
-//            } else if !trashZone.frame.contains(panLocation), stickyView.isInTrashZone {
-//                stickyView.isInTrashZone = false
-//                feedbackGenerator.impactOccurred()
-//
-//            }
-//        }
+        //        /// - Tag: AttemptRepositioning
+        //        // 拖动标签的时候重新找平面
+        //        fileprivate func attemptRepositioning(_ stickyView: StickyNoteView) {
+        //            // Conducts a ray-cast for feature points using the panned position of the StickyNoteView
+        //            let point = CGPoint(x: stickyView.frame.midX, y: stickyView.frame.midY)
+        //            if let result = arView.raycast(from: point, allowing: .estimatedPlane, alignment: .any).first {
+        //                stickyView.stickyNote.transform.matrix = result.worldTransform
+        //            } else {
+        //                print("No surface detected, unable to reposition note.")
+        //                stickyView.stickyNote.shouldAnimate = true
+        //            }
+        //        }
+        //
+        //        fileprivate func trashZoneThresholdFeedback(_ sender: UIPanGestureRecognizer, _ feedbackGenerator: UIImpactFeedbackGenerator) {
+        //
+        //            guard let stickyView = sender.view as? StickyNoteView else { return }
+        //
+        //            let panLocation = sender.location(in: trashZone)
+        //
+        //            if trashZone.frame.contains(panLocation), !stickyView.isInTrashZone {
+        //                stickyView.isInTrashZone = true
+        //                feedbackGenerator.impactOccurred()
+        //
+        //            } else if !trashZone.frame.contains(panLocation), stickyView.isInTrashZone {
+        //                stickyView.isInTrashZone = false
+        //                feedbackGenerator.impactOccurred()
+        //
+        //            }
+        //        }
         
         @objc
         func tappedReset(_ sender: UIButton) {
             reset()
         }
+        
+        
+        
+
+        
         
     }

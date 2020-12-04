@@ -30,6 +30,7 @@ class ARViewController: UIViewController,ARSessionDelegate {
     @IBOutlet var pointNStep: UILabel!
     @IBOutlet var pointName: UILabel!
     @IBOutlet var pointDetail: UITextView!
+    var pointImg: UIImageView!
     
     // 控制栏
     @IBOutlet var controllNext: UIButton!
@@ -41,7 +42,9 @@ class ARViewController: UIViewController,ARSessionDelegate {
     
     /// POP
     @IBOutlet var popView: UIView!
+    var popImageViewCont: UIView!
     var popImageView: UIImageView!
+    var popButtons: UIStackView!
     var popLeftButton: UIButton!
     var popRightButton: UIButton!
     var popStarSegmentControl: UISegmentedControl!
@@ -67,13 +70,20 @@ class ARViewController: UIViewController,ARSessionDelegate {
     var lesson1001Anchor: Experience.Lesson1001!
     var lesson1001ScaleAnchor: Experience.Lesson1001Scale!
     var lesson1001MeltblownAnchor: Experience.Lesson1001Meltblown!
-    var lesson1002Anchor: Experience.Lesson1002!
+    var lesson1002Anchor: Experience2.Lesson1002!
+    var lesson1002s1Anchor: Experience2.Lesson1002s1!
+    var lesson1002s2Anchor: Experience2.Lesson1002s2!
+    var lesson1002s3Anchor: Experience2.Lesson1002s3!
+    var lesson1002s4Anchor: Experience2.Lesson1002s4!
     var lesson1003Anchor: Experience.Lesson1003!
     var lesson1004Anchor: Experience.Lesson1004!
     
     
     var loadingView:UIView!
     var processImageView:UIImageView!
+    var goBackButton: UIButton!
+    var processView : UIProgressView!
+    var processLabel : UILabel!
     
     // StikyNotes
     var stickyNotes = [StickyNoteEntity]()
@@ -103,15 +113,30 @@ class ARViewController: UIViewController,ARSessionDelegate {
         
         // StikyNote
         subscription = arView.scene.subscribe(to: SceneEvents.Update.self) { [unowned self] in
-            self.updateScene(on: $0)//这句话什么意思
+            self.updateScene(on: $0)
         }
         arViewGestureSetup()
-        
+        worldAnchor = AnchorEntity(world: .zero)
+        arView.scene.anchors.append(worldAnchor)
         arView.session.delegate = self
         
         
-        worldAnchor = AnchorEntity(world: .zero)
-        arView.scene.anchors.append(worldAnchor)
+        
+//        arView.debugOptions.insert(.showStatistics)
+//        arView.debugOptions.insert(.showAnchorGeometry)
+//        arView.debugOptions.insert(.showAnchorOrigins)
+//        arView.debugOptions.insert(.showPhysics)
+//        arView.debugOptions.insert(.showWorldOrigin)
+//        arView.renderOptions.insert(.disableMotionBlur)
+        
+        
+        // Capture the default value after you initialize the view.
+        let defaultScaleFactor = arView.contentScaleFactor
+        
+        // Scale as needed. For example, here the scale factor is
+        // set to 75% of the default value.
+        arView.contentScaleFactor = 0.75 * defaultScaleFactor
+        
         
     }
     
@@ -120,12 +145,6 @@ class ARViewController: UIViewController,ARSessionDelegate {
         
         // 隐藏导航栏
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        
-        // Add observer to the keyboardWillShowNotification to get the height of the keyboard every time it is shown
-        // 检测键盘是否出来
-        //        let notificationName = UIResponder.keyboardWillShowNotification
-        //        let selector = #selector(keyboardIsPoppingUp(notification:))
-        //        NotificationCenter.default.addObserver(self, selector: selector, name: notificationName, object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -138,9 +157,6 @@ class ARViewController: UIViewController,ARSessionDelegate {
     
     // MARK: - AR Lesson Resources
     func setupARLessonResources() {
-        // 重启一下
-        reset()
-        
         // AR 配置工作
         switch  lessonID {
         case 999:
@@ -151,13 +167,16 @@ class ARViewController: UIViewController,ARSessionDelegate {
             loadLesson1001()
         case 1002:
             loadLesson1002()
-        case 1003:
-            loadLesson1003()
-        case 1004:
-            loadLesson1004()
+//        case 1003:
+//            loadLesson1003()
+//        case 1004:
+//            loadLesson1004()
         default:
-            print("本课程AR课程未就绪")
-            loadARNY()
+            print("本AR课程未就绪")
+            arView.removeFromSuperview()
+            goBackButton.isHidden = false
+            processLabel.isHidden = true
+            processView.isHidden = true
         }
         
     }
@@ -191,7 +210,7 @@ class ARViewController: UIViewController,ARSessionDelegate {
         for note in stickyNotes {
             deleteStickyNote(note)
         }
-        print("sesson reset")
+        print("AR Sesson Reset")
     }
     
     
@@ -266,37 +285,48 @@ class ARViewController: UIViewController,ARSessionDelegate {
             buttonSwitchCamera.isHidden = true
         }
         
+        // 控制按钮
+        controllStackView.isHidden = true
+        controllNext.isHidden = true
+        controllBack.isHidden = true
+        controllNext.addTarget(self, action: #selector(controlNext(_ :)), for: .touchUpInside)
+        controllBack.addTarget(self, action: #selector(controlBack(_ :)), for: .touchUpInside)
+        
+        
+        InfoView.isHidden = true
         
         segmentedControl = (controllStackView.viewWithTag(12) as! UISegmentedControl)
         pickView = (controllStackView.viewWithTag(22) as! UIPickerView)
         switchControl = (controllStackView.viewWithTag(32) as! UISwitch)
         
         popStarSegmentControl = (popView.viewWithTag(1) as! UISegmentedControl)
-        popImageView = (popView.viewWithTag(2) as! UIImageView)
+        popImageViewCont = (popView.viewWithTag(123)!)
+        popImageView = (popView.viewWithTag(22) as! UIImageView)
+        popButtons = (popView.viewWithTag(66) as! UIStackView)
         popLeftButton =  (popView.viewWithTag(3) as! UIButton)
         popRightButton =  (popView.viewWithTag(4) as! UIButton)
         popLabel = (popView.viewWithTag(5) as! UILabel)
         
-        // processImageView
-        processImageView.image = UIImage(named: currentLesson.imageName)    }
+        // loadingView
+        processImageView.image = UIImage(named: currentLesson.imageName)
+        
+        // info view
+        pointImg = (InfoView.viewWithTag(123) as! UIImageView)
+        pointImg.contentMode = .scaleAspectFill
+    }
     
     /// 更新UI元素
     func updateUI(_ lessionID: Int, _ pointID: Int){
-        
-        // 界面元素（需要根据课程是否有信息展示）
-        InfoView.isHidden = false
-        controllStackView.isHidden = true
-        // controllNext.isHidden = false
-        // controllBack.isHidden = false
-        
-        
         // 根据lessionID和pointID查找数据
         guard let index = currentLesson.points.firstIndex(where: { $0.id == pointID }) else {
             print("没有找到pointID", pointID)
             return
         }
+        
         currentPoint = currentLesson.points[index]
         
+        // Info View 展示
+        InfoView.isHidden = false
         if currentLesson.isWithSteps {
             pointNStep.text = "STEP " + String(index+1) + "/" + String(pointsCount)
         } else {
@@ -304,17 +334,29 @@ class ARViewController: UIViewController,ARSessionDelegate {
         }
         pointName.text = currentPoint.name
         pointDetail.text = currentPoint.detail
+        print("更新数据成功：Point",pointID)
         
-        print("更新Point数据",pointID)
-        
-        // 步骤按钮
+        // 控制按钮，上一步和下一步
+        guard controllNext.titleLabel?.text != "Back to Main" else {
+            return
+        }
         if currentLesson.isWithSteps {
-            // 暂不做处理
+            // 步骤类课程，暂不做处理，不展示上一步和下一步按钮
+            // 目前来说更理想的方案是，可以回退之前的，但是无法Next到下一步（可以之后再加，需要引入LatestPoint变量）
             
+            if ((index+1) == pointsCount) {
+                controllNext.setTitle("End Lesson", for: .normal)
+            }else {
+                //
+            }
         } else
-        {   // 不是按照步骤，而是按照知识点的
-            self.controllNext.setTitle("Next Point", for: .normal)
+        {   /// 不是按照步骤，而是按照知识点的，显示步骤按钮，支持用户随意切换Point（目前技术上无法支持在AR中响应）
             self.controllNext.isHidden = false
+            if ((index+1) == pointsCount) {
+                controllNext.setTitle("End Lesson", for: .normal)
+            }else {
+                self.controllNext.setTitle("Next Point", for: .normal)
+            }
             
             // point为1时隐藏返回按钮
             if ((pointID - 2000) == 1) {
@@ -322,16 +364,17 @@ class ARViewController: UIViewController,ARSessionDelegate {
             }else {
                 controllBack.isHidden = false
             }
-            
-            if ((index+1) == pointsCount) {
-                controllNext.setTitle("End Lesson", for: .normal)
-            }else {
-                controllNext.isHidden = false
-            }
         }
         
+    }
+    
+    /// restore控制按钮，上一步和下一步
+    func restoreNextNBack(){
+        controllNext.isHidden = false
+        controllNext.setTitle("Next Point", for: .normal)
+        controllNext.addTarget(self, action: #selector(controlNext(_ :)), for: .touchUpInside)
         
-        
+        controllBack.isHidden = true
     }
     
     func showNotification(_ lessionID: Int){
@@ -374,9 +417,9 @@ class ARViewController: UIViewController,ARSessionDelegate {
         popView.isHidden = false
         popStarSegmentControl.isHidden = true
         
-        popLabel.text = "😔Lesson isn't Finished"
+        popLabel.text = "Comfirm to Quit"
         
-        popRightButton.setTitle("Exit", for: .normal)
+        popRightButton.setTitle("Quit", for: .normal)
         popRightButton.addTarget(self, action: #selector(popRightButtonRateNExit(_ :)), for: .touchUpInside)
         
         popLeftButton.setTitle("Close", for: .normal)
@@ -391,19 +434,12 @@ class ARViewController: UIViewController,ARSessionDelegate {
             setupARLessonResources()
             print("切换回之后无法进行追踪，暂时无法解决⚠️")
         } else {
-            self.arView.scene.anchors.removeAll()
             // 开启前置摄像头面部识别Indicate to use the FaceTrackingConfiguration (front camera)
             guard ARFaceTrackingConfiguration.isSupported else { return }
+            self.arView.scene.anchors.removeAll()
             let configuration = ARFaceTrackingConfiguration()
             configuration.isLightEstimationEnabled = true
-            
             arView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
-            
-            //            // ARNY Mode 和lesson1000专属放行
-            //            if ((lessonID == 1000) || (lessonID == 999)) {
-            //                loadLesson1000Face()
-            //            }
-            
         }
     }
     
@@ -427,7 +463,9 @@ class ARViewController: UIViewController,ARSessionDelegate {
         notificationBar.isHidden = true
     }
     
-    @IBAction func controllNext(_ sender: Any) {
+    
+    /// 下一步和上一步操作，原则上，上一步和下一步需要在AR中进行直接反馈，但是由于技术限制，因此仅展示文案变化。
+    @objc func controlNext(_ sender: Any) {
         /// 结束课程
         if (self.controllNext.titleLabel?.text == "End Lesson") {
             //pop
@@ -436,58 +474,54 @@ class ARViewController: UIViewController,ARSessionDelegate {
             
             popLabel.text = "🎉🎉🎉The Lesson is Finished"
             
-            popRightButton.setTitle("Rate&Exit", for: .normal)
+            popRightButton.setTitle("Rate", for: .normal)
             popRightButton.addTarget(self, action: #selector(popRightButtonRateNExit(_ :)), for: .touchUpInside)
             
-            popLeftButton.setTitle("Close&Stay", for: .normal)
+            popLeftButton.setTitle("Close", for: .normal)
             popLeftButton.addTarget(self, action:#selector(popLeftButtonClose(_ :)), for: .touchUpInside)
         } else {
             // 正常Next
-            // 先执行本课程中的任务
-            switch lessonID {
-            case 1000:
-                do{
-                    perform1000(at: pointID)
-                }
-            case 1001:
-                do {
-                    //perform1001(to: pointID)
-                }
-            default: break
-            //
-            }
-            
+            //            // 先执行本课程中的任务
+            //            switch lessonID {
+            //            case 1000:
+            //                do{
+            //                    //perform1000(at: pointID)
+            //                }
+            //            default: break
+            //            }
+            //更新UI
             pointID += 1
             updateUI(lessonID, pointID)
         }
     }
     
-    @IBAction func controlBack(_ sender: Any) {
-        
+    @objc func controlBack(_ sender: Any) {
+        // 更新UI
         pointID -= 1
         updateUI(lessonID, pointID)
         
         
-        switch lessonID {
-        case 1000:
-            do {
-                
-                //perform1000(at: pointID)
-            }
-        case 1001:
-            do {
-                
-                //perform1001(to: pointID)
-            }
-        default: break
+        //        switch lessonID {
+        //        case 1000:
+        //            do {
         //
-        }
+        //                //perform1000(at: pointID)
+        //            }
+        //        case 1001:
+        //            do {
+        //
+        //                //perform1001(to: pointID)
+        //            }
+        //        default: break
+        //        //
+        //        }
     }
     
     /// EndLessonPopComfirm
     @objc func popRightButtonRateNExit(_ sender: UIButton){
         self.popView.isHidden = true
         // 打分存储
+        
         
         // 退出
         navigationController?.popViewController(animated: true)
@@ -499,6 +533,25 @@ class ARViewController: UIViewController,ARSessionDelegate {
     }
     
     
+    /// Scan Guide
+    func showGuide(){
+        self.popView.isHidden = false
+        self.popImageViewCont.isHidden = false
+        self.popButtons.isHidden = true
+        
+        self.popLabel.text = "Please scan the object in the picture"
+        //self.popImageView.image = UIImage(named: "1001T.jpg")
+        self.popImageView.image = UIImage(named: String(lessonID) + "T.jpg")
+        self.popImageViewCont.alpha = 0.6
+    }
+    
+    /// hide Guide
+    func hideGuide(){
+        self.popView.isHidden = true
+        self.popImageViewCont.isHidden = true
+        self.popButtons.isHidden = false
+    }
+    
     /*
      // MARK: - Navigation
      
@@ -508,5 +561,7 @@ class ARViewController: UIViewController,ARSessionDelegate {
      // Pass the selected object to the new view controller.
      }
      */
+    
+    
     
 }

@@ -39,18 +39,15 @@ extension ARViewController {
         Experience.loadLesson1000Async(completion: { (result) in
             do {
                 self.lesson1000Anchor = try result.get()
-                
-                self.arView.scene.anchors.removeAll()
                 self.arView.scene.anchors.append(self.lesson1000Anchor)
-                // ...
-                // 响应Reality Composer设置的actions
+
                 self.setupNotifyActions1000()
-                //                self.lesson1000Anchor.generateCollisionShapes(recursive: true)
-                //                self.lesson1000Anchor.bubble1000?.generateCollisionShapes(recursive: true)
-                
                 self.lessonPath = 1
                 print("👌lesson1000加载完成")
                 self.loadingView.isHidden = true
+                
+                self.showGuide()
+                
             } catch {
                 // handle error
                 print("❌lesson1000加载失败")
@@ -125,6 +122,8 @@ extension ARViewController {
         lesson1000Anchor.actions.onShow.onAction = { entity in
             self.lessonID = 1000
             self.showNotification(self.lessonID)
+            
+            self.hideGuide()
         }
         
         /// 跳转常规模式，传递lessonID
@@ -316,7 +315,10 @@ extension ARViewController {
             // 准备Simulation模式的UI
             // 备注：无法通过actions启动entity的运动，原因未知，此处按钮改为结束本次课程
             
-            self.InfoView.isHidden = true
+            self.pointID = 2008
+            self.updateUI(self.lessonID, self.pointID)
+            self.pointImg.image = UIImage(named: self.currentPoint.imageName)
+            
             
             
             self.controllNext.isHidden = false

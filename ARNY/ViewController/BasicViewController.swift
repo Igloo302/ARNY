@@ -64,9 +64,9 @@ class BasicViewController: UIViewController {
         popView.isHidden = false
         popStarSegmentControl.isHidden = true
         
-        popLabel.text = "😔Lesson isn't Finished"
+        popLabel.text = "Comfirm to Quit"
         
-        popRightButton.setTitle("Exit", for: .normal)
+        popRightButton.setTitle("Quit", for: .normal)
         popRightButton.addTarget(self, action: #selector(popRightButtonRateNExit(_ :)), for: .touchUpInside)
         
         popLeftButton.setTitle("Close", for: .normal)
@@ -97,10 +97,10 @@ class BasicViewController: UIViewController {
             
             popLabel.text = "🎉🎉🎉Lesson is Finished"
             
-            popRightButton.setTitle("Rate&Exit", for: .normal)
+            popRightButton.setTitle("Rate", for: .normal)
             popRightButton.addTarget(self, action: #selector(popRightButtonRateNExit(_ :)), for: .touchUpInside)
             
-            popLeftButton.setTitle("Close&Stay", for: .normal)
+            popLeftButton.setTitle("Close", for: .normal)
             popLeftButton.addTarget(self, action:#selector(popLeftButtonClose(_ :)), for: .touchUpInside)
         } else {
             pointID += 1
@@ -198,7 +198,7 @@ class BasicViewController: UIViewController {
         pointDetail.text = currentPoint.detail
         
         imgForBasic.image = UIImage(named: currentPoint.imageNameForBasic)
-        imgForBasic.contentMode = .scaleAspectFill
+        imgForBasic.contentMode = .scaleAspectFit
         
         // point为1时隐藏返回按钮
         if ((pointID - 2000) == 1) {
@@ -211,7 +211,7 @@ class BasicViewController: UIViewController {
             //controllNext.isHidden = true
             controllNext.setTitle("End Lesson", for: .normal)
         }else {
-            controllNext.isHidden = false
+            controllNext.setTitle("Next", for: .normal)
         }
         
         // isWithAR时展示AR按钮

@@ -22,11 +22,11 @@
         ],
         "points": [
             {
-                "name": "Clean your hands 清洁双手",
+                "name": "清洁双手 Clean your hands",
                 "id": 2001,
                 "isNew": false,
                 "isWithAR": true,
-                "detail": "Before touching the mask, clean your hands with an alcohol-based hand rub or soap and water.\n在触摸面罩之前，请用酒精洗手液或肥皂和水清洁双手。",
+                "detail": "在触摸面罩之前，请用酒精洗手液或肥皂和水清洁双手。\nBefore touching the mask, clean your hands with an alcohol-based hand rub or soap and water.",
                 "imageName": "washhand.jpg",
                 "imageNameForBasic": "washhand.jpg"
             },
@@ -40,13 +40,13 @@
                 "imageNameForBasic": "checkmask.jpg"
             },
             {
-                "name": "Verify which side is the top 确认顶部",
+                "name": "确认顶部 Verify which side is the top",
                 "id": 2003,
                 "isNew": false,
                 "isWithAR": true,
-                "detail": "Verify which side is the top – this is usually where the metal strip is. \n确认哪边是顶部——这通常是金属条的位置。",
-                "imageName": "checkmask.jpg",
-                "imageNameForBasic": "checkmask.jpg"
+                "detail": "确认哪边是顶部——这通常是金属条的位置。\nVerify which side is the top – this is usually where the metal strip is.",
+                "imageName": "metalstrip.jpg",
+                "imageNameForBasic": "metalstrip.jpg"
             },
             {
                 "name": "Identify the inside 确认内外部",
@@ -67,22 +67,31 @@
                 "imageNameForBasic": "rightmask.jpg"
             },
             {
-                "name": "Pinch the metal strip 调整金属条",
+                "name": "调整金属条 Pinch the metal strip",
                 "id": 2006,
                 "isNew": false,
                 "isWithAR": true,
-                "detail": "Pinch the metal strip so it moulds to the shape of your nose. 捏住金属条，使其与你的鼻子形状相吻合。",
-                "imageName": "metalstrip.jpg",
-                "imageNameForBasic": "metalstrip.jpg"
+                "detail": "捏住金属条，使其与你的鼻子形状相吻合。\nPinch the metal strip so it moulds to the shape of your nose. ",
+                "imageName": "mentals.png",
+                "imageNameForBasic": "mentals.png"
             },
             {
-                "name": "Do not touch the front 不要触碰口罩前部",
+                "name": "不要触碰口罩前部 Do not touch the front ",
                 "id": 2007,
                 "isNew": false,
                 "isWithAR": true,
-                "detail": "Remember, do not touch the front of the mask while using it to avoid contamination; if you accidentally touch it, clean your hands.   切记，在使用口罩时，不要触摸口罩的正面，以免造成污染；如果不小心触摸到口罩，请清洁双手。 ",
+                "detail": "切记，在使用口罩时，不要触摸口罩的正面，以免造成污染；如果不小心触摸到口罩，请清洁双手。 \nRemember, do not touch the front of the mask while using it to avoid contamination; if you accidentally touch it, clean your hands.",
                 "imageName": "donttouch.jpg",
                 "imageNameForBasic": "donttouch.jpg"
+            },
+            {
+                "name": "口罩的错误戴法",
+                "id": 2008,
+                "isNew": false,
+                "isWithAR": true,
+                "detail": "要按以下方式佩戴口罩：盖住口鼻，并在下巴下方固紧紧贴脸部两侧",
+                "imageName": "wrong.jpg",
+                "imageNameForBasic": "wrong.jpg"
             }
         ]
     },
@@ -90,10 +99,10 @@
         "name": "How Surgical Masks are Made?",
         "category": "Health",
         "id": 1001,
-        "isNew": false,
+        "isNew": true,
         "isWithAR": true,
         "isWithSteps": false,
-        "intro": "Surgical masks, once simply a strip of cloth tied around the face of a doctor or nurse, are today manufactured using non-woven fabrics made from plastics like polypropylene to filter and protect. They are also available in many different styles and grades depending on the level of protection the user requires.\n外科口罩曾经只是简单地用布条绑在医生或护士的脸上，现在则使用聚丙烯等塑料制成的无纺布来过滤和保护。它们也有许多不同的风格和等级，取决于用户所需的保护水平。",
+        "intro": "外科口罩曾经只是简单地用布条绑在医生或护士的脸上，现在则使用聚丙烯等塑料制成的无纺布来过滤和保护。\nSurgical masks, once simply a strip of cloth tied around the face of a doctor or nurse, are today manufactured using non-woven fabrics made from plastics like polypropylene to filter and protect. ",
         "imageName": "HowSurgicalMasksareMade.jpg",
         "score": 4.5,
         "relatedLessons": [
@@ -109,16 +118,16 @@
         ],
         "points": [
             {
-                "name": "多层结构Multi-layered structure",
+                "name": "多层结构 Multi-layered structure",
                 "id": 2001,
                 "isNew": false,
                 "isWithAR": true,
                 "detail": "手术口罩是由多层结构组成的，一般是在两面用无纺布粘合织物覆盖一层纺织品。医用口罩一般采用SMS（纺粘-熔喷-纺粘）复合多层结构，里外的S为纺粘无纺布，英文为Spunbond；中间M为熔喷无纺布，英文为Meltblowing。\n无纺布由于其一次性的特点，制作成本较低，而且比较干净。\n机器生产线将无纺布从线轴上组装起来，用超声波将各层无纺布焊接在一起，并在口罩上盖上鼻条、耳环和其他部件。",
-                "imageName": "multi-layered.jpg",
-                "imageNameForBasic": "multi-layered.jpg"
+                "imageName": "2001.jpeg",
+                "imageNameForBasic": "2001.jpeg"
             },
             {
-                "name": "无纺布Non-woven fabric",
+                "name": "无纺布 Non-woven fabric",
                 "id": 2002,
                 "isNew": false,
                 "isWithAR": true,
@@ -131,18 +140,18 @@
                 "id": 2003,
                 "isNew": false,
                 "isWithAR": true,
-                "detail": "纺粘无纺布是用纺粘工艺制造的，将熔化的塑料挤压到传送带上。材料被挤压成网状，其中股线在冷却时相互粘合。",
-                "imageName": "spun-bond.jpg",
-                "imageNameForBasic": "spun-bond.jpg"
+                "detail": "纺粘无纺布是用纺粘工艺制造的。将聚合物挤出、拉伸，形成连续长丝后，长丝铺设成网，纤网再经过自身粘合、热粘合、化学粘合或机械加固方法，使纤网变成无纺布。",
+                "imageName": "2003.jpg",
+                "imageNameForBasic": "2003.jpg"
             },
             {
-                "name": "熔喷布Meltblown",
+                "name": "熔喷布 Meltblown",
                 "id": 2004,
                 "isNew": false,
                 "isWithAR": true,
                 "detail": "熔喷布是无纺布的一种，是指通过熔喷工艺制备的无纺布，塑料通过一个带有数百个小喷嘴的模具被挤出，并被热空气吹成细小的纤维，再次在传送带上冷却和粘合。",
-                "imageName": "spun-bond.jpg",
-                "imageNameForBasic": "spun-bond.jpg"
+                "imageName": "2004.png",
+                "imageNameForBasic": "2004.png"
             },
             {
                 "name": "口罩的纤维尺度 Fiber Scale",
@@ -150,8 +159,8 @@
                 "isNew": false,
                 "isWithAR": true,
                 "detail": "S表示纺粘层（Spunbond），其纤维直径比较粗，在20微米（μm）左右。\n，熔喷层的纤维直径比较细，在1-5微米（μm）左右，所以只有纺粘层直径的十分之一，这个对防止细菌、血液渗透其至关重要的作用。\n纺粘层S纤维直径是头发直径的1/3，而熔喷层M纤维直径接近头发直径的1/30，当然，研发人员还在开发更细的纤维，来保证更好的抗菌阻隔性。",
-                "imageName": "multi-layered.jpg",
-                "imageNameForBasic": "multi-layered.jpg"
+                "imageName": "2005.jpeg",
+                "imageNameForBasic": "2005.jpeg"
             },
             {
                 "name": "熔喷布生产1：原材料聚丙烯PP颗粒",
@@ -188,6 +197,15 @@
                 "detail": "静电吸附就是通过荷电纤维的库仑力实现对新冠病毒飞沫（气溶胶）的捕获。原理就是让过滤材料表面更开阔，对微粒的捕获能力能抢，而电荷密度增加，对颗粒的吸附和极化效应更强，所以，过滤层的熔喷无纺布过滤材料，必须要经过驻极处理，才能在不改变呼吸阻力的前提下，实现95%的过滤性，才能有效防病毒。\n口罩要在到达阻隔效果的同时保证舒适通气性，驻极处理能够大幅提高过滤效率，不改变呼吸阻力。一般需要驻极电压在30Kv-60kv，驻极时间要在20秒以上。",
                 "imageName": "2009.png",
                 "imageNameForBasic": "2009.png"
+            },
+            {
+                "name": "阻隔效果",
+                "id": 2010,
+                "isNew": false,
+                "isWithAR": true,
+                "detail": "口罩里面最重要的是阻隔层或则熔喷层M（Meltblown），熔喷层的纤维直径比较细，在2微米（μm）左右，所以只有纺粘层直径的十分之一，这个对防止细菌、血液渗透其至关重要的作用。",
+                "imageName": "2010.jpg",
+                "imageNameForBasic": "2010.jpg"
             }
         ]
     },
@@ -198,7 +216,7 @@
         "isNew": true,
         "isWithAR": true,
         "isWithSteps": false,
-        "intro": "Wearing a coronavirus mask is important for helping slow the spread of the virus, especially when you decide to go out. It's also important to know what type of mask you should wear and when it's appropriate to wear them.\n戴冠状病毒口罩对于帮助减缓病毒的传播很重要，尤其是当你决定外出时。同样重要的是，要知道你应该戴什么类型的口罩，以及什么时候戴口罩合适。",
+        "intro": "戴冠状病毒口罩对于帮助减缓病毒的传播很重要，尤其是当你决定外出时。同样重要的是，要知道你应该戴什么类型的口罩，以及什么时候戴口罩合适。\nWearing a coronavirus mask is important for helping slow the spread of the virus, especially when you decide to go out. It's also important to know what type of mask you should wear and when it's appropriate to wear them.",
         "imageName": "types.png",
         "score": 4.5,
         "relatedLessons": [
@@ -216,8 +234,8 @@
                 "isNew": false,
                 "isWithAR": true,
                 "detail": "普通口罩，也叫面罩，是一种宽松的一次性装置，在佩戴者的嘴和鼻子周围形成一道物理屏障，隔开周围环境中潜在的污染物。不同的面罩，用途不同，厚度不同，对人的保护效力也不同，佩戴舒适程度也有所差异。\n常见的棉布口罩和海绵口罩构成十分简单，由不同的纤维压制而成，保护效力有限。",
-                "imageName": "turtlerock.jpg",
-                "imageNameForBasic": "turtlerock.jpg"
+                "imageName": "cloth.jpg",
+                "imageNameForBasic": "cloth.jpg"
             },
             {
                 "name": "医用外科口罩",
@@ -225,44 +243,62 @@
                 "isNew": false,
                 "isWithAR": true,
                 "detail": "医用外科口罩是手术室等有体液、血液飞溅风险环境常用的医用口罩，可阻隔血液、体液穿过口罩污染佩戴者，同时对细菌的过滤效率有95%以上，但对颗粒的过滤效率有限，且多为长方形设计，与面部的密合度不如医用防护口罩那么严密。常见的医用外科口罩有绑带式、耳挂式等",
-                "imageName": "turtlerock.jpg",
-                "imageNameForBasic": "turtlerock.jpg"
-            },
-            {
-                "name": "医用外科口罩和一次性使用医用口罩的区别",
-                "id": 2003,
-                "isNew": false,
-                "isWithAR": true,
-                "detail": "医用外科口罩符合YY 0469-2011《医用外科口罩》医药标准的要求，一次性使用医用口罩符合YY/T 0969-2013《一次性使用医用口罩》的要求。\n两种口罩都要求细菌过滤效率达到95%以上，也就是说两种口罩都明确可以阻隔细菌。但有一个显著的差别是，医用外科口罩对直径0.3μm的非油性颗粒过滤效率超过30%，对血液、体液等飞溅（飞沫）时流体阻力达到120mmHg，但一次性使用医用口罩对此并无要求。这说明，医用外科口罩除了隔离细菌外，还可以隔离血液、体液飞溅及非油性颗粒，而一次性使用医用口罩对血液、体液飞溅及非油性颗粒隔离效果并不可知。",
-                "imageName": "turtlerock.jpg",
-                "imageNameForBasic": "turtlerock.jpg"
+                "imageName": "surgicalmask.jpg",
+                "imageNameForBasic": "surgicalmask.jpg"
             },
             {
                 "name": "N95口罩",
-                "id": 2004,
+                "id": 2003,
                 "isNew": false,
                 "isWithAR": true,
                 "detail": "N95口罩符合GB19083-2010 医用防护口罩技术要求。\nN95口罩其实属于呼吸器 (respirator)，呼吸器是一种呼吸防护设备，在设计上相较于普通口罩来说贴合面部更加紧密，可以非常有效地过滤空气中的颗粒物。其中，N表示Not resistant to oil, 可以用于防护非油性悬浮颗粒；95的意思是过滤效率大于等于95%，表明经仔细测试后，这种呼吸器可以阻挡至少95％的非常小的（0.3微米级别）测试颗粒。",
-                "imageName": "turtlerock.jpg",
-                "imageNameForBasic": "turtlerock.jpg"
+                "imageName": "n95.jpg",
+                "imageNameForBasic": "n95.jpg"
             },
             {
-                "name": "洗手",
+                "name": "医用外科口罩和一次性使用医用口罩的区别",
+                "id": 2004,
+                "isNew": false,
+                "isWithAR": true,
+                "detail": "医用外科口罩符合YY 0469-2011《医用外科口罩》医药标准的要求，一次性使用医用口罩符合YY/T 0969-2013《一次性使用医用口罩》的要求。\n两种口罩都要求细菌过滤效率达到95%以上，也就是说两种口罩都明确可以阻隔细菌。但有一个显著的差别是，医用外科口罩对直径0.3μm的非油性颗粒过滤效率超过30%，对血液、体液等飞溅（飞沫）时流体阻力达到120mmHg，但一次性使用医用口罩对此并无要求。",
+                "imageName": "vs.jpg",
+                "imageNameForBasic": "vs.jpg"
+            },
+            {
+                "name": "公众科学戴口罩指引:普通公众（一）",
                 "id": 2005,
                 "isNew": false,
                 "isWithAR": true,
-                "detail": "先需要洗手20分钟",
-                "imageName": "turtlerock.jpg",
-                "imageNameForBasic": "turtlerock.jpg"
+                "detail": "居家、户外、无人员聚集，通风良好，不建议戴口罩。",
+                "imageName": "2-2005.jpg",
+                "imageNameForBasic": "2-2005.jpg"
             },
             {
-                "name": "洗手",
+                "name": "公众科学戴口罩指引：普通公众（二）",
                 "id": 2006,
                 "isNew": false,
                 "isWithAR": true,
-                "detail": "先需要洗手20分钟",
-                "imageName": "turtlerock.jpg",
-                "imageNameForBasic": "turtlerock.jpg"
+                "detail": "处于人员密集场所，如办公、购物、餐厅、会议室、车间等\n在中、低风险地区，建议应随身备用口罩（一次性医用或医用外科口罩），与其他人近距离接触时戴口罩\n在高风险地区，建议戴一次性使用医用口罩。",
+                "imageName": "2-2006.jpg",
+                "imageNameForBasic": "2-2006.jpg"
+            },
+            {
+                "name": "公众科学戴口罩指引：普通公众（三）",
+                "id": 2007,
+                "isNew": false,
+                "isWithAR": true,
+                "detail": "对于咳嗽和喷嚏等感冒症状者，建议戴一次性使用医用口罩或医用外科口罩",
+                "imageName": "2-2007.jpg",
+                "imageNameForBasic": "2-2007.jpg"
+            },
+            {
+                "name": "公众科学戴口罩指引：普通公众（四）",
+                "id": 2008,
+                "isNew": false,
+                "isWithAR": true,
+                "detail": "对于与居家隔离、出院康复人员共同生活的人员\n建议戴一次性使用医用口罩或医用外科口罩。",
+                "imageName": "2-2008.jpg",
+                "imageNameForBasic": "2-2008.jpg"
             }
         ]
     },

@@ -205,11 +205,6 @@
     "displayName" : "Scan_17-44-06.arobject"
   },
   {
-    "libraryIdentifier" : "deb93c04a169c9bff11585c768d4d0a6",
-    "format" : "model",
-    "displayName" : "123123.usdz"
-  },
-  {
     "libraryIdentifier" : "a913a485b95b9c11e93c0fa38eed22ed",
     "format" : "arObject",
     "displayName" : "Scan_11-58-44.arobject"
@@ -263,5 +258,25 @@
     "libraryIdentifier" : "2c95bc164f5b7343b19fe92942dd5849",
     "format" : "model",
     "displayName" : "222.usdz"
+  },
+  {
+    "libraryIdentifier" : "57b16597ddba8b43f04efa969b47e873",
+    "format" : "model",
+    "displayName" : "123123.usdz"
+  },
+  {
+    "libraryIdentifier" : "72cdcd8f095e4881f90f9f9ba97de9ed",
+    "format" : "image",
+    "displayName" : "wood _texture3177.jpeg"
+  },
+  {
+    "libraryIdentifier" : "6390a1487921b38e2036beedcd207775",
+    "format" : "image",
+    "displayName" : "ehud-neuhaus-wW5854gAm1c-unsplash.jpeg"
+  },
+  {
+    "libraryIdentifier" : "7ecd31a44929d4ce40341b499cd8430d",
+    "format" : "image",
+    "displayName" : "编组 10备份 5.png"
   }
 ]
