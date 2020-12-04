@@ -208,5 +208,60 @@
     "libraryIdentifier" : "deb93c04a169c9bff11585c768d4d0a6",
     "format" : "model",
     "displayName" : "123123.usdz"
+  },
+  {
+    "libraryIdentifier" : "a913a485b95b9c11e93c0fa38eed22ed",
+    "format" : "arObject",
+    "displayName" : "Scan_11-58-44.arobject"
+  },
+  {
+    "libraryIdentifier" : "bc675605fd091fe38b5c40bffb4b819e",
+    "format" : "model",
+    "displayName" : "Oil_Barrel_Prop.usdz"
+  },
+  {
+    "libraryIdentifier" : "3e5ad42dc3817cc1347ae039beaaa5b1",
+    "format" : "image",
+    "displayName" : "下载.png"
+  },
+  {
+    "libraryIdentifier" : "20b99eaacc0de787729b80d2762ac80c",
+    "format" : "model",
+    "displayName" : "222.usdz"
+  },
+  {
+    "libraryIdentifier" : "a4a3b4a739aa4527e6ce64f9a47e2933",
+    "format" : "model",
+    "displayName" : "111.usdz"
+  },
+  {
+    "libraryIdentifier" : "cf7c41ecef7aabb94389a5b8738ab67f",
+    "format" : "model",
+    "displayName" : "333.usdz"
+  },
+  {
+    "libraryIdentifier" : "452f4e8e05b020df28609e7caf49f2a4",
+    "format" : "model",
+    "displayName" : "444.usdz"
+  },
+  {
+    "libraryIdentifier" : "421d370a93fdca4c0dfcf8ccdf445fdc",
+    "format" : "model",
+    "displayName" : "555.usdz"
+  },
+  {
+    "libraryIdentifier" : "4e7523a196e68d5e51a032031cc08cba",
+    "format" : "model",
+    "displayName" : "111.usdz"
+  },
+  {
+    "libraryIdentifier" : "a39e8f9940417132eb80a5c01ccc48f9",
+    "format" : "model",
+    "displayName" : "111.usdz"
+  },
+  {
+    "libraryIdentifier" : "2c95bc164f5b7343b19fe92942dd5849",
+    "format" : "model",
+    "displayName" : "222.usdz"
   }
 ]

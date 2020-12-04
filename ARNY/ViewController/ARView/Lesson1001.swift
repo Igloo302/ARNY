@@ -54,15 +54,15 @@ extension ARViewController {
             self.pointID = 2001
             self.updateUI(self.lessonID, self.pointID)
             
-            // Show Label
-            self.insertNewSticky(self.lesson1001Anchor.layer1!,offset: [0.1,0,0])
-            self.insertNewSticky(self.lesson1001Anchor.layer2!,offset: [0.1,0,0])
-            self.insertNewSticky(self.lesson1001Anchor.layer3!,offset: [0.1,0,0])
-            DispatchQueue.main.asyncAfter(deadline: .now() + 10){
-                self.deleteStickyNote(of: self.lesson1001Anchor.layer1!)
-                self.deleteStickyNote(of: self.lesson1001Anchor.layer2!)
-                self.deleteStickyNote(of: self.lesson1001Anchor.layer3!)
-            }
+            //            // Show Label
+            //            self.insertNewSticky(self.lesson1001Anchor.layer1!,offset: [0.1,0,0])
+            //            self.insertNewSticky(self.lesson1001Anchor.layer2!,offset: [0.1,0,0])
+            //            self.insertNewSticky(self.lesson1001Anchor.layer3!,offset: [0.1,0,0])
+            //            DispatchQueue.main.asyncAfter(deadline: .now() + 10){
+            //                self.deleteStickyNote(of: self.lesson1001Anchor.layer1!)
+            //                self.deleteStickyNote(of: self.lesson1001Anchor.layer2!)
+            //                self.deleteStickyNote(of: self.lesson1001Anchor.layer3!)
+            //            }
         }
         
         lesson1001Anchor.actions.onStart.onAction = {entity in
@@ -84,7 +84,6 @@ extension ARViewController {
             
             //需要补充一个引导进入子场景和退出子场景的交互？
             
-            
             // 载入Scale场景
             self.loadLesson1001Scale()
             
@@ -94,8 +93,8 @@ extension ARViewController {
             (self.controllStackView.viewWithTag(2)!).isHidden = true
             
             (self.controllStackView.viewWithTag(31) as! UILabel).text = "真实比例"
+            self.switchControl.isOn = false
             self.switchControl.addTarget(self, action: #selector(self.switchScale(_ :)), for: .valueChanged)
-            
             
         }
         
@@ -117,8 +116,14 @@ extension ARViewController {
         /// 熔喷布
         lesson1001Anchor.actions.clickMeltblown.onAction = { entity in
             // 点击查看纺粘布详情
-            self.pointID = 2003
+            self.pointID = 2004
             self.updateUI(self.lessonID, self.pointID)
+        }
+        
+        lesson1001Anchor.actions.showMeltblown.onAction = { entity in
+            // 点击查看熔喷布制造
+            // 载入
+            self.loadLesson1001Meltblown()
         }
     }
     
@@ -126,12 +131,15 @@ extension ARViewController {
     
     func loadLesson1001Scale(){
         print("⌚️开始载入...")
+        self.loadingView.isHidden = false
         Experience.loadLesson1001ScaleAsync(completion: { (result) in
             do {
                 self.lesson1001ScaleAnchor = try result.get()
                 self.arView.scene.anchors.append(self.lesson1001ScaleAnchor)
-                //self.setupNotifyActions1001Scale()
+                self.setupNotifyActions1001Scale()
                 print("👌lesson1001Scale加载完成")
+                
+                self.loadingView.isHidden = true
             } catch {
                 // handle error
                 print("❌lesson1001Scale加载失败")
@@ -139,12 +147,67 @@ extension ARViewController {
         })
     }
     
+    func setupNotifyActions1001Scale(){
+        
+        lesson1001ScaleAnchor.actions.quit.onAction = { entity in
+            self.lesson1001ScaleAnchor.removeFromParent()
+        }
+        
+    }
+    
+    
     @objc func switchScale(_ sender: UISwitch) {
         if sender.isOn {
             self.lesson1001ScaleAnchor.notifications.small.post()
         } else{
             self.lesson1001ScaleAnchor.notifications.big.post()
         }
+    }
+    
+    
+    func loadLesson1001Meltblown(){
+        print("⌚️开始载入...")
+        Experience.loadLesson1001MeltblownAsync(completion: { (result) in
+            do {
+                self.lesson1001MeltblownAnchor = try result.get()
+                self.arView.scene.anchors.append(self.lesson1001MeltblownAnchor)
+                self.setupNotifyActions1001Meltblown()
+                print("👌lesson1001Meltblown加载完成")
+                
+                self.loadingView.isHidden = true
+            } catch {
+                // handle error
+                print("❌lesson1001Meltblown加载失败")
+            }
+        })
+    }
+    
+    func setupNotifyActions1001Meltblown(){
+        lesson1001MeltblownAnchor.actions.onShow.onAction = { entity in
+            self.pointID = 2004
+            self.updateUI(self.lessonID, self.pointID)
+        }
+        
+        lesson1001MeltblownAnchor.actions.process1.onAction = { entity in
+            self.pointID = 2006
+            self.updateUI(self.lessonID, self.pointID)
+        }
+        lesson1001MeltblownAnchor.actions.process2.onAction = { entity in
+            self.pointID = 2007
+            self.updateUI(self.lessonID, self.pointID)
+        }
+        lesson1001MeltblownAnchor.actions.process3.onAction = { entity in
+            self.pointID = 2008
+            self.updateUI(self.lessonID, self.pointID)
+        }
+        lesson1001MeltblownAnchor.actions.process4.onAction = { entity in
+            self.pointID = 2009
+            self.updateUI(self.lessonID, self.pointID)
+        }
+        lesson1001MeltblownAnchor.actions.quit.onAction = { entity in
+            self.lesson1001MeltblownAnchor.removeFromParent()
+        }
+        
     }
     
 }

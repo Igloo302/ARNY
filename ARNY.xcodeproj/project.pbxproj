@@ -77,6 +77,10 @@
 		03D3563E256AB33A006BD6A7 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D3563D256AB33A006BD6A7 /* UserData.swift */; };
 		03D35644256AB415006BD6A7 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D35643256AB415006BD6A7 /* Subject.swift */; };
 		03D3564A256AB8D7006BD6A7 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D35649256AB8D7006BD6A7 /* Lesson.swift */; };
+		03EA709B257929460017B176 /* 2008.png in Resources */ = {isa = PBXBuildFile; fileRef = 03EA7097257929450017B176 /* 2008.png */; };
+		03EA709C257929460017B176 /* 2007.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03EA7098257929450017B176 /* 2007.jpg */; };
+		03EA709D257929460017B176 /* 2006.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03EA7099257929460017B176 /* 2006.jpg */; };
+		03EA709E257929460017B176 /* 2009.png in Resources */ = {isa = PBXBuildFile; fileRef = 03EA709A257929460017B176 /* 2009.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -152,6 +156,10 @@
 		03D3563D256AB33A006BD6A7 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		03D35643256AB415006BD6A7 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		03D35649256AB8D7006BD6A7 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		03EA7097257929450017B176 /* 2008.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2008.png; sourceTree = "<group>"; };
+		03EA7098257929450017B176 /* 2007.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2007.jpg; sourceTree = "<group>"; };
+		03EA7099257929460017B176 /* 2006.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2006.jpg; sourceTree = "<group>"; };
+		03EA709A257929460017B176 /* 2009.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2009.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +192,10 @@
 			children = (
 				032833AF256FF334000ACAC7 /* HowSurgicalMasksareMade.jpg */,
 				032833B1256FF334000ACAC7 /* multi-layered.jpg */,
+				03EA7099257929460017B176 /* 2006.jpg */,
+				03EA7098257929450017B176 /* 2007.jpg */,
+				03EA7097257929450017B176 /* 2008.png */,
+				03EA709A257929460017B176 /* 2009.png */,
 				032833B0256FF334000ACAC7 /* non-woven-fabrics.jpg */,
 				032833B2256FF334000ACAC7 /* spun-bond.jpg */,
 			);
@@ -415,6 +427,7 @@
 				032833AC256FF033000ACAC7 /* checkmask.jpg in Resources */,
 				036EB6462570D62100E12C8E /* 1003-3.jpeg in Resources */,
 				036EB61C2570D2A800E12C8E /* dog.jpg in Resources */,
+				03EA709B257929460017B176 /* 2008.png in Resources */,
 				036EB6242570D2A800E12C8E /* bomb.png in Resources */,
 				036EB6212570D2A800E12C8E /* dream.jpg in Resources */,
 				032833B4256FF335000ACAC7 /* non-woven-fabrics.jpg in Resources */,
@@ -428,9 +441,12 @@
 				032833A5256FEF86000ACAC7 /* washhand.jpg in Resources */,
 				032833B6256FF335000ACAC7 /* spun-bond.jpg in Resources */,
 				036EB6232570D2A800E12C8E /* lock.jpg in Resources */,
+				03EA709D257929460017B176 /* 2006.jpg in Resources */,
+				03EA709E257929460017B176 /* 2009.png in Resources */,
 				036EB6202570D2A800E12C8E /* Photography.jpg in Resources */,
 				031BB056256C02950048F2C6 /* LessonData.json in Resources */,
 				036EB6452570D62100E12C8E /* 1003-4.jpeg in Resources */,
+				03EA709C257929460017B176 /* 2007.jpg in Resources */,
 				036EB6322570D2D500E12C8E /* 1013-1.jpeg in Resources */,
 				031BB062256C09D50048F2C6 /* SubjectData.json in Resources */,
 				036EB61B2570D2A800E12C8E /* battery.png in Resources */,
