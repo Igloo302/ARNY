@@ -42,12 +42,14 @@ class ARViewController: UIViewController,ARSessionDelegate {
     
     /// POP
     @IBOutlet var popView: UIView!
-    var popImageViewCont: UIView!
+    @IBOutlet var popImageViewCont: UIView!
     var popImageView: UIImageView!
-    var popButtons: UIStackView!
+    @IBOutlet var popButtonsCont: UIView!
     var popLeftButton: UIButton!
     var popRightButton: UIButton!
+    @IBOutlet var popStarSegmentControlCont: UIView!
     var popStarSegmentControl: UISegmentedControl!
+    @IBOutlet var popLabelCont: UIView!
     var popLabel: UILabel!
     
     // 课程信息
@@ -252,11 +254,12 @@ class ARViewController: UIViewController,ARSessionDelegate {
                 currentPoint = currentLesson.points.first!
                 pointID = currentPoint.id
                 print("未从上级页面接收到PointID，设置为PointID默认值", pointID)
-                
             }
             
             pointsCount = currentLesson.points.count
             print("课程信息载入完成，当前课程位于",lessonID, pointID,"课程共有",pointsCount)
+            
+            processImageView.image = UIImage(named: currentLesson.imageName)
         } else {
             //lessonID = 1000
             print("未从上级页面接收到lessonID，进入ARNY")
@@ -292,25 +295,21 @@ class ARViewController: UIViewController,ARSessionDelegate {
         controllNext.addTarget(self, action: #selector(controlNext(_ :)), for: .touchUpInside)
         controllBack.addTarget(self, action: #selector(controlBack(_ :)), for: .touchUpInside)
         
-        
-        InfoView.isHidden = true
-        
         segmentedControl = (controllStackView.viewWithTag(12) as! UISegmentedControl)
         pickView = (controllStackView.viewWithTag(22) as! UIPickerView)
         switchControl = (controllStackView.viewWithTag(32) as! UISwitch)
         
-        popStarSegmentControl = (popView.viewWithTag(1) as! UISegmentedControl)
-        popImageViewCont = (popView.viewWithTag(123)!)
-        popImageView = (popView.viewWithTag(22) as! UIImageView)
-        popButtons = (popView.viewWithTag(66) as! UIStackView)
-        popLeftButton =  (popView.viewWithTag(3) as! UIButton)
-        popRightButton =  (popView.viewWithTag(4) as! UIButton)
-        popLabel = (popView.viewWithTag(5) as! UILabel)
-        
-        // loadingView
-        processImageView.image = UIImage(named: currentLesson.imageName)
+        // pop view
+        popImageView = (popView.viewWithTag(1) as! UIImageView)
+        popLabel = (popView.viewWithTag(2) as! UILabel)
+        popStarSegmentControl = (popView.viewWithTag(3) as! UISegmentedControl)
+        popLeftButton =  (popView.viewWithTag(4) as! UIButton)
+        popRightButton =  (popView.viewWithTag(5) as! UIButton)
+        popView.layer.applySketchShadow(color: UIColor(red: 0.44, green: 0.53, blue: 0.82, alpha: 1.00), alpha: 0.2, x: 0, y: 10, blur: 30, spread: 0)
+
         
         // info view
+        InfoView.isHidden = true
         pointImg = (InfoView.viewWithTag(123) as! UIImageView)
         pointImg.contentMode = .scaleAspectFill
     }
@@ -415,14 +414,12 @@ class ARViewController: UIViewController,ARSessionDelegate {
         
         //pop确认
         popView.isHidden = false
-        popStarSegmentControl.isHidden = true
+        popStarSegmentControlCont.isHidden = true
+        popImageViewCont.isHidden = true
+        popButtonsCont.isHidden = false
         
         popLabel.text = "Comfirm to Quit"
-        
-        popRightButton.setTitle("Quit", for: .normal)
         popRightButton.addTarget(self, action: #selector(popRightButtonRateNExit(_ :)), for: .touchUpInside)
-        
-        popLeftButton.setTitle("Close", for: .normal)
         popLeftButton.addTarget(self, action:#selector(popLeftButtonClose(_ :)), for: .touchUpInside)
     }
     
@@ -470,14 +467,12 @@ class ARViewController: UIViewController,ARSessionDelegate {
         if (self.controllNext.titleLabel?.text == "End Lesson") {
             //pop
             popView.isHidden = false
-            popStarSegmentControl.isHidden = false
+            popStarSegmentControlCont.isHidden = false
+            popImageViewCont.isHidden = true
+            popButtonsCont.isHidden = false
             
-            popLabel.text = "🎉🎉🎉The Lesson is Finished"
-            
-            popRightButton.setTitle("Rate", for: .normal)
+            popLabel.text = "This lesson has been completed"
             popRightButton.addTarget(self, action: #selector(popRightButtonRateNExit(_ :)), for: .touchUpInside)
-            
-            popLeftButton.setTitle("Close", for: .normal)
             popLeftButton.addTarget(self, action:#selector(popLeftButtonClose(_ :)), for: .touchUpInside)
         } else {
             // 正常Next
@@ -537,19 +532,26 @@ class ARViewController: UIViewController,ARSessionDelegate {
     func showGuide(){
         self.popView.isHidden = false
         self.popImageViewCont.isHidden = false
-        self.popButtons.isHidden = true
+        self.popButtonsCont.isHidden = true
+        self.popStarSegmentControlCont.isHidden = true
         
-        self.popLabel.text = "Please scan the object in the picture"
-        //self.popImageView.image = UIImage(named: "1001T.jpg")
-        self.popImageView.image = UIImage(named: String(lessonID) + "T.jpg")
-        self.popImageViewCont.alpha = 0.6
+        if lessonID != 999 {
+            self.popLabel.text = "Scan the object in the picture"
+            //self.popImageView.image = UIImage(named: "1001T.jpg")
+            self.popImageView.image = UIImage(named: String(lessonID) + "T.jpg")
+            
+        } else {
+            self.popLabel.text = "ANRY Mode. Scan Anything."
+            self.popImageView.image = UIImage(named: "ARNY.png")
+        }
+        
+        
+        
     }
     
     /// hide Guide
     func hideGuide(){
         self.popView.isHidden = true
-        self.popImageViewCont.isHidden = true
-        self.popButtons.isHidden = false
     }
     
     /*

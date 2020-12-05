@@ -38,8 +38,11 @@ class SubjectViewController: UIViewController {
         // Do any additional setup after loading the view.
         // 配置手势
         lessonCard1.addGestureRecognizer(setGestureRecognizer())
+        lessonCard1.layer.applySketchShadow(color: UIColor(red: 0.44, green: 0.53, blue: 0.82, alpha: 1.00), alpha: 0.2, x: 0, y: 10, blur: 30, spread: 0)
         lessonCard2.addGestureRecognizer(setGestureRecognizer())
+        lessonCard2.layer.applySketchShadow(color: UIColor(red: 0.44, green: 0.53, blue: 0.82, alpha: 1.00), alpha: 0.2, x: 0, y: 10, blur: 30, spread: 0)
         lessonCard3.addGestureRecognizer(setGestureRecognizer())
+        lessonCard3.layer.applySketchShadow(color: UIColor(red: 0.44, green: 0.53, blue: 0.82, alpha: 1.00), alpha: 0.2, x: 0, y: 10, blur: 30, spread: 0)
     }
     
     func initSP(){

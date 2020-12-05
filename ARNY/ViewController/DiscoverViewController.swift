@@ -7,6 +7,9 @@
 
 import UIKit
 
+
+
+
 var categorys = ["Tech", "Health","Nature","Other"]
 
 var images0 :[String] = [""]
@@ -26,6 +29,10 @@ var lessonNamesD : [String] = [""]
 
 class DiscoverViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
     
+    @IBOutlet weak var searchBar: UIView!
+    @IBOutlet weak var headButton: UIButton!
+    
+    
     @IBOutlet weak var stackView1: UIStackView!
     
     @IBOutlet weak var stackView2: UIStackView!
@@ -36,6 +43,11 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate,UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 阴影
+               searchBar.layer.applySketchShadow(color: UIColor(red: 0.25, green: 0.46, blue: 0.80, alpha: 1.00), alpha: 0.08, x: 0, y: 10, blur: 20, spread: 0)
+               headButton.layer.applySketchShadow(color: UIColor(red: 0.25, green: 0.46, blue: 0.80, alpha: 1.00), alpha: 0.08, x: 0, y: 10, blur: 20, spread: 0)
+               
         
         // Do any additional setup after loading the view.
         

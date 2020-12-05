@@ -136,9 +136,13 @@ extension ARViewController {
         processImageView = UIImageView()
         processImageView.translatesAutoresizingMaskIntoConstraints = false
         processImageView.contentMode = .scaleAspectFill
-        processImageView.image = UIImage(named: "rate.png")
+        processImageView.image = UIImage(named: "ARNY.png") 
         processImageView.layer.cornerRadius = 16
+        processImageView.layer.applySketchShadow(color: UIColor(red: 0.49, green: 0.46, blue: 0.71, alpha: 1.00), alpha: 0.3, x: 0, y: 20, blur: 30, spread: 0)
+        //processImageView.layer.masksToBounds = true
         loadingView.addSubview(processImageView)
+        
+        
 
 
         processView = UIProgressView()

@@ -16,8 +16,16 @@ class TypePageViewContorller: UIViewController, UICollectionViewDelegate,UIColle
     var lessonNames : [String] = [""]
 
     @IBOutlet weak var catNameLabel: UILabel!
+    @IBOutlet weak var searchBar: UIView!
+    @IBOutlet weak var headButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        // 阴影
+        searchBar.layer.applySketchShadow(color: UIColor(red: 0.25, green: 0.46, blue: 0.80, alpha: 1.00), alpha: 0.08, x: 0, y: 10, blur: 20, spread: 0)
+        headButton.layer.applySketchShadow(color: UIColor(red: 0.25, green: 0.46, blue: 0.80, alpha: 1.00), alpha: 0.08, x: 0, y: 10, blur: 20, spread: 0)
+        
 
         // Do any additional setup after loading the view.
         

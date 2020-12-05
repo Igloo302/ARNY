@@ -19,7 +19,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var covid19: UIImageView!
     
     @IBOutlet weak var searchBar: UIView!
-    
+    @IBOutlet weak var headButton: UIButton!
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,21 +43,25 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let tapToAR = UITapGestureRecognizer(target: self, action: #selector(startARMode))
         tapToAR.numberOfTapsRequired = 1
         arMode.addGestureRecognizer(tapToAR)
+        
+        arMode.layer.applySketchShadow(color: UIColor(red: 0.49, green: 0.46, blue: 0.71, alpha: 1.00), alpha: 0.3, x: 0, y: 20, blur: 30, spread: 0)
     
         // 给每张卡片设置跳转
-        (subjectStackView.viewWithTag(2)!).addGestureRecognizer(setGestureRecognizer())
-        (subjectStackView.viewWithTag(3)!).addGestureRecognizer(setGestureRecognizer())
-        (subjectStackView.viewWithTag(4)!).addGestureRecognizer(setGestureRecognizer())
-        (subjectStackView.viewWithTag(5)!).addGestureRecognizer(setGestureRecognizer())
+//        (subjectStackView.viewWithTag(2)!).addGestureRecognizer(setGestureRecognizer())
+//        (subjectStackView.viewWithTag(3)!).addGestureRecognizer(setGestureRecognizer())
+//        (subjectStackView.viewWithTag(4)!).addGestureRecognizer(setGestureRecognizer())
+//        (subjectStackView.viewWithTag(5)!).addGestureRecognizer(setGestureRecognizer())
+        var t = 2
+        while t <= 5{
+            (subjectStackView.viewWithTag(t)!).addGestureRecognizer(setGestureRecognizer())
+            (subjectStackView.viewWithTag(t)!).layer.applySketchShadow(color: UIColor(red: 0.49, green: 0.46, blue: 0.71, alpha: 1.00), alpha: 0.3, x: 0, y: 20, blur: 30, spread: 0)
+            t+=1
+        }
         
         // 阴影
-//        arMode.layer.applySketchShadow(
-//            color: .black,
-//            alpha: 0.3,
-//            x: 0,
-//            y: 20,
-//            blur: 30,
-//            spread: 0)
+        searchBar.layer.applySketchShadow(color: UIColor(red: 0.25, green: 0.46, blue: 0.80, alpha: 1.00), alpha: 0.08, x: 0, y: 10, blur: 20, spread: 0)
+        headButton.layer.applySketchShadow(color: UIColor(red: 0.25, green: 0.46, blue: 0.80, alpha: 1.00), alpha: 0.08, x: 0, y: 10, blur: 20, spread: 0)
+        
     }
     
     @objc func startARMode(){

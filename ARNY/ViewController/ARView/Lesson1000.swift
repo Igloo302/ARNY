@@ -165,8 +165,12 @@ extension ARViewController {
             /// 🐂 分支路径->lesson1000Mask lessonpath=3
             //ui
             self.popView.isHidden = false
+            self.popImageViewCont.isHidden = false
+            self.popButtonsCont.isHidden = false
+            self.popStarSegmentControlCont.isHidden = true
+            
             self.popLabel.text = "Do you have a real mask like this on hand?"
-            self.popLeftButton.setTitle("No Mask", for: .normal)
+            //self.popLeftButton.setTitle("No Mask", for: .normal)
             self.popRightButton.setTitle("Yes", for: .normal)
             self.popRightButton.addTarget(self, action: #selector(self.popRightButtonHaveMask(_ :)), for: .touchUpInside)
             self.popLeftButton.addTarget(self, action:#selector(self.popLeftButtonHaveMask(_ :)), for: .touchUpInside)

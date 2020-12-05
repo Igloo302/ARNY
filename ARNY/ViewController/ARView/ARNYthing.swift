@@ -14,7 +14,9 @@ extension ARViewController {
     func loadARNY(){
         print("------ARNY Mode--------")
         loadLesson1000()
+        loadLesson1001()
         loadLesson1002()
+        
     }
     
     func startLessonARNY(){

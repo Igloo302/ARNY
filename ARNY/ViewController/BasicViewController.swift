@@ -187,6 +187,7 @@ class BasicViewController: UIViewController {
         popLeftButton =  (popView.viewWithTag(3) as! UIButton)
         popRightButton =  (popView.viewWithTag(4) as! UIButton)
         popLabel = (popView.viewWithTag(5) as! UILabel)
+        popView.layer.applySketchShadow(color: UIColor(red: 0.44, green: 0.53, blue: 0.82, alpha: 1.00), alpha: 0.2, x: 0, y: 10, blur: 30, spread: 0)
         
     }
     
