@@ -6,8 +6,8 @@
           "__content" : [
             {
               "arAnchorSpecification" : {
-                "alignment" : "horizontal",
-                "name" : "surface"
+                "name" : "object",
+                "url" : "arObject:936a4f912b26c1bfa6fc6f11d51150a2\/%E5%8F%A3%E7%BD%A9%E7%9B%92%E5%AD%90.arobject"
               },
               "behaviors" : [
                 {
@@ -5823,7 +5823,7 @@
                           "height",
                           {
                             "typeName" : "Double",
-                            "value" : 0.024738810200922539
+                            "value" : 0.024738810200922536
                           }
                         ],
                         [
@@ -7397,7 +7397,7 @@
                                       "height",
                                       {
                                         "typeName" : "Double",
-                                        "value" : 0.026085758488851987
+                                        "value" : 0.026085758488851994
                                       }
                                     ],
                                     [
@@ -7483,14 +7483,14 @@
                                       "depth",
                                       {
                                         "typeName" : "Double",
-                                        "value" : 0.036699439218672525
+                                        "value" : 0.036699439218672539
                                       }
                                     ],
                                     [
                                       "height",
                                       {
                                         "typeName" : "Double",
-                                        "value" : 0.026085758488851987
+                                        "value" : 0.026085758488851994
                                       }
                                     ],
                                     [
@@ -7612,14 +7612,14 @@
                                 "diameter",
                                 {
                                   "typeName" : "Double",
-                                  "value" : 0.060358321364300957
+                                  "value" : 0.06035832136430095
                                 }
                               ],
                               [
                                 "height",
                                 {
                                   "typeName" : "Double",
-                                  "value" : 0.015022760638794944
+                                  "value" : 0.015022760638794938
                                 }
                               ],
                               [

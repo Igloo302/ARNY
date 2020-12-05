@@ -305,7 +305,7 @@ class ARViewController: UIViewController,ARSessionDelegate {
         popStarSegmentControl = (popView.viewWithTag(3) as! UISegmentedControl)
         popLeftButton =  (popView.viewWithTag(4) as! UIButton)
         popRightButton =  (popView.viewWithTag(5) as! UIButton)
-        popView.layer.applySketchShadow(color: UIColor(red: 0.44, green: 0.53, blue: 0.82, alpha: 1.00), alpha: 0.2, x: 0, y: 10, blur: 30, spread: 0)
+        //popView.layer.applySketchShadow(color: UIColor(red: 0.44, green: 0.53, blue: 0.82, alpha: 1.00), alpha: 0.2, x: 0, y: 10, blur: 30, spread: 0)
 
         
         // info view

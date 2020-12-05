@@ -83,9 +83,9 @@
 		03D3563E256AB33A006BD6A7 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D3563D256AB33A006BD6A7 /* UserData.swift */; };
 		03D35644256AB415006BD6A7 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D35643256AB415006BD6A7 /* Subject.swift */; };
 		03D3564A256AB8D7006BD6A7 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D35649256AB8D7006BD6A7 /* Lesson.swift */; };
-		03E54AB5257AF9500065D950 /* ARNY.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E54AB4257AF9500065D950 /* ARNY.png */; };
 		03E54ABA257AFA570065D950 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E54AB9257AFA570065D950 /* InfoViewController.swift */; };
 		03E54ABD257B99760065D950 /* 1002T.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03E54ABC257B99760065D950 /* 1002T.jpg */; };
+		03E54AC1257BB2760065D950 /* ARNY.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E54AC0257BB2750065D950 /* ARNY.png */; };
 		03EA709B257929460017B176 /* 2008.png in Resources */ = {isa = PBXBuildFile; fileRef = 03EA7097257929450017B176 /* 2008.png */; };
 		03EA709C257929460017B176 /* 2007.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03EA7098257929450017B176 /* 2007.jpg */; };
 		03EA709D257929460017B176 /* 2006.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03EA7099257929460017B176 /* 2006.jpg */; };
@@ -171,9 +171,9 @@
 		03D3563D256AB33A006BD6A7 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		03D35643256AB415006BD6A7 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		03D35649256AB8D7006BD6A7 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
-		03E54AB4257AF9500065D950 /* ARNY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ARNY.png; sourceTree = "<group>"; };
 		03E54AB9257AFA570065D950 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InfoViewController.swift; path = ARNY/ViewController/InfoViewController.swift; sourceTree = SOURCE_ROOT; };
 		03E54ABC257B99760065D950 /* 1002T.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1002T.jpg; sourceTree = "<group>"; };
+		03E54AC0257BB2750065D950 /* ARNY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ARNY.png; path = ../../../ARNY.png; sourceTree = "<group>"; };
 		03EA7097257929450017B176 /* 2008.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2008.png; sourceTree = "<group>"; };
 		03EA7098257929450017B176 /* 2007.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2007.jpg; sourceTree = "<group>"; };
 		03EA7099257929460017B176 /* 2006.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2006.jpg; sourceTree = "<group>"; };
@@ -362,7 +362,7 @@
 				032833B8256FF5E8000ACAC7 /* 1002 */,
 				036EB5ED2570CFF800E12C8E /* lessonImage */,
 				036EB6362570D32600E12C8E /* rate.png */,
-				03E54AB4257AF9500065D950 /* ARNY.png */,
+				03E54AC0257BB2750065D950 /* ARNY.png */,
 				031BB055256C02950048F2C6 /* LessonData.json */,
 				031BB061256C09D50048F2C6 /* SubjectData.json */,
 			);
@@ -441,7 +441,6 @@
 				039D280C257A9A9500425709 /* 2004.png in Resources */,
 				039D2834257AD9A500425709 /* surgicalmask.jpg in Resources */,
 				036EB61F2570D2A800E12C8E /* apple.png in Resources */,
-				03E54AB5257AF9500065D950 /* ARNY.png in Resources */,
 				039D283D257AD9F500425709 /* 2-2006.jpg in Resources */,
 				036EB6222570D2A800E12C8E /* engine2.jpg in Resources */,
 				039D2840257AD9F500425709 /* 2-2007.jpg in Resources */,
@@ -475,6 +474,7 @@
 				039D283E257AD9F500425709 /* 2-2008.jpg in Resources */,
 				039D2825257AAC1600425709 /* wrong.jpg in Resources */,
 				036EB63F2570D42400E12C8E /* engine3.jpg in Resources */,
+				03E54AC1257BB2760065D950 /* ARNY.png in Resources */,
 				036EB61E2570D2A800E12C8E /* Computational.jpg in Resources */,
 				036EB64B2570D73D00E12C8E /* engine5.jpg in Resources */,
 			);

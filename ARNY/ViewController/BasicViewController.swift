@@ -20,10 +20,12 @@ class BasicViewController: UIViewController {
     /// POP
     @IBOutlet var popView: UIView!
     var popImageView: UIImageView!
+    var popImageViewCout: UIView!
     var popLeftButton: UIButton!
     var popRightButton: UIButton!
     var popStarSegmentControl: UISegmentedControl!
     var popLabel: UILabel!
+    var popCSButton: UIButton!
     
     
     // 控制栏
@@ -63,6 +65,9 @@ class BasicViewController: UIViewController {
         //pop确认
         popView.isHidden = false
         popStarSegmentControl.isHidden = true
+        
+        popImageViewCout.isHidden = false
+        popImageView.image = UIImage(named: currentLesson.imageName)
         
         popLabel.text = "Comfirm to Quit"
         
@@ -134,7 +139,9 @@ class BasicViewController: UIViewController {
         self.popView.isHidden = true
     }
     
-    
+    @objc func goBackButton(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
     
     // MARK: - Lesson & Point Content
     func initLP(){
@@ -184,9 +191,11 @@ class BasicViewController: UIViewController {
         //PopView
         popStarSegmentControl = (popView.viewWithTag(1) as! UISegmentedControl)
         popImageView = (popView.viewWithTag(2) as! UIImageView)
+        popImageViewCout = (popView.viewWithTag(666)!)
         popLeftButton =  (popView.viewWithTag(3) as! UIButton)
         popRightButton =  (popView.viewWithTag(4) as! UIButton)
         popLabel = (popView.viewWithTag(5) as! UILabel)
+        popCSButton = (popView.viewWithTag(6) as! UIButton)
         popView.layer.applySketchShadow(color: UIColor(red: 0.44, green: 0.53, blue: 0.82, alpha: 1.00), alpha: 0.2, x: 0, y: 10, blur: 30, spread: 0)
         
     }
@@ -194,6 +203,28 @@ class BasicViewController: UIViewController {
     func updateUI(_ lessionID: Int, _ pointID: Int){
         // 根据lessionID和pointID查找数据
         let index = currentLesson.points.firstIndex(where: { $0.id == pointID })!
+        
+        /// 建设中内容
+        if (currentPoint.name == "洗手"){
+            InfoView.isHidden = true
+            controllNext.isHidden = true
+            controllBack.isHidden = true
+            buttonAR.isHidden = true
+            popLabel.isHidden = true
+            popLeftButton.isHidden = true
+            popRightButton.isHidden = true
+            
+            
+            popView.isHidden = false
+            popCSButton.isHidden = false
+            popImageViewCout.isHidden = false
+            
+            popImageView.image = UIImage(named: currentLesson.imageName)
+            
+            popCSButton.addTarget(self, action: #selector(goBackButton(_ :)), for: .touchUpInside)
+        }
+        
+        
         pointNStep.text = "STEP " + String(index+1) + "/" + String(pointsCount)
         pointName.text = currentPoint.name
         pointDetail.text = currentPoint.detail
