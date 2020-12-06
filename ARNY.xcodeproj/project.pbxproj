@@ -78,6 +78,9 @@
 		039D2840257AD9F500425709 /* 2-2007.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 039D283C257AD9F500425709 /* 2-2007.jpg */; };
 		039D2843257AF1E600425709 /* 1000T.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 039D2842257AF1E600425709 /* 1000T.jpg */; };
 		03C73D682574DAF700C511C1 /* VirusSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C73D672574DAF700C511C1 /* VirusSimulation.swift */; };
+		03D27E24257CC6FA006EBAEB /* Experience8.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 03D27E23257CC6F9006EBAEB /* Experience8.rcproject */; };
+		03D27E27257CD040006EBAEB /* Experience1.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 03D27E26257CD040006EBAEB /* Experience1.rcproject */; };
+		03D27E2A257CD1BC006EBAEB /* ARNY.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 03D27E29257CD1BC006EBAEB /* ARNY.rcproject */; };
 		03D3560C256A80D3006BD6A7 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D3560B256A80D3006BD6A7 /* DiscoverViewController.swift */; };
 		03D35616256AB024006BD6A7 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D35615256AB024006BD6A7 /* Data.swift */; };
 		03D3563E256AB33A006BD6A7 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D3563D256AB33A006BD6A7 /* UserData.swift */; };
@@ -166,6 +169,9 @@
 		039D283C257AD9F500425709 /* 2-2007.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2-2007.jpg"; sourceTree = "<group>"; };
 		039D2842257AF1E600425709 /* 1000T.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1000T.jpg; sourceTree = "<group>"; };
 		03C73D672574DAF700C511C1 /* VirusSimulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirusSimulation.swift; sourceTree = "<group>"; };
+		03D27E23257CC6F9006EBAEB /* Experience8.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience8.rcproject; sourceTree = "<group>"; };
+		03D27E26257CD040006EBAEB /* Experience1.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience1.rcproject; sourceTree = "<group>"; };
+		03D27E29257CD1BC006EBAEB /* ARNY.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = ARNY.rcproject; sourceTree = "<group>"; };
 		03D3560B256A80D3006BD6A7 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		03D35615256AB024006BD6A7 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		03D3563D256AB33A006BD6A7 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -353,8 +359,11 @@
 			isa = PBXGroup;
 			children = (
 				0336AC8A256A50B800951BF9 /* Assets.xcassets */,
+				03D27E29257CD1BC006EBAEB /* ARNY.rcproject */,
 				0336AC85256A50B500951BF9 /* Experience.rcproject */,
+				03D27E26257CD040006EBAEB /* Experience1.rcproject */,
 				039D282D257AB71600425709 /* Experience2.rcproject */,
+				03D27E23257CC6F9006EBAEB /* Experience8.rcproject */,
 				0336AC8C256A50B800951BF9 /* LaunchScreen.storyboard */,
 				0336AC87256A50B500951BF9 /* Main.storyboard */,
 				0328339C256FEF7C000ACAC7 /* 1000 */,
@@ -502,8 +511,11 @@
 				0385AE41256BF93000B16056 /* ARViewController+ARCoachingOverlayDelegate.swift in Sources */,
 				0345576A2572343B0057539B /* Lesson1000.swift in Sources */,
 				03D35616256AB024006BD6A7 /* Data.swift in Sources */,
+				03D27E24257CC6FA006EBAEB /* Experience8.rcproject in Sources */,
+				03D27E2A257CD1BC006EBAEB /* ARNY.rcproject in Sources */,
 				036EB651257103A700E12C8E /* StikyNoteEntity.swift in Sources */,
 				0345576D257234F90057539B /* ARNYthing.swift in Sources */,
+				03D27E27257CD040006EBAEB /* Experience1.rcproject in Sources */,
 				039A7618256B86AD0033E5A7 /* TypePageViewContorller.swift in Sources */,
 				0336AC82256A50B500951BF9 /* AppDelegate.swift in Sources */,
 				036EB67425710AAD00E12C8E /* ARViewController+OverlayUI.swift in Sources */,

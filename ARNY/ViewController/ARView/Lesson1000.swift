@@ -40,7 +40,7 @@ extension ARViewController {
             do {
                 self.lesson1000Anchor = try result.get()
                 self.arView.scene.anchors.append(self.lesson1000Anchor)
-
+                
                 self.setupNotifyActions1000()
                 self.lessonPath = 1
                 print("👌lesson1000加载完成")
@@ -143,8 +143,8 @@ extension ARViewController {
             self.pointID = 2001
             self.updateUI(self.lessonID, self.pointID)
             
-            //
-            self.insertNewSticky(entity!)
+            // 洗手液
+            self.insertNewSticky(entity!, offset: [0, 0.03, -0.03])
             DispatchQueue.main.asyncAfter(deadline: .now() + 3){
                 self.deleteStickyNote(of: entity!)
             }
@@ -170,6 +170,8 @@ extension ARViewController {
             self.popStarSegmentControlCont.isHidden = true
             
             self.popLabel.text = "Do you have a real mask like this on hand?"
+            self.popImageViewCont.isHidden = false
+            self.popImageView.image = UIImage(named: "1001T.jpg")
             //self.popLeftButton.setTitle("No Mask", for: .normal)
             self.popRightButton.setTitle("Yes", for: .normal)
             self.popRightButton.addTarget(self, action: #selector(self.popRightButtonHaveMask(_ :)), for: .touchUpInside)
@@ -183,7 +185,7 @@ extension ARViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 3){
                 self.deleteStickyNote(of: entity!)
             }
-
+            
         }
         
         
@@ -349,7 +351,7 @@ extension ARViewController {
     }
     
     func setupNotifyActions1000Simulation(){
-
+        
         
         lesson1000SimulationAnchor.actions.flying.onAction = {entity in
             
@@ -421,16 +423,31 @@ extension ARViewController {
             else {
                 // 非前置摄像头流程
                 print("设备不支持Face Tracking")
+                //
+                //                self.popView.isHidden = false
+                //                self.popLabel.text = "Your Device doesn't support the lesson."
+                //                self.popLeftButton.setTitle("Close", for: .normal)
+                //                self.popRightButton.setTitle("End Lesson", for: .normal)
+                //                self.popRightButton.addTarget(self, action: #selector(self.popRightButtonRateNExit(_ :)), for: .touchUpInside)
+                //                self.popLeftButton.addTarget(self, action:#selector(self.popLeftButtonClose(_ :)), for: .touchUpInside)
+                //
+                //                self.controllNext.isHidden = false
+                //                self.controllNext.setTitle("End Lesson", for: .normal)
                 
                 self.popView.isHidden = false
-                self.popLabel.text = "Your Device doesn't support the lesson."
-                self.popLeftButton.setTitle("Close", for: .normal)
-                self.popRightButton.setTitle("End Lesson", for: .normal)
-                self.popRightButton.addTarget(self, action: #selector(self.popRightButtonRateNExit(_ :)), for: .touchUpInside)
-                self.popLeftButton.addTarget(self, action:#selector(self.popLeftButtonClose(_ :)), for: .touchUpInside)
+                self.popLabel.text = "Please go back to the bag"
+                self.popImageView.image = UIImage(named: "1000T.jpg")
+                self.popLeftButton.isHidden = true
+                self.popRightButton.isHidden = true
                 
-                self.controllNext.isHidden = false
-                self.controllNext.setTitle("End Lesson", for: .normal)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+                    self.popView.isHidden = true
+                    self.lesson10000MaskAnchor.removeFromParent()
+                    self.lesson1000Anchor.isEnabled = true
+                    self.lesson1000Anchor.notifications.showPoint2.post()
+                    
+                    // 此处需要补充跳转，暂时不处理
+                }
             }
         }
     }
@@ -461,14 +478,22 @@ extension ARViewController {
         self.popView.isHidden = true
         // 加载lesson1000Mask
         self.lessonPath = 3
-        self.arView.scene.anchors.removeAll()
+        //self.arView.scene.anchors.removeAll()
+        //self.lesson1000Anchor.isEnabled = false
         self.loadLesson1000Mask()
+        
+        
+        self.popRightButton.removeTarget(self, action: #selector(self.popRightButtonHaveMask(_ :)), for: .touchUpInside)
+        self.popLeftButton.removeTarget(self, action:#selector(self.popLeftButtonHaveMask(_ :)), for: .touchUpInside)
     }
     
     @objc func popLeftButtonHaveMask(_ sender: UIButton){
         //close the pop view and do nothing
         self.popView.isHidden = true
         self.lesson1000Anchor.notifications.showPoint2.post()
+        
+        self.popRightButton.removeTarget(self, action: #selector(self.popRightButtonHaveMask(_ :)), for: .touchUpInside)
+        self.popLeftButton.removeTarget(self, action:#selector(self.popLeftButtonHaveMask(_ :)), for: .touchUpInside)
     }
 }
 

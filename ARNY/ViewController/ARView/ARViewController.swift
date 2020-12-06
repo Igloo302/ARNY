@@ -77,8 +77,8 @@ class ARViewController: UIViewController,ARSessionDelegate {
     var lesson1002s2Anchor: Experience2.Lesson1002s2!
     var lesson1002s3Anchor: Experience2.Lesson1002s3!
     var lesson1002s4Anchor: Experience2.Lesson1002s4!
-    var lesson1003Anchor: Experience.Lesson1003!
-    var lesson1004Anchor: Experience.Lesson1004!
+//    var lesson1003Anchor: Experience.Lesson1003!
+//    var lesson1004Anchor: Experience.Lesson1004!
     
     
     var loadingView:UIView!
@@ -419,6 +419,8 @@ class ARViewController: UIViewController,ARSessionDelegate {
         popButtonsCont.isHidden = false
         
         popLabel.text = "Comfirm to Quit"
+        popRightButton.isHidden = false
+        popLeftButton.isHidden = false
         popRightButton.addTarget(self, action: #selector(popRightButtonRateNExit(_ :)), for: .touchUpInside)
         popLeftButton.addTarget(self, action:#selector(popLeftButtonClose(_ :)), for: .touchUpInside)
     }
@@ -472,6 +474,8 @@ class ARViewController: UIViewController,ARSessionDelegate {
             popButtonsCont.isHidden = false
             
             popLabel.text = "This lesson has been completed"
+            popRightButton.isHidden = false
+            popLeftButton.isHidden = false
             popRightButton.addTarget(self, action: #selector(popRightButtonRateNExit(_ :)), for: .touchUpInside)
             popLeftButton.addTarget(self, action:#selector(popLeftButtonClose(_ :)), for: .touchUpInside)
         } else {

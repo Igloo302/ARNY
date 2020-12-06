@@ -40,11 +40,6 @@
     "displayName" : "洗手.m4a"
   },
   {
-    "libraryIdentifier" : "936a4f912b26c1bfa6fc6f11d51150a2",
-    "format" : "arObject",
-    "displayName" : "口罩盒子.arobject"
-  },
-  {
     "libraryIdentifier" : "3c4f565abfd9f8eb8279aad25a454af8",
     "format" : "model",
     "displayName" : "MASK.usdz"
@@ -303,5 +298,10 @@
     "libraryIdentifier" : "7dd41b456afa1cc0cadce7d673d4a988",
     "format" : "image",
     "displayName" : "编组 10备份 6.png"
+  },
+  {
+    "libraryIdentifier" : "b07dd4d4967d7a76b5768d19f19d3a90",
+    "format" : "arObject",
+    "displayName" : "Scan_14-53-42.arobject"
   }
 ]
