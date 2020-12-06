@@ -69,9 +69,9 @@ class ARViewController: UIViewController,ARSessionDelegate {
     var lesson1000FaceAnchor : Experience.Lesson1000Face!
     var lesson1000SimulationAnchor: Experience.Lesosn1000Simulation!
     var lesson10000MaskAnchor: Experience.Lesson1000WithRealMask!
-    var lesson1001Anchor: Experience.Lesson1001!
-    var lesson1001ScaleAnchor: Experience.Lesson1001Scale!
-    var lesson1001MeltblownAnchor: Experience.Lesson1001Meltblown!
+    var lesson1001Anchor: Experience1.Lesson1001!
+    var lesson1001ScaleAnchor: Experience1.Lesson1001Scale!
+    var lesson1001MeltblownAnchor: Experience1.Lesson1001Meltblown!
     var lesson1002Anchor: Experience2.Lesson1002!
     var lesson1002s1Anchor: Experience2.Lesson1002s1!
     var lesson1002s2Anchor: Experience2.Lesson1002s2!
