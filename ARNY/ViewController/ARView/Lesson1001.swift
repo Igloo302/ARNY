@@ -16,7 +16,7 @@ extension ARViewController {
         // 载入信息
         self.loadingView.isHidden = false
         
-        Experience.loadLesson1001Async(completion: { (result) in
+        Experience1.loadLesson1001Async(completion: { (result) in
             do {
                 self.lesson1001Anchor = try result.get()
                 self.arView.scene.anchors.append(self.lesson1001Anchor)
@@ -179,7 +179,7 @@ extension ARViewController {
     
     func loadLesson1001Scale(){
         print("⌚️开始载入...")
-        Experience.loadLesson1001ScaleAsync(completion: { (result) in
+        Experience1.loadLesson1001ScaleAsync(completion: { (result) in
             do {
                 self.lesson1001ScaleAnchor = try result.get()
                 self.arView.scene.anchors.append(self.lesson1001ScaleAnchor)
@@ -320,7 +320,7 @@ extension ARViewController {
     
     func loadLesson1001Meltblown(){
         print("⌚️开始载入...")
-        Experience.loadLesson1001MeltblownAsync(completion: { (result) in
+        Experience1.loadLesson1001MeltblownAsync(completion: { (result) in
             do {
                 self.lesson1001MeltblownAnchor = try result.get()
                 //                self.lesson1001MeltblownAnchor.transform.scale = [0.05, 0.05, 0.05]
