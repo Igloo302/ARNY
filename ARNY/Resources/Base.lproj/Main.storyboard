@@ -41,6 +41,9 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
                                     </preferredSymbolConfiguration>
                                 </state>
+                                <connections>
+                                    <action selector="buttonMultiUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fk3-2Q-FpF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSn-rS-w0D">
                                 <rect key="frame" x="1098.5" y="30" width="37.5" height="42.5"/>
@@ -567,6 +570,7 @@
                     <connections>
                         <outlet property="InfoView" destination="uLN-VF-NsS" id="CS4-d6-XRf"/>
                         <outlet property="arView" destination="AkS-9D-6qf" id="rVq-H0-tAa"/>
+                        <outlet property="buttonMultiUser" destination="PaQ-qN-dxu" id="LjX-La-MOx"/>
                         <outlet property="buttonSwitchCamera" destination="Tsl-uJ-0eW" id="eHk-6K-Hwc"/>
                         <outlet property="controllBack" destination="esq-XX-Qtu" id="1by-PP-w2a"/>
                         <outlet property="controllNext" destination="6AX-IZ-N9R" id="6u1-Fz-xba"/>
@@ -3735,7 +3739,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="350" id="kmq-fB-Asb"/>
                                                 </constraints>
-                                                <mutableString key="text">Photo by Hoover Tung on Unsplash
+                                                <string key="text">Photo by Hoover Tung on Unsplash
 Photo by ShareGrid on Unsplash
 Photo by Magdiel Lagos on Unsplash
 Photo by Matheus Cenali on Unsplash
@@ -3751,7 +3755,7 @@ Photo by iMattSmart on Unsplash
 Photo by Karsten Winegeart on Unsplash
 Photo by Jon Tyson on Unsplash
 Photo by Brian McGowan on Unsplash
-Photo by Kai Pilger on Unsplash</mutableString>
+Photo by Kai Pilger on Unsplash</string>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

@@ -8,16 +8,18 @@
 import UIKit
 import RealityKit
 import ARKit
-
+import MultipeerConnectivity
 import Combine
+import MultipeerHelper
 
-class ARViewController: UIViewController,ARSessionDelegate {
+class ARViewController: UIViewController,ARSessionDelegate,MultipeerHelperDelegate {
     
     @IBOutlet var arView: ARView!
     
     
     // 右上角功能按钮
     @IBOutlet weak var buttonSwitchCamera: UIButton!
+    @IBOutlet weak var buttonMultiUser: UIButton!
     
     // 通知Bar
     @IBOutlet var notificationBar: UIView!
@@ -569,5 +571,45 @@ class ARViewController: UIViewController,ARSessionDelegate {
      */
     
     
+    // MARK: - Collaboration
     
+    
+    var multipeerHelp: MultipeerHelper!
+    
+    
+    @IBAction func buttonMultiUser(_ sender: Any) {
+        // Turn off ARView's automatically-configured session
+        // to create and set up your own configuration.
+        arView.automaticallyConfigureSession = false
+        
+        //configuration = ARWorldTrackingConfiguration()
+        let configuration = arView.session.configuration as! ARWorldTrackingConfiguration
+        
+        // Enable a collaborative session.
+        configuration.isCollaborationEnabled = true
+
+        // Enable realistic reflections.
+        configuration.environmentTexturing = .automatic
+
+        // Begin the session.
+        arView.session.run(configuration)
+        
+        setupMultipeer()
+
+    }
+    
+    func setupMultipeer() {
+      multipeerHelp = MultipeerHelper(
+        serviceName: "helper-test",
+        sessionType: .both,
+        delegate: self
+      )
+
+      // MARK: - Setting RealityKit Synchronization
+
+      guard let syncService = multipeerHelp.syncService else {
+        fatalError("could not create multipeerHelp.syncService")
+      }
+      arView.scene.synchronizationService = syncService
+    }
 }

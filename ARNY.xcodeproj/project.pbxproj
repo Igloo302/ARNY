@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -77,6 +77,7 @@
 		039D283F257AD9F500425709 /* 2-2005.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 039D283B257AD9F400425709 /* 2-2005.jpg */; };
 		039D2840257AD9F500425709 /* 2-2007.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 039D283C257AD9F500425709 /* 2-2007.jpg */; };
 		039D2843257AF1E600425709 /* 1000T.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 039D2842257AF1E600425709 /* 1000T.jpg */; };
+		03B2AFE8257FC0FB002D49BE /* MultipeerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 03B2AFE7257FC0FB002D49BE /* MultipeerHelper */; };
 		03C73D682574DAF700C511C1 /* VirusSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C73D672574DAF700C511C1 /* VirusSimulation.swift */; };
 		03D27E24257CC6FA006EBAEB /* Experience8.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 03D27E23257CC6F9006EBAEB /* Experience8.rcproject */; };
 		03D27E27257CD040006EBAEB /* Experience1.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 03D27E26257CD040006EBAEB /* Experience1.rcproject */; };
@@ -190,6 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03B2AFE8257FC0FB002D49BE /* MultipeerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +396,9 @@
 			dependencies = (
 			);
 			name = ARNY;
+			packageProductDependencies = (
+				03B2AFE7257FC0FB002D49BE /* MultipeerHelper */,
+			);
 			productName = ARNY;
 			productReference = 0336AC7E256A50B500951BF9 /* ARNY.app */;
 			productType = "com.apple.product-type.application";
@@ -421,6 +426,9 @@
 				Base,
 			);
 			mainGroup = 0336AC75256A50B500951BF9;
+			packageReferences = (
+				03B2AFE6257FC0FB002D49BE /* XCRemoteSwiftPackageReference "MultipeerHelper" */,
+			);
 			productRefGroup = 0336AC7F256A50B500951BF9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -679,6 +687,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86TWYCWZ65;
 				INFOPLIST_FILE = ARNY/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -698,6 +707,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86TWYCWZ65;
 				INFOPLIST_FILE = ARNY/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -731,6 +741,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		03B2AFE6257FC0FB002D49BE /* XCRemoteSwiftPackageReference "MultipeerHelper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/MultipeerHelper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		03B2AFE7257FC0FB002D49BE /* MultipeerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03B2AFE6257FC0FB002D49BE /* XCRemoteSwiftPackageReference "MultipeerHelper" */;
+			productName = MultipeerHelper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0336AC76256A50B500951BF9 /* Project object */;
 }
